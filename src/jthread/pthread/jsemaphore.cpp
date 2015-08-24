@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 sapier, < sapier AT gmx DOT net >
 
 This program is free software; you can redistribute it and/or modify

@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 celeron55, Perttu Ahola <celeron55@gmail.com>
 
 This program is free software; you can redistribute it and/or modify
@@ -65,8 +65,8 @@ void ScriptApiEnv::player_event(ServerActiveObject* player, std::string type)
 	if (player == NULL)
 		return;
 
-	// Get minetest.registered_playerevents
-	lua_getglobal(L, "minetest");
+	// Get multicraft.registered_playerevents
+	lua_getglobal(L, "multicraft");
 	lua_getfield(L, -1, "registered_playerevents");
 
 	// Call callbacks

@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2010-2013 kwolekr, Ryan Kwolek <kwolekr@minetest.net>
 
 This program is free software; you can redistribute it and/or modify
@@ -32,7 +32,7 @@ class NodeResolver;
 class IGameDef;
 
 /*
-	Minetest Schematic File Format
+	MultiCraft Schematic File Format
 
 	All values are stored in big-endian byte order.
 	[u32] signature: 'MTSM'

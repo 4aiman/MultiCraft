@@ -1,5 +1,5 @@
 --
--- This file contains built-in stuff in Minetest implemented in Lua.
+-- This file contains built-in stuff in MultiCraft implemented in Lua.
 --
 -- It is always loaded and executed after registration of the C API,
 -- before loading and running any mods.
@@ -7,7 +7,7 @@
 
 -- Initialize some very basic things
 multicraft = core
-minetest = core
+multicraft = core
 print = multicraft.debug
 math.randomseed(os.time())
 os.setlocale("C", "numeric")

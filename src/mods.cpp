@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 celeron55, Perttu Ahola <celeron55@gmail.com>
 
 This program is free software; you can redistribute it and/or modify
@@ -349,7 +349,7 @@ Json::Value getModstoreUrl(std::string url)
 	} catch (SettingNotFoundException) {}
 
 	if (special_http_header) {
-		extra_headers.push_back("Accept: application/vnd.minetest.mmdb-v1+json");
+		extra_headers.push_back("Accept: application/vnd.multicraft.mmdb-v1+json");
 	}
 	return fetchJsonValue(url, special_http_header ? &extra_headers : NULL);
 }

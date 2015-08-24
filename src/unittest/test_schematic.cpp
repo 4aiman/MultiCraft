@@ -1,5 +1,5 @@
  /*
-Minetest
+MultiCraft
 Copyright (C) 2010-2014 kwolekr, Ryan Kwolek <kwolekr@minetest.net>
 
 This program is free software; you can redistribute it and/or modify

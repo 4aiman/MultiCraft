@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2010-2013 celeron55, Perttu Ahola <celeron55@gmail.com>
 
 This program is free software; you can redistribute it and/or modify
@@ -299,7 +299,7 @@ static void set_allowed_options(OptionList *allowed_options)
 	allowed_options->insert(std::make_pair("gameid", ValueSpec(VALUETYPE_STRING,
 			_("Set gameid (\"--gameid list\" prints available ones)"))));
 	allowed_options->insert(std::make_pair("migrate", ValueSpec(VALUETYPE_STRING,
-			_("Migrate from current map backend to another (Only works when using minetestserver or with --server)"))));
+			_("Migrate from current map backend to another (Only works when using multicraftserver or with --server)"))));
 #ifndef SERVER
 	allowed_options->insert(std::make_pair("videomodes", ValueSpec(VALUETYPE_FLAG,
 			_("Show available video modes"))));
@@ -767,7 +767,7 @@ static bool determine_subgame(GameParams *game_params)
 		if (game_params->game_spec.isValid()) {
 			gamespec = game_params->game_spec;
 			infostream << "Using commanded gameid [" << gamespec.id << "]" << std::endl;
-		} else { // Otherwise we will be using "minetest"
+		} else { // Otherwise we will be using "multicraft"
 			gamespec = findSubgame(g_settings->get("default_game"));
 			infostream << "Using default gameid [" << gamespec.id << "]" << std::endl;
 			if (!gamespec.isValid()) {

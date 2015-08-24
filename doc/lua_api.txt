@@ -1,15 +1,15 @@
-Minetest Lua Modding API Reference 0.4.12
+MultiCraft Lua Modding API Reference 0.4.12
 =========================================
 * More information at <http://www.minetest.net/>
 * Developer Wiki: <http://dev.minetest.net/>
 
 Introduction
 ------------
-Content and functionality can be added to Minetest 0.4 by using Lua
+Content and functionality can be added to MultiCraft 0.4 by using Lua
 scripting in run-time loaded mods.
 
 A mod is a self-contained bunch of scripts, textures and other related
-things that is loaded by and interfaces with Minetest.
+things that is loaded by and interfaces with MultiCraft.
 
 Mods are contained and ran solely on the server side. Definitions and media
 files are automatically transferred to the client.
@@ -39,11 +39,11 @@ Paths
         * Windows:  `<build directory>`
 * `RUN_IN_PLACE=0`: (Linux release)
     * `$path_share`
-        * Linux: `/usr/share/minetest`
-        * Windows: `<install directory>/minetest-0.4.x`
+        * Linux: `/usr/share/multicraft`
+        * Windows: `<install directory>/multicraft-0.4.x`
     * `$path_user`:
-        * Linux: `$HOME/.minetest`
-        * Windows: `C:/users/<user>/AppData/minetest` (maybe)
+        * Linux: `$HOME/.multicraft`
+        * Windows: `C:/users/<user>/AppData/multicraft` (maybe)
 
 Games
 -----
@@ -60,9 +60,9 @@ The game directory contains the file `game.conf`, which contains these fields:
 
 e.g.
 
-    name = Minetest
+    name = MultiCraft
 
-The game directory can contain the file minetest.conf, which will be used
+The game directory can contain the file multicraft.conf, which will be used
 to set default settings when running the particular game.
 
 Mod load path
@@ -77,15 +77,15 @@ Generic:
 
 In a run-in-place version (e.g. the distributed windows version):
 
-* `minetest-0.4.x/games/gameid/mods/`
-* `minetest-0.4.x/mods/` (User-installed mods)
-* `minetest-0.4.x/worlds/worldname/worldmods/`
+* `multicraft-0.4.x/games/gameid/mods/`
+* `multicraft-0.4.x/mods/` (User-installed mods)
+* `multicraft-0.4.x/worlds/worldname/worldmods/`
 
 On an installed version on Linux:
 
-* `/usr/share/minetest/games/gameid/mods/`
-* `$HOME/.minetest/mods/` (User-installed mods)
-* `$HOME/.minetest/worlds/worldname/worldmods`
+* `/usr/share/multicraft/games/gameid/mods/`
+* `$HOME/.multicraft/mods/` (User-installed mods)
+* `$HOME/.multicraft/worlds/worldname/worldmods`
 
 Mod load path for world-specific games
 --------------------------------------
@@ -129,7 +129,7 @@ Mod directory structure
 
 ### modname
 The location of this directory can be fetched by using
-`minetest.get_modpath(modname)`.
+`multicraft.get_modpath(modname)`.
 
 ### `depends.txt`
 List of mods that have to be loaded before loading this mod.
@@ -148,10 +148,10 @@ A File containing description to be shown within mainmenu.
 
 ### `init.lua`
 The main Lua script. Running this script should register everything it
-wants to register. Subsequent execution depends on minetest calling the
+wants to register. Subsequent execution depends on multicraft calling the
 registered callbacks.
 
-`minetest.setting_get(name)` and `minetest.setting_getbool(name)` can be used
+`multicraft.setting_get(name)` and `multicraft.setting_getbool(name)` can be used
 to read custom or existing settings at load time, if necessary.
 
 ### `models`
@@ -187,9 +187,9 @@ when registering it.
 The `:` prefix can also be used for maintaining backwards compatibility.
 
 ### Aliases
-Aliases can be added by using `minetest.register_alias(name, convert_to)`.
+Aliases can be added by using `multicraft.register_alias(name, convert_to)`.
 
-This will make Minetest to convert things called name to things called
+This will make MultiCraft to convert things called name to things called
 `convert_to`.
 
 This can be used for maintaining backwards compatibility.
@@ -197,7 +197,7 @@ This can be used for maintaining backwards compatibility.
 This can be also used for setting quick access names for things, e.g. if
 you have an item called `epiclylongmodname:stuff`, you could do
 
-    minetest.register_alias("stuff", "epiclylongmodname:stuff")
+    multicraft.register_alias("stuff", "epiclylongmodname:stuff")
 
 and be able to use `/giveme stuff`.
 
@@ -403,55 +403,55 @@ Examples of sound parameter tables:
 
 Registered definitions of stuff
 -------------------------------
-Anything added using certain `minetest.register_*` functions get added to
-the global `minetest.registered_*` tables.
+Anything added using certain `multicraft.register_*` functions get added to
+the global `multicraft.registered_*` tables.
 
-* `minetest.register_entity(name, prototype table)`
-    * added to `minetest.registered_entities[name]`
+* `multicraft.register_entity(name, prototype table)`
+    * added to `multicraft.registered_entities[name]`
 
-* `minetest.register_node(name, node definition)`
-    * added to `minetest.registered_items[name]`
-    * added to `minetest.registered_nodes[name]`
+* `multicraft.register_node(name, node definition)`
+    * added to `multicraft.registered_items[name]`
+    * added to `multicraft.registered_nodes[name]`
 
-* `minetest.register_tool(name, item definition)`
-    * added to `minetest.registered_items[name]`
+* `multicraft.register_tool(name, item definition)`
+    * added to `multicraft.registered_items[name]`
 
-* `minetest.register_craftitem(name, item definition)`
-    * added to `minetest.registered_items[name]`
+* `multicraft.register_craftitem(name, item definition)`
+    * added to `multicraft.registered_items[name]`
 
-* `minetest.register_biome(biome definition)`
+* `multicraft.register_biome(biome definition)`
     * returns an integer uniquely identifying the registered biome
-    * added to `minetest.registered_biome` with the key of `biome.name`
+    * added to `multicraft.registered_biome` with the key of `biome.name`
     * if `biome.name` is nil, the key is the returned ID
 
-* `minetest.register_ore(ore definition)`
+* `multicraft.register_ore(ore definition)`
     * returns an integer uniquely identifying the registered ore
-    * added to `minetest.registered_ores` with the key of `ore.name`
+    * added to `multicraft.registered_ores` with the key of `ore.name`
     * if `ore.name` is nil, the key is the returned ID
 
-* `minetest.register_decoration(decoration definition)`
+* `multicraft.register_decoration(decoration definition)`
     * returns an integer uniquely identifying the registered decoration
-    * added to `minetest.registered_decorations` with the key of `decoration.name`
+    * added to `multicraft.registered_decorations` with the key of `decoration.name`
     * if `decoration.name` is nil, the key is the returned ID
 
-* `minetest.register_schematic(schematic definition)`
+* `multicraft.register_schematic(schematic definition)`
     * returns an integer uniquely identifying the registered schematic
-    * added to `minetest.registered_schematic` with the key of `schematic.name`
+    * added to `multicraft.registered_schematic` with the key of `schematic.name`
     * if `schematic.name` is nil, the key is the returned ID
     * if the schematic is loaded from a file, schematic.name is set to the filename
     * if the function is called when loading the mod, and schematic.name is a relative path,
     * then the current mod path will be prepended to the schematic filename
 
-* `minetest.clear_registered_biomes()`
+* `multicraft.clear_registered_biomes()`
     * clears all biomes currently registered
 
-* `minetest.clear_registered_ores()`
+* `multicraft.clear_registered_ores()`
     * clears all ores currently registered
 
-* `minetest.clear_registered_decorations()`
+* `multicraft.clear_registered_decorations()`
     * clears all decorations currently registered
 
-* `minetest.clear_registered_schematics()`
+* `multicraft.clear_registered_schematics()`
     * clears all schematics currently registered
 
 Note that in some cases you will stumble upon things that are not contained
@@ -461,21 +461,21 @@ existence before trying to access the fields.
 Example: If you want to check the drawtype of a node, you could do:
 
     local function get_nodedef_field(nodename, fieldname)
-        if not minetest.registered_nodes[nodename] then
+        if not multicraft.registered_nodes[nodename] then
             return nil
         end
-        return minetest.registered_nodes[nodename][fieldname]
+        return multicraft.registered_nodes[nodename][fieldname]
     end
     local drawtype = get_nodedef_field(nodename, "drawtype")
 
-Example: `minetest.get_item_group(name, group)` has been implemented as:
+Example: `multicraft.get_item_group(name, group)` has been implemented as:
 
-    function minetest.get_item_group(name, group)
-        if not minetest.registered_items[name] or not
-                minetest.registered_items[name].groups[group] then
+    function multicraft.get_item_group(name, group)
+        if not multicraft.registered_items[name] or not
+                multicraft.registered_items[name].groups[group] then
             return 0
         end
-        return minetest.registered_items[name].groups[group]
+        return multicraft.registered_items[name].groups[group]
     end
 
 Nodes
@@ -486,7 +486,7 @@ are quite static.
 
 The definition of a node is stored and can be accessed by name in
 
-    minetest.registered_nodes[node.name]
+    multicraft.registered_nodes[node.name]
 
 See "Registered definitions of stuff".
 
@@ -520,10 +520,10 @@ node definition:
     drawtype == "signlike"
     paramtype2 == "wallmounted"
     ^ The rotation of the node is stored in param2. You can make this value
-      by using minetest.dir_to_wallmounted().
+      by using multicraft.dir_to_wallmounted().
     paramtype2 == "facedir"
     ^ The rotation of the node is stored in param2. Furnaces and chests are
-      rotated this way. Can be made by using minetest.dir_to_facedir().
+      rotated this way. Can be made by using multicraft.dir_to_facedir().
       Values range 0 - 23
       facedir modulo 4 = axisdir
       0 = y+    1 = z+    2 = z-    3 = x+    4 = x-    5 = y-
@@ -545,7 +545,7 @@ Node drawtypes
 ---------------
 There are a bunch of different looking node types.
 
-Look for examples in `games/minimal` or `games/minetest_game`.
+Look for examples in `games/minimal` or `games/multicraft_game`.
 
 * `normal`
 * `airlike`
@@ -636,7 +636,7 @@ A value of `{x=250, y=250, z=250}` is common.
 
 ### `seed`
 Random seed for the noise. Add the world seed to a seed offset for world-unique noise.
-In the case of `minetest.get_perlin()`, this value has the world seed automatically added.
+In the case of `multicraft.get_perlin()`, this value has the world seed automatically added.
 
 ### `octaves`
 Number of times the noise gradient is accumulated into the noise.
@@ -781,7 +781,7 @@ structures, such as trees, cave spikes, rocks, and so on.
 Schematic specifier
 --------------------
 A schematic specifier identifies a schematic by either a filename to a
-Minetest Schematic file (`.mts`) or through raw data supplied through Lua,
+MultiCraft Schematic file (`.mts`) or through raw data supplied through Lua,
 in the form of a table.  This table specifies the following fields:
 
 * The `size` field is a 3D vector containing the dimensions of the provided schematic. (required)
@@ -1009,7 +1009,7 @@ read groups, you must interpret `nil` and `0` as the same value, `0`.
 
 You can read the rating of a group for an item or a node by using
 
-    minetest.get_item_group(itemname, groupname)
+    multicraft.get_item_group(itemname, groupname)
 
 ### Groups of items
 Groups of items can define what kind of an item it is (e.g. wool).
@@ -1269,7 +1269,7 @@ Some of the values in the key-value store are handled specially:
 
 Example stuff:
 
-    local meta = minetest.get_meta(pos)
+    local meta = multicraft.get_meta(pos)
     meta:set_string("formspec",
             "size[8,9]"..
             "list[context;main;0,0;8,4;]"..
@@ -1479,7 +1479,7 @@ examples.
      * if you want a listelement to start with "#" write "##"
 * index to be selected within textlist
 * `true`/`false`: draw transparent background
-* see also `minetest.explode_textlist_event` (main menu: `engine.explode_textlist_event`)
+* see also `multicraft.explode_textlist_event` (main menu: `engine.explode_textlist_event`)
 
 #### `tabheader[<X>,<Y>;<name>;<caption 1>,<caption 2>,...,<caption n>;<current_tab>;<transparent>;<draw_border>]`
 * show a tab**header** at specific position (ignores formsize)
@@ -1525,7 +1525,7 @@ examples.
 * `orientation`:  `vertical`/`horizontal`
 * fieldname data is transferred to Lua
 * value this trackbar is set to (`0`-`1000`)
-* see also `minetest.explode_scrollbar_event` (main menu: `engine.explode_scrollbar_event`)
+* see also `multicraft.explode_scrollbar_event` (main menu: `engine.explode_scrollbar_event`)
 
 #### `table[<X>,<Y>;<W>,<H>;<name>;<cell 1>,<cell 2>,...,<cell n>;<selected idx>]`
 * show scrollable table using options defined by the previous `tableoptions[]`
@@ -1535,7 +1535,7 @@ examples.
 * `name`: fieldname sent to server on row select or doubleclick
 * `cell 1`...`cell n`: cell contents given in row-major order
 * `selected idx`: index of row to be selected within table (first row = `1`)
-* see also `minetest.explode_table_event` (main menu: `engine.explode_table_event`)
+* see also `multicraft.explode_table_event` (main menu: `engine.explode_table_event`)
 
 #### `tableoptions[<opt 1>;<opt 2>;...]`
 * sets options for `table[]`
@@ -1657,38 +1657,38 @@ Helper functions
     * e.g. `string:split("a,b", ",") == {"a","b"}`
 * `string:trim()`
     * e.g. `string.trim("\n \t\tfoo bar\t ") == "foo bar"`
-* `minetest.pos_to_string({x=X,y=Y,z=Z})`: returns `"(X,Y,Z)"`
+* `multicraft.pos_to_string({x=X,y=Y,z=Z})`: returns `"(X,Y,Z)"`
     * Convert position to a printable string
-* `minetest.string_to_pos(string)`: returns a position
+* `multicraft.string_to_pos(string)`: returns a position
     * Same but in reverse. Returns `nil` if the string can't be parsed to a position.
-* `minetest.formspec_escape(string)`: returns a string
+* `multicraft.formspec_escape(string)`: returns a string
     * escapes the characters "[", "]", "\", "," and ";", which can not be used in formspecs
-* `minetest.is_yes(arg)`
+* `multicraft.is_yes(arg)`
     * returns whether `arg` can be interpreted as yes
-* `minetest.get_us_time()`
+* `multicraft.get_us_time()`
     * returns time with microsecond precision
 * `table.copy(table)`: returns a table
     * returns a deep copy of `table`
 
-`minetest` namespace reference
+`multicraft` namespace reference
 ------------------------------
 
 ### Utilities
 
-* `minetest.get_current_modname()`: returns the currently loading mod's name, when we are loading a mod
-* `minetest.get_modpath(modname)`: returns e.g. `"/home/user/.minetest/usermods/modname"`
+* `multicraft.get_current_modname()`: returns the currently loading mod's name, when we are loading a mod
+* `multicraft.get_modpath(modname)`: returns e.g. `"/home/user/.multicraft/usermods/modname"`
     * Useful for loading additional `.lua` modules or static data from mod
-* `minetest.get_modnames()`: returns a list of installed mods
+* `multicraft.get_modnames()`: returns a list of installed mods
     * Return a list of installed mods, sorted alphabetically
-* `minetest.get_worldpath()`: returns e.g. `"/home/user/.minetest/world"`
+* `multicraft.get_worldpath()`: returns e.g. `"/home/user/.multicraft/world"`
     * Useful for storing custom data
-* `minetest.is_singleplayer()`
-* `minetest.features`
+* `multicraft.is_singleplayer()`
+* `multicraft.features`
     * Table containing API feature flags: `{foo=true, bar=true}`
-* `minetest.has_feature(arg)`: returns `boolean, missing_features`
+* `multicraft.has_feature(arg)`: returns `boolean, missing_features`
     * `arg`: string or table in format `{foo=true, bar=true}`
     * `missing_features`: `{foo=true, bar=true}`
-* `minetest.get_player_information(player_name)`: returns a table containing
+* `multicraft.get_player_information(player_name)`: returns a table containing
   information about player. Example return value:
         {
             address = "127.0.0.1",     -- IP address of client
@@ -1711,71 +1711,71 @@ Helper functions
             --vers_string = "0.4.9-git", -- full version string
             --state = "Active"           -- current client state
         }
-* `minetest.mkdir(path)`: returns success.
+* `multicraft.mkdir(path)`: returns success.
     * Creates a directory specified by `path`, creating parent directories
       if they don't exist.
-* `minetest.get_dir_list(path, [is_dir])`: returns list of entry names
+* `multicraft.get_dir_list(path, [is_dir])`: returns list of entry names
     * is_dir is one of:
       * nil: return all entries,
       * true: return only subdirectory names, or
       * false: return only file names.
 
 ### Logging
-* `minetest.debug(line)`
+* `multicraft.debug(line)`
     * Always printed to `stderr` and logfile (`print()` is redirected here)
-* `minetest.log(line)`
-* `minetest.log(loglevel, line)`
+* `multicraft.log(line)`
+* `multicraft.log(loglevel, line)`
     * `loglevel` is one of `"error"`, `"action"`, `"info"`, `"verbose"`
 
 ### Registration functions
 Call these functions only at load time!
 
-* `minetest.register_entity(name, prototype table)`
-* `minetest.register_abm(abm definition)`
-* `minetest.register_node(name, node definition)`
-* `minetest.register_tool(name, item definition)`
-* `minetest.register_craftitem(name, item definition)`
-* `minetest.register_alias(name, convert_to)`
-* `minetest.register_craft(recipe)`
-* `minetest.register_ore(ore definition)`
-* `minetest.register_decoration(decoration definition)`
-* `minetest.override_item(name, redefinition)`
+* `multicraft.register_entity(name, prototype table)`
+* `multicraft.register_abm(abm definition)`
+* `multicraft.register_node(name, node definition)`
+* `multicraft.register_tool(name, item definition)`
+* `multicraft.register_craftitem(name, item definition)`
+* `multicraft.register_alias(name, convert_to)`
+* `multicraft.register_craft(recipe)`
+* `multicraft.register_ore(ore definition)`
+* `multicraft.register_decoration(decoration definition)`
+* `multicraft.override_item(name, redefinition)`
     * Overrides fields of an item registered with register_node/tool/craftitem.
     * Note: Item must already be defined, (opt)depend on the mod defining it.
-    * Example: `minetest.override_item("default:mese", {light_source=LIGHT_MAX})`
+    * Example: `multicraft.override_item("default:mese", {light_source=LIGHT_MAX})`
 
-* `minetest.clear_registered_ores()`
-* `minetest.clear_registered_decorations()`
+* `multicraft.clear_registered_ores()`
+* `multicraft.clear_registered_decorations()`
 
 ### Global callback registration functions
 Call these functions only at load time!
 
-* `minetest.register_globalstep(func(dtime))`
+* `multicraft.register_globalstep(func(dtime))`
     * Called every server step, usually interval of 0.1s
-* `minetest.register_on_shutdown(func())`
+* `multicraft.register_on_shutdown(func())`
     * Called before server shutdown
     * **Warning**: If the server terminates abnormally (i.e. crashes), the registered
       callbacks **will likely not be run**. Data should be saved at
       semi-frequent intervals as well as on server shutdown.
-* `minetest.register_on_placenode(func(pos, newnode, placer, oldnode, itemstack, pointed_thing))`
+* `multicraft.register_on_placenode(func(pos, newnode, placer, oldnode, itemstack, pointed_thing))`
     * Called when a node has been placed
     * If return `true` no item is taken from `itemstack`
     * **Not recommended**; use `on_construct` or `after_place_node` in node definition
       whenever possible
-* `minetest.register_on_dignode(func(pos, oldnode, digger))`
+* `multicraft.register_on_dignode(func(pos, oldnode, digger))`
     * Called when a node has been dug.
     * **Not recommended**; Use `on_destruct` or `after_dig_node` in node definition
       whenever possible
-* `minetest.register_on_punchnode(func(pos, node, puncher, pointed_thing))`
+* `multicraft.register_on_punchnode(func(pos, node, puncher, pointed_thing))`
      * Called when a node is punched
-* `minetest.register_on_generated(func(minp, maxp, blockseed))`
+* `multicraft.register_on_generated(func(minp, maxp, blockseed))`
      * Called after generating a piece of world. Modifying nodes inside the area
        is a bit faster than usually.
-* `minetest.register_on_newplayer(func(ObjectRef))`
+* `multicraft.register_on_newplayer(func(ObjectRef))`
      * Called after a new player has been created
-* `minetest.register_on_dieplayer(func(ObjectRef))`
+* `multicraft.register_on_dieplayer(func(ObjectRef))`
      * Called when a player dies
-* `minetest.register_on_punchplayer(func(player, hitter, time_from_last_punch, tool_capabilities, dir, damage))`
+* `multicraft.register_on_punchplayer(func(player, hitter, time_from_last_punch, tool_capabilities, dir, damage))`
      * Called when a player is punched
      * `player` - ObjectRef - Player that was punched
      * `hitter` - ObjectRef - Player that hit
@@ -1785,18 +1785,18 @@ Call these functions only at load time!
        the puncher to the punched.
      * `damage` - number that represents the damage calculated by the engine
      * should return `true` to prevent the default damage mechanism
-* `minetest.register_on_respawnplayer(func(ObjectRef))`
+* `multicraft.register_on_respawnplayer(func(ObjectRef))`
      * Called when player is to be respawned
      * Called _before_ repositioning of player occurs
      * return true in func to disable regular player placement
-* `minetest.register_on_prejoinplayer(func(name, ip))`
+* `multicraft.register_on_prejoinplayer(func(name, ip))`
      * Called before a player joins the game
      * If it returns a string, the player is disconnected with that string as reason
-* `minetest.register_on_joinplayer(func(ObjectRef))`
+* `multicraft.register_on_joinplayer(func(ObjectRef))`
     * Called when a player joins the game
-* `minetest.register_on_leaveplayer(func(ObjectRef))`
+* `multicraft.register_on_leaveplayer(func(ObjectRef))`
     * Called when a player leaves the game
-* `minetest.register_on_cheat(func(ObjectRef, cheat))`
+* `multicraft.register_on_cheat(func(ObjectRef, cheat))`
     * Called when a player cheats
     * `cheat`: `{type=<cheat_type>}`, where `<cheat_type>` is one of:
         * `"moved_too_fast"`
@@ -1804,140 +1804,140 @@ Call these functions only at load time!
         * `"finished_unknown_dig"`
         * `dug_unbreakable`
         * `dug_too_fast`
-* `minetest.register_on_chat_message(func(name, message))`
+* `multicraft.register_on_chat_message(func(name, message))`
     * Called always when a player says something
-* `minetest.register_on_player_receive_fields(func(player, formname, fields))`
+* `multicraft.register_on_player_receive_fields(func(player, formname, fields))`
     * Called when a button is pressed in player's inventory form
     * Newest functions are called first
     * If function returns `true`, remaining functions are not called
-* `minetest.register_on_craft(func(itemstack, player, old_craft_grid, craft_inv))`
+* `multicraft.register_on_craft(func(itemstack, player, old_craft_grid, craft_inv))`
     * Called when `player` crafts something
     * `itemstack` is the output
     * `old_craft_grid` contains the recipe (Note: the one in the inventory is cleared)
     * `craft_inv` is the inventory with the crafting grid
     * Return either an `ItemStack`, to replace the output, or `nil`, to not modify it
-* `minetest.register_craft_predict(func(itemstack, player, old_craft_grid, craft_inv))`
+* `multicraft.register_craft_predict(func(itemstack, player, old_craft_grid, craft_inv))`
     * The same as before, except that it is called before the player crafts, to make
    craft prediction, and it should not change anything.
-* `minetest.register_on_protection_violation(func(pos, name))`
+* `multicraft.register_on_protection_violation(func(pos, name))`
     * Called by `builtin` and mods when a player violates protection at a position
       (eg, digs a node or punches a protected entity).
-      * The registered functions can be called using `minetest.record_protection_violation`
+      * The registered functions can be called using `multicraft.record_protection_violation`
       * The provided function should check that the position is protected by the mod
         calling this function before it prints a message, if it does, to allow for
         multiple protection mods.
-* `minetest.register_on_item_eat(func(hp_change, replace_with_item, itemstack, user, pointed_thing))`
-    * Called when an item is eaten, by `minetest.item_eat`
+* `multicraft.register_on_item_eat(func(hp_change, replace_with_item, itemstack, user, pointed_thing))`
+    * Called when an item is eaten, by `multicraft.item_eat`
     * Return `true` or `itemstack` to cancel the default item eat response (i.e.: hp increase)
 
 ### Other registration functions
-* `minetest.register_chatcommand(cmd, chatcommand definition)`
-* `minetest.register_privilege(name, definition)`
+* `multicraft.register_chatcommand(cmd, chatcommand definition)`
+* `multicraft.register_privilege(name, definition)`
     * `definition`: `"description text"`
     * `definition`: `{ description = "description text", give_to_singleplayer = boolean, -- default: true }`
-* `minetest.register_authentication_handler(handler)`
-    * See `minetest.builtin_auth_handler` in `builtin.lua` for reference
+* `multicraft.register_authentication_handler(handler)`
+    * See `multicraft.builtin_auth_handler` in `builtin.lua` for reference
 
 ### Setting-related
-* `minetest.setting_set(name, value)`
+* `multicraft.setting_set(name, value)`
     * Setting names can't contain whitespace or any of `="{}#`.
     * Setting values can't contain the sequence `\n"""`.
     * Setting names starting with "secure." can't be set.
-* `minetest.setting_get(name)`: returns string or `nil`
-* `minetest.setting_setbool(name, value)`
+* `multicraft.setting_get(name)`: returns string or `nil`
+* `multicraft.setting_setbool(name, value)`
     * See documentation on `setting_set` for restrictions.
-* `minetest.setting_getbool(name)`: returns boolean or `nil`
-* `minetest.setting_get_pos(name)`: returns position or nil
-* `minetest.setting_save()`, returns `nil`, save all settings to config file
+* `multicraft.setting_getbool(name)`: returns boolean or `nil`
+* `multicraft.setting_get_pos(name)`: returns position or nil
+* `multicraft.setting_save()`, returns `nil`, save all settings to config file
 
 ### Authentication
-* `minetest.notify_authentication_modified(name)`
+* `multicraft.notify_authentication_modified(name)`
     * Should be called by the authentication handler if privileges changes.
     * To report everybody, set `name=nil`.
-* `minetest.get_password_hash(name, raw_password)`
-    * Convert a name-password pair to a password hash that Minetest can use
-* `minetest.string_to_privs(str)`: returns `{priv1=true,...}`
-* `minetest.privs_to_string(privs)`: returns `"priv1,priv2,..."`
+* `multicraft.get_password_hash(name, raw_password)`
+    * Convert a name-password pair to a password hash that MultiCraft can use
+* `multicraft.string_to_privs(str)`: returns `{priv1=true,...}`
+* `multicraft.privs_to_string(privs)`: returns `"priv1,priv2,..."`
     * Convert between two privilege representations
-* `minetest.set_player_password(name, password_hash)`
-* `minetest.set_player_privs(name, {priv1=true,...})`
-* `minetest.get_player_privs(name) -> {priv1=true,...}`
-* `minetest.auth_reload()`
-* `minetest.check_player_privs(name, {priv1=true,...})`: returns `bool, missing_privs`
+* `multicraft.set_player_password(name, password_hash)`
+* `multicraft.set_player_privs(name, {priv1=true,...})`
+* `multicraft.get_player_privs(name) -> {priv1=true,...}`
+* `multicraft.auth_reload()`
+* `multicraft.check_player_privs(name, {priv1=true,...})`: returns `bool, missing_privs`
     * A quickhand for checking privileges
-* `minetest.get_player_ip(name)`: returns an IP address string
+* `multicraft.get_player_ip(name)`: returns an IP address string
 
-`minetest.set_player_password`, `minetest_set_player_privs`, `minetest_get_player_privs`
-and `minetest.auth_reload` call the authetification handler.
+`multicraft.set_player_password`, `multicraft_set_player_privs`, `multicraft_get_player_privs`
+and `multicraft.auth_reload` call the authetification handler.
 
 ### Chat
-* `minetest.chat_send_all(text)`
-* `minetest.chat_send_player(name, text)`
+* `multicraft.chat_send_all(text)`
+* `multicraft.chat_send_player(name, text)`
 
 ### Environment access
-* `minetest.set_node(pos, node)`
-* `minetest.add_node(pos, node): alias set_node(pos, node)`
+* `multicraft.set_node(pos, node)`
+* `multicraft.add_node(pos, node): alias set_node(pos, node)`
     * Set node at position (`node = {name="foo", param1=0, param2=0}`)
-* `minetest.swap_node(pos, node`
+* `multicraft.swap_node(pos, node`
     * Set node at position, but don't remove metadata
-* `minetest.remove_node(pos)`
+* `multicraft.remove_node(pos)`
     * Equivalent to `set_node(pos, "air")`
-* `minetest.get_node(pos)`
+* `multicraft.get_node(pos)`
     * Returns `{name="ignore", ...}` for unloaded area
-* `minetest.get_node_or_nil(pos)`
+* `multicraft.get_node_or_nil(pos)`
     * Returns `nil` for unloaded area
-* `minetest.get_node_light(pos, timeofday)` returns a number between `0` and `15` or `nil`
+* `multicraft.get_node_light(pos, timeofday)` returns a number between `0` and `15` or `nil`
     * `timeofday`: `nil` for current time, `0` for night, `0.5` for day
 
-* `minetest.place_node(pos, node)`
+* `multicraft.place_node(pos, node)`
     * Place node with the same effects that a player would cause
-* `minetest.dig_node(pos)`
+* `multicraft.dig_node(pos)`
     * Dig node with the same effects that a player would cause
     * Returns `true` if successful, `false` on failure (e.g. protected location)
-* `minetest.punch_node(pos)`
+* `multicraft.punch_node(pos)`
     * Punch node with the same effects that a player would cause
 
-* `minetest.find_nodes_with_meta(pos1, pos2)`
+* `multicraft.find_nodes_with_meta(pos1, pos2)`
     * Get a table of positions of nodes that have metadata within a region {pos1, pos2}
-* `minetest.get_meta(pos)`
+* `multicraft.get_meta(pos)`
     * Get a `NodeMetaRef` at that position
-* `minetest.get_node_timer(pos)`
+* `multicraft.get_node_timer(pos)`
     * Get `NodeTimerRef`
 
-* `minetest.add_entity(pos, name)`: Spawn Lua-defined entity at position
+* `multicraft.add_entity(pos, name)`: Spawn Lua-defined entity at position
     * Returns `ObjectRef`, or `nil` if failed
-* `minetest.add_item(pos, item)`: Spawn item
+* `multicraft.add_item(pos, item)`: Spawn item
     * Returns `ObjectRef`, or `nil` if failed
-* `minetest.get_player_by_name(name)`: Get an `ObjectRef` to a player
-* `minetest.get_objects_inside_radius(pos, radius)`
-* `minetest.set_timeofday(val)`
+* `multicraft.get_player_by_name(name)`: Get an `ObjectRef` to a player
+* `multicraft.get_objects_inside_radius(pos, radius)`
+* `multicraft.set_timeofday(val)`
     * `val` is between `0` and `1`; `0` for midnight, `0.5` for midday
-* `minetest.get_timeofday()`
-* `minetest.get_gametime()`: returns the time, in seconds, since the world was created
-* `minetest.find_node_near(pos, radius, nodenames)`: returns pos or `nil`
+* `multicraft.get_timeofday()`
+* `multicraft.get_gametime()`: returns the time, in seconds, since the world was created
+* `multicraft.find_node_near(pos, radius, nodenames)`: returns pos or `nil`
     * `nodenames`: e.g. `{"ignore", "group:tree"}` or `"default:dirt"`
-* `minetest.find_nodes_in_area(minp, maxp, nodenames)`: returns a list of positions
+* `multicraft.find_nodes_in_area(minp, maxp, nodenames)`: returns a list of positions
     * `nodenames`: e.g. `{"ignore", "group:tree"}` or `"default:dirt"`
-* `minetest.find_nodes_in_area_under_air(minp, maxp, nodenames)`: returns a list of positions
+* `multicraft.find_nodes_in_area_under_air(minp, maxp, nodenames)`: returns a list of positions
     * returned positions are nodes with a node air above
     * `nodenames`: e.g. `{"ignore", "group:tree"}` or `"default:dirt"`
-* `minetest.get_perlin(noiseparams)`
-* `minetest.get_perlin(seeddiff, octaves, persistence, scale)`
+* `multicraft.get_perlin(noiseparams)`
+* `multicraft.get_perlin(seeddiff, octaves, persistence, scale)`
     * Return world-specific perlin noise (`int(worldseed)+seeddiff`)
-* `minetest.get_voxel_manip([pos1, pos2])`
+* `multicraft.get_voxel_manip([pos1, pos2])`
     * Return voxel manipulator object.
     * Loads the manipulator from the map if positions are passed.
-* `minetest.set_gen_notify(flags, {deco_ids})`
+* `multicraft.set_gen_notify(flags, {deco_ids})`
     * Set the types of on-generate notifications that should be collected
     * `flags` is a flag field with the available flags: `dungeon`, `temple`, `cave_begin`,
    `cave_end`, `large_cave_begin`, `large_cave_end`, `decoration`
    * The second parameter is a list of IDS of decorations which notification is requested for
 * `get_gen_notify()`: returns a flagstring and a table with the deco_ids
-* `minetest.get_mapgen_object(objectname)`
+* `multicraft.get_mapgen_object(objectname)`
     * Return requested mapgen object if available (see "Mapgen objects")
-* `minetest.get_mapgen_params()` Returns mapgen parameters, a table containing
+* `multicraft.get_mapgen_params()` Returns mapgen parameters, a table containing
   `mgname`, `seed`, `chunksize`, `water_level`, and `flags`.
-* `minetest.set_mapgen_params(MapgenParams)`
+* `multicraft.set_mapgen_params(MapgenParams)`
     * Set map generation parameters
     * Function cannot be called after the registration period; only initialization
       and `on_mapgen_init`
@@ -1946,30 +1946,30 @@ and `minetest.auth_reload` call the authetification handler.
         * Leave field unset to leave that parameter unchanged
         * `flags` contains a comma-delimited string of flags to set,
           or if the prefix `"no"` is attached, clears instead.
-        * `flags` is in the same format and has the same options as `mg_flags` in `minetest.conf`
-* `minetest.set_noiseparams(name, noiseparams, set_default)`
+        * `flags` is in the same format and has the same options as `mg_flags` in `multicraft.conf`
+* `multicraft.set_noiseparams(name, noiseparams, set_default)`
     * Sets the noiseparams setting of `name` to the noiseparams table specified in `noiseparams`.
     * `set_default` is an optional boolean (default: `true`) that specifies whether the setting
       should be applied to the default config or current active config
-* `minetest.get_noiseparams(name)`: returns a table of the noiseparams for name
-* `minetest.generate_ores(vm, pos1, pos2)`
+* `multicraft.get_noiseparams(name)`: returns a table of the noiseparams for name
+* `multicraft.generate_ores(vm, pos1, pos2)`
     * Generate all registered ores within the VoxelManip `vm` and in the area from `pos1` to `pos2`.
     * `pos1` and `pos2` are optional and default to mapchunk minp and maxp.
-* `minetest.generate_decorations(vm, pos1, pos2)`
+* `multicraft.generate_decorations(vm, pos1, pos2)`
     * Generate all registered decorations within the VoxelManip `vm` and in the area from `pos1` to `pos2`.
     * `pos1` and `pos2` are optional and default to mapchunk minp and maxp.
-* `minetest.clear_objects()`
+* `multicraft.clear_objects()`
     * clear all objects in the environments
-* `minetest.delete_area(pos1, pos2)`
+* `multicraft.delete_area(pos1, pos2)`
     * delete all mapblocks in the area from pos1 to pos2, inclusive
-* `minetest.line_of_sight(pos1, pos2, stepsize)`: returns `boolean, pos`
+* `multicraft.line_of_sight(pos1, pos2, stepsize)`: returns `boolean, pos`
     * Check if there is a direct line of sight between `pos1` and `pos2`
     * Returns the position of the blocking node when `false`
     * `pos1`: First position
     * `pos2`: Second position
     * `stepsize`: smaller gives more accurate results but requires more computing
       time. Default is `1`.
-* `minetest.find_path(pos1,pos2,searchdistance,max_jump,max_drop,algorithm)`
+* `multicraft.find_path(pos1,pos2,searchdistance,max_jump,max_drop,algorithm)`
     * returns table containing path
     * returns a table of 3D points representing a path from `pos1` to `pos2` or `nil`
     * `pos1`: start position
@@ -1978,57 +1978,57 @@ and `minetest.auth_reload` call the authetification handler.
     * `max_jump`: maximum height difference to consider walkable
     * `max_drop`: maximum height difference to consider droppable
     * `algorithm`: One of `"A*_noprefetch"` (default), `"A*"`, `"Dijkstra"`
-* `minetest.spawn_tree (pos, {treedef})`
+* `multicraft.spawn_tree (pos, {treedef})`
     * spawns L-System tree at given `pos` with definition in `treedef` table
-* `minetest.transforming_liquid_add(pos)`
+* `multicraft.transforming_liquid_add(pos)`
     * add node to liquid update queue
-* `minetest.get_node_max_level(pos)`
+* `multicraft.get_node_max_level(pos)`
     * get max available level for leveled node
-* `minetest.get_node_level(pos)`
+* `multicraft.get_node_level(pos)`
     * get level of leveled node (water, snow)
-* `minetest.set_node_level(pos, level)`
+* `multicraft.set_node_level(pos, level)`
     * set level of leveled node, default `level` equals `1`
     * if `totallevel > maxlevel`, returns rest (`total-max`).
-* `minetest.add_node_level(pos, level)`
+* `multicraft.add_node_level(pos, level)`
     * increase level of leveled node by level, default `level` equals `1`
     * if `totallevel > maxlevel`, returns rest (`total-max`)
     * can be negative for decreasing
 
 ### Inventory
-`minetest.get_inventory(location)`: returns an `InvRef`
+`multicraft.get_inventory(location)`: returns an `InvRef`
 
 * `location` = e.g.
     * `{type="player", name="celeron55"}`
     * `{type="node", pos={x=, y=, z=}}`
     * `{type="detached", name="creative"}`
-* `minetest.create_detached_inventory(name, callbacks)`: returns an `InvRef`
+* `multicraft.create_detached_inventory(name, callbacks)`: returns an `InvRef`
     * callbacks: See "Detached inventory callbacks"
     * Creates a detached inventory. If it already exists, it is cleared.
-* `minetest.do_item_eat(hp_change, replace_with_item, itemstack, user, pointed_thing)`:
+* `multicraft.do_item_eat(hp_change, replace_with_item, itemstack, user, pointed_thing)`:
    returns left over ItemStack
-    * See `minetest.item_eat` and `minetest.register_on_item_eat`
+    * See `multicraft.item_eat` and `multicraft.register_on_item_eat`
 
 ### Formspec
-* `minetest.show_formspec(playername, formname, formspec)`
+* `multicraft.show_formspec(playername, formname, formspec)`
     * `playername`: name of player to show formspec
     * `formname`: name passed to `on_player_receive_fields` callbacks.
       It should follow the `"modname:<whatever>"` naming convention
     * `formspec`: formspec to display
-* `minetest.formspec_escape(string)`: returns a string
+* `multicraft.formspec_escape(string)`: returns a string
     * escapes the characters "[", "]", "\", "," and ";", which can not be used in formspecs
-* `minetest.explode_table_event(string)`: returns a table
+* `multicraft.explode_table_event(string)`: returns a table
     * returns e.g. `{type="CHG", row=1, column=2}`
     * `type` is one of:
         * `"INV"`: no row selected)
         * `"CHG"`: selected)
         * `"DCL"`: double-click
-* `minetest.explode_textlist_event(string)`: returns a table
+* `multicraft.explode_textlist_event(string)`: returns a table
     * returns e.g. `{type="CHG", index=1}`
     * `type` is one of:
         * `"INV"`: no row selected)
         * `"CHG"`: selected)
         * `"DCL"`: double-click
-* `minetest.explode_scrollbar_event(string)`: returns a table
+* `multicraft.explode_scrollbar_event(string)`: returns a table
     * returns e.g. `{type="CHG", value=500}`
     * `type` is one of:
         * `"INV"`: something failed
@@ -2036,22 +2036,22 @@ and `minetest.auth_reload` call the authetification handler.
         * `"VAL"`: not changed
 
 ### Item handling
-* `minetest.inventorycube(img1, img2, img3)`
+* `multicraft.inventorycube(img1, img2, img3)`
     * Returns a string for making an image of a cube (useful as an item image)
-* `minetest.get_pointed_thing_position(pointed_thing, above)`
+* `multicraft.get_pointed_thing_position(pointed_thing, above)`
     * Get position of a `pointed_thing` (that you can get from somewhere)
-* `minetest.dir_to_facedir(dir, is6d)`
+* `multicraft.dir_to_facedir(dir, is6d)`
     * Convert a vector to a facedir value, used in `param2` for `paramtype2="facedir"`;
     * passing something non-`nil`/`false` for the optional second parameter causes it to
       take the y component into account
-* `minetest.facedir_to_dir(facedir)`
+* `multicraft.facedir_to_dir(facedir)`
     * Convert a facedir back into a vector aimed directly out the "back" of a node
-* `minetest.dir_to_wallmounted(dir)`
+* `multicraft.dir_to_wallmounted(dir)`
     * Convert a vector to a wallmounted value, used for `paramtype2="wallmounted"`
-* `minetest.get_node_drops(nodename, toolname)`
+* `multicraft.get_node_drops(nodename, toolname)`
     * Returns list of item names.
     * **Note**: This will be removed or modified in a future version.
-* `minetest.get_craft_result(input)`: returns `output, decremented_input`
+* `multicraft.get_craft_result(input)`: returns `output, decremented_input`
     * `input.method` = `"normal"` or `"cooking"` or `"fuel"`
     * `input.width` = for example `3`
     * `input.items` = for example
@@ -2059,7 +2059,7 @@ and `minetest.auth_reload` call the authetification handler.
     * `output.item` = `ItemStack`, if unsuccessful: empty `ItemStack`
     * `output.time` = a number, if unsuccessful: `0`
     * `decremented_input` = like `input`
-* `minetest.get_craft_recipe(output)`: returns input
+* `multicraft.get_craft_recipe(output)`: returns input
     * returns last registered recipe for output item (node)
     * `output` is a node or item type such as `"default:torch"`
     * `input.method` = `"normal"` or `"cooking"` or `"fuel"`
@@ -2067,7 +2067,7 @@ and `minetest.auth_reload` call the authetification handler.
     * `input.items` = for example
       `{ stack1, stack2, stack3, stack4, stack 5, stack 6, stack 7, stack 8, stack 9 }`
       * `input.items` = `nil` if no recipe found
-* `minetest.get_all_craft_recipes(query item)`: returns a table or `nil`
+* `multicraft.get_all_craft_recipes(query item)`: returns a table or `nil`
     * returns indexed table with all registered recipes for query item (node)
       or `nil` if no recipe was found
     * recipe entry table:
@@ -2084,7 +2084,7 @@ and `minetest.auth_reload` call the authetification handler.
                 [2]={type = "normal", width = 1, output = "default:gold_ingot 9",
                 items = {1 = "default:goldblock"}}
             }
-* `minetest.handle_node_drops(pos, drops, digger)`
+* `multicraft.handle_node_drops(pos, drops, digger)`
     * `drops`: list of itemstrings
     * Handles drops from nodes after digging: Default action is to put them into
       digger's inventory
@@ -2092,76 +2092,76 @@ and `minetest.auth_reload` call the authetification handler.
       ground)
 
 ### Rollback
-* `minetest.rollback_get_node_actions(pos, range, seconds, limit)`:
+* `multicraft.rollback_get_node_actions(pos, range, seconds, limit)`:
   returns `{{actor, pos, time, oldnode, newnode}, ...}`
     * Find who has done something to a node, or near a node
     * `actor`: `"player:<name>"`, also `"liquid"`.
-* `minetest.rollback_revert_actions_by(actor, seconds)`: returns `boolean, log_messages`
+* `multicraft.rollback_revert_actions_by(actor, seconds)`: returns `boolean, log_messages`
     * Revert latest actions of someone
     * `actor`: `"player:<name>"`, also `"liquid"`.
 
 ### Defaults for the `on_*` item definition functions
 These functions return the leftover itemstack.
 
-* `minetest.item_place_node(itemstack, placer, pointed_thing, param2)`
+* `multicraft.item_place_node(itemstack, placer, pointed_thing, param2)`
     * Place item as a node
     * `param2` overrides `facedir` and wallmounted `param2`
     * returns `itemstack, success`
-* `minetest.item_place_object(itemstack, placer, pointed_thing)`
+* `multicraft.item_place_object(itemstack, placer, pointed_thing)`
     * Place item as-is
-* `minetest.item_place(itemstack, placer, pointed_thing, param2)`
+* `multicraft.item_place(itemstack, placer, pointed_thing, param2)`
     * Use one of the above based on what the item is.
     * Calls `on_rightclick` of `pointed_thing.under` if defined instead
     * **Note**: is not called when wielded item overrides `on_place`
     * `param2` overrides `facedir` and wallmounted `param2`
     * returns `itemstack, success`
-* `minetest.item_drop(itemstack, dropper, pos)`
+* `multicraft.item_drop(itemstack, dropper, pos)`
     * Drop the item
-* `minetest.item_eat(hp_change, replace_with_item)`
+* `multicraft.item_eat(hp_change, replace_with_item)`
     * Eat the item.
     * `replace_with_item` is the itemstring which is added to the inventory.
       If the player is eating a stack, then replace_with_item goes to a
       different spot. Can be `nil`
-    * See `minetest.do_item_eat`
+    * See `multicraft.do_item_eat`
 
 ### Defaults for the `on_punch` and `on_dig` node definition callbacks
-* `minetest.node_punch(pos, node, puncher, pointed_thing)`
-    * Calls functions registered by `minetest.register_on_punchnode()`
-* `minetest.node_dig(pos, node, digger)`
+* `multicraft.node_punch(pos, node, puncher, pointed_thing)`
+    * Calls functions registered by `multicraft.register_on_punchnode()`
+* `multicraft.node_dig(pos, node, digger)`
     * Checks if node can be dug, puts item into inventory, removes node
-    * Calls functions registered by `minetest.registered_on_dignodes()`
+    * Calls functions registered by `multicraft.registered_on_dignodes()`
 
 ### Sounds
-* `minetest.sound_play(spec, parameters)`: returns a handle
+* `multicraft.sound_play(spec, parameters)`: returns a handle
     * `spec` is a `SimpleSoundSpec`
     * `parameters` is a sound parameter table
-* `minetest.sound_stop(handle)`
+* `multicraft.sound_stop(handle)`
 
 ### Timing
-* `minetest.after(time, func, ...)`
+* `multicraft.after(time, func, ...)`
     * Call the function `func` after `time` seconds
     * Optional: Variable number of arguments that are passed to `func`
 
 ### Server
-* `minetest.request_shutdown()`: request for server shutdown
-* `minetest.get_server_status()`: returns server status string
+* `multicraft.request_shutdown()`: request for server shutdown
+* `multicraft.get_server_status()`: returns server status string
 
 ### Bans
-* `minetest.get_ban_list()`: returns the ban list (same as `minetest.get_ban_description("")`)
-* `minetest.get_ban_description(ip_or_name)`: returns ban description (string)
-* `minetest.ban_player(name)`: ban a player
-* `minetest.unban_player_or_ip(name)`: unban player or IP address
-* `minetest.kick_player(name, [reason])`: disconnect a player with a optional reason
+* `multicraft.get_ban_list()`: returns the ban list (same as `multicraft.get_ban_description("")`)
+* `multicraft.get_ban_description(ip_or_name)`: returns ban description (string)
+* `multicraft.ban_player(name)`: ban a player
+* `multicraft.unban_player_or_ip(name)`: unban player or IP address
+* `multicraft.kick_player(name, [reason])`: disconnect a player with a optional reason
 
 ### Particles
-* `minetest.add_particle(particle definition)`
-    * Deprecated: `minetest.add_particle(pos, velocity, acceleration, expirationtime,
+* `multicraft.add_particle(particle definition)`
+    * Deprecated: `multicraft.add_particle(pos, velocity, acceleration, expirationtime,
       size, collisiondetection, texture, playername)`
 
-* `minetest.add_particlespawner(particlespawner definition)`
+* `multicraft.add_particlespawner(particlespawner definition)`
     * Add a `ParticleSpawner`, an object that spawns an amount of particles over `time` seconds
     * Returns an `id`
-    * `Deprecated: minetest.add_particlespawner(amount, time,
+    * `Deprecated: multicraft.add_particlespawner(amount, time,
       minpos, maxpos,
       minvel, maxvel,
       minacc, maxacc,
@@ -2169,13 +2169,13 @@ These functions return the leftover itemstack.
       minsize, maxsize,
       collisiondetection, texture, playername)`
 
-* `minetest.delete_particlespawner(id, player)``
-    * Delete `ParticleSpawner` with `id` (return value from `minetest.add_particlespawner`)
+* `multicraft.delete_particlespawner(id, player)``
+    * Delete `ParticleSpawner` with `id` (return value from `multicraft.add_particlespawner`)
     * If playername is specified, only deletes on the player's client,
     * otherwise on all clients
 
 ### Schematics
-* `minetest.create_schematic(p1, p2, probability_list, filename, slice_prob_list)`
+* `multicraft.create_schematic(p1, p2, probability_list, filename, slice_prob_list)`
     * Create a schematic from the volume of map specified by the box formed by p1 and p2.
     * Apply the specified probability values to the specified nodes in `probability_list`.
         * `probability_list` is an array of tables containing two fields, `pos` and `prob`.
@@ -2190,9 +2190,9 @@ These functions return the leftover itemstack.
               called `ypos` instead which
               indicates the y position of the slice with a probability applied.
             * If slice probability list equals `nil`, no slice probabilities are applied.
-    * Saves schematic in the Minetest Schematic format to filename.
+    * Saves schematic in the MultiCraft Schematic format to filename.
 
-* `minetest.place_schematic(pos, schematic, rotation, replacements, force_placement)`
+* `multicraft.place_schematic(pos, schematic, rotation, replacements, force_placement)`
     * Place the schematic specified by schematic (see: Schematic specifier) at `pos`.
     * `rotation` can equal `"0"`, `"90"`, `"180"`, `"270"`, or `"random"`.
     * If the `rotation` parameter is omitted, the schematic is not rotated.
@@ -2200,7 +2200,7 @@ These functions return the leftover itemstack.
     * `force_placement` is a boolean indicating whether nodes other than `air` and
       `ignore` are replaced by the schematic
 
-* `minetest.serialize_schematic(schematic, format, options)`
+* `multicraft.serialize_schematic(schematic, format, options)`
     * Return the serialized schematic specified by schematic (see: Schematic specifier)
     * in the `format` of either "mts" or "lua".
     * "mts" - a string containing the binary MTS data used in the MTS file format
@@ -2212,30 +2212,30 @@ These functions return the leftover itemstack.
     * will use that number of spaces as indentation instead of a tab character.
 
 ### Misc.
-* `minetest.get_connected_players()`: returns list of `ObjectRefs`
-* `minetest.hash_node_position({x=,y=,z=})`: returns an 48-bit integer
+* `multicraft.get_connected_players()`: returns list of `ObjectRefs`
+* `multicraft.hash_node_position({x=,y=,z=})`: returns an 48-bit integer
     * Gives a unique hash number for a node position (16+16+16=48bit)
-* `minetest.get_position_from_hash(hash)`: returns a position
-    * Inverse transform of `minetest.hash_node_position`
-* `minetest.get_item_group(name, group)`: returns a rating
+* `multicraft.get_position_from_hash(hash)`: returns a position
+    * Inverse transform of `multicraft.hash_node_position`
+* `multicraft.get_item_group(name, group)`: returns a rating
     * Get rating of a group of an item. (`0` means: not in group)
-* `minetest.get_node_group(name, group)`: returns a rating
+* `multicraft.get_node_group(name, group)`: returns a rating
     * Deprecated: An alias for the former.
-* `minetest.raillike_group(name)`: returns a rating
+* `multicraft.raillike_group(name)`: returns a rating
     * Returns rating of the connect_to_raillike group corresponding to name
     * If name is not yet the name of a connect_to_raillike group, a new group id
     * is created, with that name
-* `minetest.get_content_id(name)`: returns an integer
+* `multicraft.get_content_id(name)`: returns an integer
     * Gets the internal content ID of `name`
-* `minetest.get_name_from_content_id(content_id)`: returns a string
+* `multicraft.get_name_from_content_id(content_id)`: returns a string
     * Gets the name of the content with that content ID
-* `minetest.parse_json(string[, nullvalue])`: returns something
+* `multicraft.parse_json(string[, nullvalue])`: returns something
     * Convert a string containing JSON data into the Lua equivalent
     * `nullvalue`: returned in place of the JSON null; defaults to `nil`
     * On success returns a table, a string, a number, a boolean or `nullvalue`
     * On failure outputs an error message and returns `nil`
     * Example: `parse_json("[10, {\"a\":false}]")`, returns `{10, {a = false}}`
-* `minetest.write_json(data[, styled])`: returns a string or `nil` and an error message
+* `multicraft.write_json(data[, styled])`: returns a string or `nil` and an error message
     * Convert a Lua table into a JSON string
     * styled: Outputs in a human-readable format if this is set, defaults to false
     * Unserializable things like functions and userdata are saved as null.
@@ -2244,47 +2244,47 @@ These functions return the leftover itemstack.
         2. You can not mix string and integer keys.
            This is due to the fact that JSON has two distinct array and object values.
     * Example: `write_json({10, {a = false}})`, returns `"[10, {\"a\": false}]"`
-* `minetest.serialize(table)`: returns a string
+* `multicraft.serialize(table)`: returns a string
     * Convert a table containing tables, strings, numbers, booleans and `nil`s
-      into string form readable by `minetest.deserialize`
+      into string form readable by `multicraft.deserialize`
     * Example: `serialize({foo='bar'})`, returns `'return { ["foo"] = "bar" }'`
-* `minetest.deserialize(string)`: returns a table
-    * Convert a string returned by `minetest.deserialize` into a table
+* `multicraft.deserialize(string)`: returns a table
+    * Convert a string returned by `multicraft.deserialize` into a table
     * `string` is loaded in an empty sandbox environment.
     * Will load functions, but they cannot access the global environment.
     * Example: `deserialize('return { ["foo"] = "bar" }')`, returns `{foo='bar'}`
     * Example: `deserialize('print("foo")')`, returns `nil` (function call fails)
         * `error:[string "print("foo")"]:1: attempt to call global 'print' (a nil value)`
-* `minetest.compress(data, method, ...)`: returns `compressed_data`
+* `multicraft.compress(data, method, ...)`: returns `compressed_data`
     * Compress a string of data.
     * `method` is a string identifying the compression method to be used.
     * Supported compression methods:
     *     Deflate (zlib): `"deflate"`
     * `...` indicates method-specific arguments.  Currently defined arguments are:
     *     Deflate: `level` - Compression level, `0`-`9` or `nil`.
-* `minetest.decompress(compressed_data, method, ...)`: returns data
+* `multicraft.decompress(compressed_data, method, ...)`: returns data
     * Decompress a string of data (using ZLib).
-    * See documentation on `minetest.compress()` for supported compression methods.
+    * See documentation on `multicraft.compress()` for supported compression methods.
     * currently supported.
     * `...` indicates method-specific arguments. Currently, no methods use this.
-* `minetest.is_protected(pos, name)`: returns boolean
+* `multicraft.is_protected(pos, name)`: returns boolean
     * This function should be overridden by protection mods and should be used to
       check if a player can interact at a position.
     * This function should call the old version of itself if the position is not
       protected by the mod.
     * Example:
 
-            local old_is_protected = minetest.is_protected
-            function minetest.is_protected(pos, name)
+            local old_is_protected = multicraft.is_protected
+            function multicraft.is_protected(pos, name)
                 if mymod:position_protected_from(pos, name) then
                     return true
                 end
                     return old_is_protected(pos, name)
             end
-* `minetest.record_protection_violation(pos, name)`
+* `multicraft.record_protection_violation(pos, name)`
      * This function calls functions registered with
-       `minetest.register_on_protection_violation`.
-* `minetest.rotate_and_place(itemstack, placer, pointed_thing, infinitestacks, orient_flags)`
+       `multicraft.register_on_protection_violation`.
+* `multicraft.rotate_and_place(itemstack, placer, pointed_thing, infinitestacks, orient_flags)`
     * Attempt to predict the desired orientation of the facedir-capable node
       defined by `itemstack`, and place it accordingly (on-wall, on the floor, or
       hanging from the ceiling). Stacks are handled normally if the `infinitestacks`
@@ -2299,54 +2299,54 @@ These functions return the leftover itemstack.
           the floor or ceiling
         * The first four options are mutually-exclusive; the last in the list takes
           precedence over the first.
-* `minetest.rotate_node(itemstack, placer, pointed_thing)`
+* `multicraft.rotate_node(itemstack, placer, pointed_thing)`
     * calls `rotate_and_place()` with infinitestacks set according to the state of
        the creative mode setting, and checks for "sneak" to set the `invert_wall`
        parameter.
 
-* `minetest.forceload_block(pos)`
+* `multicraft.forceload_block(pos)`
     * forceloads the position `pos`.
     * returns `true` if area could be forceloaded
     * Please note that forceloaded areas are saved when the server restarts.
 
-* `minetest.forceload_free_block(pos)`
+* `multicraft.forceload_free_block(pos)`
     * stops forceloading the position `pos`
 
-* `minetest.request_insecure_environment()`: returns an environment containing
+* `multicraft.request_insecure_environment()`: returns an environment containing
   insecure functions if the calling mod has been listed as trusted in the
   `secure.trusted_mods` setting or security is disabled, otherwise returns `nil`.
     * Only works at init time.
     * **DO NOT ALLOW ANY OTHER MODS TO ACCESS THE RETURNED ENVIRONMENT, STORE IT IN
       A LOCAL VARIABLE!**
 
-* `minetest.global_exists(name)`
+* `multicraft.global_exists(name)`
     * Checks if a global variable has been set, without triggering a warning.
 
 ### Global objects
-* `minetest.env`: `EnvRef` of the server environment and world.
-    * Any function in the minetest namespace can be called using the syntax
-     `minetest.env:somefunction(somearguments)`
-     instead of `minetest.somefunction(somearguments)`
+* `multicraft.env`: `EnvRef` of the server environment and world.
+    * Any function in the multicraft namespace can be called using the syntax
+     `multicraft.env:somefunction(somearguments)`
+     instead of `multicraft.somefunction(somearguments)`
     * Deprecated, but support is not to be dropped soon
 
 ### Global tables
-* `minetest.registered_items`
+* `multicraft.registered_items`
     * Map of registered items, indexed by name
-* `minetest.registered_nodes`
+* `multicraft.registered_nodes`
     * Map of registered node definitions, indexed by name
-* `minetest.registered_craftitems`
+* `multicraft.registered_craftitems`
     * Map of registered craft item definitions, indexed by name
-* `minetest.registered_tools`
+* `multicraft.registered_tools`
     * Map of registered tool definitions, indexed by name
-* `minetest.registered_entities`
+* `multicraft.registered_entities`
     * Map of registered entity prototypes, indexed by name
-* `minetest.object_refs`
+* `multicraft.object_refs`
     * Map of object references, indexed by active object id
-* `minetest.luaentities`
+* `multicraft.luaentities`
     * Map of Lua entities, indexed by active object id
-* `minetest.registered_ores`
+* `multicraft.registered_ores`
     * List of registered ore definitions.
-* `minetest.registered_decorations`
+* `multicraft.registered_decorations`
     * List of registered decoration definitions.
 
 Class reference
@@ -2354,7 +2354,7 @@ Class reference
 
 ### `NodeMetaRef`
 Node metadata: reference extra data and functionality stored in a node.
-Can be gotten via `minetest.get_meta(pos)`.
+Can be gotten via `multicraft.get_meta(pos)`.
 
 #### Methods
 * `set_string(name, value)`
@@ -2370,7 +2370,7 @@ Can be gotten via `minetest.get_meta(pos)`.
 
 ### `NoteTimerRef`
 Node Timers: a high resolution persistent per-node timer.
-Can be gotten via `minetest.get_node_timer(pos)`.
+Can be gotten via `multicraft.get_node_timer(pos)`.
 
 #### Methods
 * `set(timeout,elapsed)`
@@ -2397,7 +2397,7 @@ This is basically a reference to a C++ `ServerActiveObject`
 
 #### Methods
 * `remove()`: remove object (after returning from Lua)
-    * Note: Doesn't work on players, use minetest.kick_player instead
+    * Note: Doesn't work on players, use multicraft.kick_player instead
 * `getpos()`: returns `{x=num, y=num, z=num}`
 * `setpos(pos)`; `pos`=`{x=num, y=num, z=num}`
 * `moveto(pos, continuous=false)`: interpolated move
@@ -2508,7 +2508,7 @@ This is basically a reference to a C++ `ServerActiveObject`
         * `"skybox"`: Uses 6 textures, `bgcolor` used
         * `"plain"`: Uses 0 textures, `bgcolor` used
     * **Note**: currently does not work directly in `on_joinplayer`; use
-      `minetest.after(0)` in there.
+      `multicraft.after(0)` in there.
 * `get_sky()`: returns bgcolor, type and a table with the textures
 * `override_day_night_ratio(ratio or nil)`
     * `0`...`1`: Overrides day-night ratio, controlling sunlight to a specific amount
@@ -2566,7 +2566,7 @@ An `InvRef` is a reference to an inventory.
   any item metadata is ignored, so attempting to remove a specific unique
   item this way will likely remove the wrong one -- to do that use `set_stack`
   with an empty `ItemStack`
-* `get_location()`: returns a location compatible to `minetest.get_inventory(location)`
+* `get_location()`: returns a location compatible to `multicraft.get_inventory(location)`
     * returns `{type="undefined"}` in case location is not known
 
 ### `ItemStack`
@@ -2637,8 +2637,8 @@ It can be created via `PcgRandom(seed)` or `PcgRandom(seed, sequence)`.
 A perlin noise generator.
 It can be created via `PerlinNoise(seed, octaves, persistence, scale)`
 or `PerlinNoise(noiseparams)`.
-Alternatively with `minetest.get_perlin(seeddiff, octaves, persistence, scale)`
-or `minetest.get_perlin(noiseparams)`.
+Alternatively with `multicraft.get_perlin(seeddiff, octaves, persistence, scale)`
+or `multicraft.get_perlin(noiseparams)`.
 
 #### Methods
 * `get2d(pos)`: returns 2D noise value at `pos={x=,y=}`
@@ -2648,7 +2648,7 @@ or `minetest.get_perlin(noiseparams)`.
 A fast, bulk perlin noise generator.
 
 It can be created via `PerlinNoiseMap(noiseparams, size)` or
-`minetest.get_perlin_map(noiseparams, size)`.
+`multicraft.get_perlin_map(noiseparams, size)`.
 
 Format of `size` is `{x=dimx, y=dimy, z=dimz}`.  The `z` conponent is ommitted
 for 2D noise, and it must be must be larger than 1 for 3D noise (otherwise
@@ -2682,7 +2682,7 @@ nil, this table will be used to store the result instead of creating a new table
 ### `VoxelManip`
 An interface to the `MapVoxelManipulator` for Lua.
 
-It can be created via `VoxelManip()` or `minetest.get_voxel_manip()`.
+It can be created via `VoxelManip()` or `multicraft.get_voxel_manip()`.
 The map will be pre-loaded if two positions are passed to either.
 
 #### Methods
@@ -2701,10 +2701,10 @@ The map will be pre-loaded if two positions are passed to either.
 * `set_data(data)`: Sets the data contents of the `VoxelManip` object
 * `update_map()`: Update map after writing chunk back to map.
     * To be used only by `VoxelManip` objects created by the mod itself;
-      not a `VoxelManip` that was retrieved from `minetest.get_mapgen_object`
+      not a `VoxelManip` that was retrieved from `multicraft.get_mapgen_object`
 * `set_lighting(light, p1, p2)`: Set the lighting within the `VoxelManip` to a uniform value
     * `light` is a table, `{day=<0...15>, night=<0...15>}`
-    * To be used only by a `VoxelManip` object from `minetest.get_mapgen_object`
+    * To be used only by a `VoxelManip` object from `multicraft.get_mapgen_object`
     * (`p1`, `p2`) is the area in which lighting is set;
       defaults to the whole area if left out
 * `get_light_data()`: Gets the light data read into the `VoxelManip` object
@@ -2717,19 +2717,19 @@ The map will be pre-loaded if two positions are passed to either.
 * `get_param2_data()`: Gets the raw `param2` data read into the `VoxelManip` object
 * `set_param2_data(param2_data)`: Sets the `param2` contents of each node in the `VoxelManip`
 * `calc_lighting(p1, p2)`:  Calculate lighting within the `VoxelManip`
-    * To be used only by a `VoxelManip` object from `minetest.get_mapgen_object`
+    * To be used only by a `VoxelManip` object from `multicraft.get_mapgen_object`
     * (`p1`, `p2`) is the area in which lighting is set; defaults to the whole area
       if left out
 * `update_liquids()`: Update liquid flow
 * `was_modified()`: Returns `true` or `false` if the data in the voxel manipulator
   had been modified since the last read from map, due to a call to
-  `minetest.set_data()` on the loaded area elsewhere
+  `multicraft.set_data()` on the loaded area elsewhere
 * `get_emerged_area()`: Returns actual emerged minimum and maximum positions.
 
 ### `VoxelArea`
 A helper class for voxel areas.
 It can be created via `VoxelArea:new{MinEdge=pmin, MaxEdge=pmax}`.
-The coordinates are *inclusive*, like most other things in Minetest.
+The coordinates are *inclusive*, like most other things in MultiCraft.
 
 #### Methods
 * `getExtent()`: returns a 3D vector containing the size of the area formed by
@@ -2748,7 +2748,7 @@ The coordinates are *inclusive*, like most other things in Minetest.
 * `iterp(minp, maxp)`: same as above, except takes a vector
 
 ### `Settings`
-An interface to read config files in the format of `minetest.conf`.
+An interface to read config files in the format of `multicraft.conf`.
 
 It can be created via `Settings(filename)`.
 
@@ -2766,7 +2766,7 @@ Mapgen objects
 --------------
 A mapgen object is a construct used in map generation. Mapgen objects can be used
 by an `on_generate` callback to speed up operations by avoiding unnecessary
-recalculations; these can be retrieved using the `minetest.get_mapgen_object()`
+recalculations; these can be retrieved using the `multicraft.get_mapgen_object()`
 function. If the requested Mapgen object is unavailable, or `get_mapgen_object()`
 was called outside of an `on_generate()` callback, `nil` is returned.
 
@@ -2796,7 +2796,7 @@ generated chunk by the current mapgen.
 Returns a table mapping requested generation notification types to arrays of
 positions at which the corresponding generated structures are located at within
 the current chunk. To set the capture of positions of interest to be recorded
-on generate, use `minetest.set_gen_notify()`.
+on generate, use `multicraft.set_gen_notify()`.
 
 Possible fields of the table returned are:
 
@@ -2823,7 +2823,7 @@ Registered entities
     * `on_step(self, dtime)`
         * Called on every server tick, after movement and collision processing.
           `dtime` is usually 0.1 seconds, as per the `dedicated_server_step` setting
-          `in minetest.conf`.
+          `in multicraft.conf`.
     * `on_punch(self, puncher, time_from_last_punch, tool_capabilities, dir`
         * Called when somebody punches the object.
         * Note that you probably want to handle most punches using the
@@ -2906,7 +2906,7 @@ Spawn a small apple tree:
         fruit_chance=10,
         fruit="default:apple"
     }
-    minetest.spawn_tree(pos,apple_tree)
+    multicraft.spawn_tree(pos,apple_tree)
 
 Definition tables
 -----------------
@@ -3007,11 +3007,11 @@ Definition tables
         on_place = func(itemstack, placer, pointed_thing),
         --[[
         ^ Shall place item and return the leftover itemstack
-        ^ default: minetest.item_place ]]
+        ^ default: multicraft.item_place ]]
         on_drop = func(itemstack, dropper, pos),
         --[[
         ^ Shall drop item and return the leftover itemstack
-        ^ default: minetest.item_drop ]]
+        ^ default: multicraft.item_drop ]]
         on_use = func(itemstack, user, pointed_thing),
         --[[
         ^  default: nil
@@ -3125,21 +3125,21 @@ Definition tables
 
         after_place_node = func(pos, placer, itemstack, pointed_thing) --[[
         ^ Called after constructing node when node was placed using
-          minetest.item_place_node / minetest.place_node
+          multicraft.item_place_node / multicraft.place_node
         ^ If return true no item is taken from itemstack
         ^ default: nil ]]
         after_dig_node = func(pos, oldnode, oldmetadata, digger), --[[
         ^ oldmetadata is in table format
         ^ Called after destructing node when node was dug using
-          minetest.node_dig / minetest.dig_node
+          multicraft.node_dig / multicraft.dig_node
         ^ default: nil ]]
         can_dig = function(pos, [player]) --[[
         ^ returns true if node can be dug, or false if not
         ^ default: nil ]]
 
         on_punch = func(pos, node, puncher, pointed_thing), --[[
-        ^ default: minetest.node_punch
-        ^ By default: Calls minetest.register_on_punchnode callbacks ]]
+        ^ default: multicraft.node_punch
+        ^ By default: Calls multicraft.register_on_punchnode callbacks ]]
         on_rightclick = func(pos, node, clicker, itemstack, pointed_thing), --[[
         ^ default: nil
         ^ if defined, itemstack will hold clicker's wielded item
@@ -3147,12 +3147,12 @@ Definition tables
         ^ Note: pointed_thing can be nil, if a mod calls this function ]]
 
         on_dig = func(pos, node, digger), --[[
-        ^ default: minetest.node_dig
+        ^ default: multicraft.node_dig
         ^ By default: checks privileges, wears out tool and removes node ]]
 
         on_timer = function(pos,elapsed), --[[
         ^ default: nil
-        ^ called by NodeTimers, see minetest.get_node_timer and NodeTimerRef
+        ^ called by NodeTimers, see multicraft.get_node_timer and NodeTimerRef
         ^ elapsed is the total time passed since the timer was started
         ^ return true to run the timer for another cycle with the same timeout value ]]
 
@@ -3318,7 +3318,7 @@ Definition tables
         ----- Schematic-type parameters
         schematic = "foobar.mts",
     --  ^ If schematic is a string, it is the filepath relative to the current working directory of the
-    --  ^ specified Minetest schematic file.
+    --  ^ specified MultiCraft schematic file.
     --  ^  - OR -, could be the ID of a previously registered schematic
     --  ^  - OR -, could instead be a table containing two mandatory fields, size and data,
     --  ^ and an optional table yslice_prob:

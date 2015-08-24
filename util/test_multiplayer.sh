@@ -1,14 +1,14 @@
 #!/bin/bash
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 gameid=minimal
-minetest=$dir/../bin/minetest
+multicraft=$dir/../bin/multicraft
 testspath=$dir/../tests
 worldpath=$testspath/testworld_$gameid
 configpath=$testspath/configs
 logpath=$testspath/log
-conf_server=$configpath/minetest.conf.multi.server
-conf_client1=$configpath/minetest.conf.multi.client1
-conf_client2=$configpath/minetest.conf.multi.client2
+conf_server=$configpath/multicraft.conf.multi.server
+conf_client1=$configpath/multicraft.conf.multi.client1
+conf_client2=$configpath/multicraft.conf.multi.client2
 log_server=$logpath/server.log
 log_client1=$logpath/client1.log
 log_client2=$logpath/client2.log
@@ -37,7 +37,7 @@ name=client2
 viewing_range_nodes_min=10
 ' > $conf_client2
 
-echo $(sleep 1; $minetest --disable-unittests --logfile $log_client1 --config $conf_client1 --go --address localhost) &
-echo $(sleep 2; $minetest --disable-unittests --logfile $log_client2 --config $conf_client2 --go --address localhost) &
-$minetest --disable-unittests --server --logfile $log_server --config $conf_server --world $worldpath --gameid $gameid
+echo $(sleep 1; $multicraft --disable-unittests --logfile $log_client1 --config $conf_client1 --go --address localhost) &
+echo $(sleep 2; $multicraft --disable-unittests --logfile $log_client2 --config $conf_client2 --go --address localhost) &
+$multicraft --disable-unittests --server --logfile $log_server --config $conf_server --world $worldpath --gameid $gameid
 

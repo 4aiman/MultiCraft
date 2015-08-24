@@ -1,4 +1,4 @@
--- Minetest: builtin/item_entity.lua
+-- MultiCraft: builtin/item_entity.lua
 
 function multicraft.spawn_item(pos, item)
 	-- Take item in any format

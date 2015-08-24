@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 Jonathan Neuschäfer <j.neuschaefer@gmx.net>
 
 This program is free software; you can redistribute it and/or modify

@@ -45,8 +45,8 @@ $user  = .
 
 Linux installed:
 $bin   = /usr/bin
-$share = /usr/share/minetest
-$user  = ~/.minetest
+$share = /usr/share/multicraft
+$user  = ~/.multicraft
 
 OS X:
 $bin   = Contents/MacOS
@@ -95,7 +95,7 @@ $ cmake . -DRUN_IN_PLACE=TRUE
 $ make -j <number of processors>
 
 Run it:
-$ ./bin/minetest
+$ ./bin/multicraft
 
 - Use cmake . -LH to see all CMake options and their current state
 - If you want to install it system-wide (or are making a distribution package),
@@ -242,9 +242,9 @@ Compiling on Windows:
 	- Start up the CMake GUI
 	- Select "Browse Source..." and select DIR/MultiCraft
 	- Now, if using MSVC:
-		- Select "Browse Build..." and select DIR/minetest-build
+		- Select "Browse Build..." and select DIR/multicraft-build
 	- Else if using MinGW:
-		- Select "Browse Build..." and select DIR/minetest
+		- Select "Browse Build..." and select DIR/multicraft
 	- Select "Configure"
 	- Select your compiler
 	- It will warn about missing stuff, ignore that at this point. (later don't)
@@ -254,7 +254,7 @@ Compiling on Windows:
 	BUILD_CLIENT             [X]
 	BUILD_SERVER             [ ]
 	CMAKE_BUILD_TYPE         Release
-	CMAKE_INSTALL_PREFIX     DIR/minetest-install
+	CMAKE_INSTALL_PREFIX     DIR/multicraft-install
 	IRRLICHT_SOURCE_DIR      DIR/irrlicht-1.7.1
 	RUN_IN_PLACE             [X]
 	WARN_ALL                 [ ]
@@ -271,14 +271,14 @@ Compiling on Windows:
 	- If something is still coloured red, you have a problem.
 	- Hit "Generate"
 	If using MSVC:
-		- Open the generated minetest.sln
+		- Open the generated multicraft.sln
 		- The project defaults to the "Debug" configuration. Make very sure to
 		  select "Release", unless you want to debug some stuff (it's slower
 		  and might not even work at all)
 		- Build the ALL_BUILD project
 		- Build the INSTALL project
 		- You should now have a working game with the executable in
-			DIR/minetest-install/bin/minetest.exe
+			DIR/multicraft-install/bin/multicraft.exe
 		- Additionally you may create a zip package by building the PACKAGE
 		  project.
 	If using MinGW:
@@ -287,13 +287,13 @@ Compiling on Windows:
 		- You may need to copy some of the downloaded DLLs into bin/, see what
 		  running the produced executable tells you it doesn't have.
 		- You should now have a working game with the executable in
-			DIR/minetest/bin/minetest.exe
+			DIR/multicraft/bin/multicraft.exe
 
 Windows releases of MultiCraft are built using a bat script like this:
 --------------------------------------------------------------------
 
 set sourcedir=%CD%
-set installpath="C:\tmp\minetest_install"
+set installpath="C:\tmp\multicraft_install"
 set irrlichtpath="C:\tmp\irrlicht-1.7.2"
 
 set builddir=%sourcedir%\bvc10

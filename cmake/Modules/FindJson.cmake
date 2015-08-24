@@ -1,7 +1,7 @@
 # Look for JSONCPP if asked to.
 # We use a bundled version by default because some distros ship versions of
 # JSONCPP that cause segfaults and other memory errors when we link with them.
-# See https://github.com/minetest/minetest/issues/1793
+# See https://github.com/multicraft/multicraft/issues/1793
 
 mark_as_advanced(JSON_LIBRARY JSON_INCLUDE_DIR)
 option(ENABLE_SYSTEM_JSONCPP "Enable using a system-wide JSONCPP.  May cause segfaults and other memory errors!" FALSE)

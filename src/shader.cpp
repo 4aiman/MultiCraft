@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 celeron55, Perttu Ahola <celeron55@gmail.com>
 Copyright (C) 2013 Kahrl <kahrl@gmx.net>
 
@@ -814,7 +814,7 @@ ShaderInfo generate_shader(std::string name, u8 material_type, u8 drawtype,
 	}
 
 	// HACK, TODO: investigate this better
-	// Grab the material renderer once more so minetest doesn't crash on exit
+	// Grab the material renderer once more so multicraft doesn't crash on exit
 	driver->getMaterialRenderer(shadermat)->grab();
 
 	// Apply the newly created material type

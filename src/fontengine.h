@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2010-2014 sapier <sapier at gmx dot net>
 
 This program is free software; you can redistribute it and/or modify
@@ -101,7 +101,7 @@ private:
 	/** initialize a font without freetype */
 	void initSimpleFont(unsigned int basesize, FontMode mode);
 
-	/** update current minetest skin with font changes */
+	/** update current multicraft skin with font changes */
 	void updateSkin();
 
 	/** clean cache */

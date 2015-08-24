@@ -1,4 +1,4 @@
--- Minetest: builtin/features.lua
+-- MultiCraft: builtin/features.lua
 
 core.features = {
 	glasslike_framed = true,

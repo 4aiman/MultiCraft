@@ -1,4 +1,4 @@
--- Minetest: builtin/item.lua
+-- MultiCraft: builtin/item.lua
 
 --
 -- Falling stuff

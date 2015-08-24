@@ -23,7 +23,7 @@ tags
 /worlds/
 
 ## Configuration/log files
-minetest.conf
+multicraft.conf
 debug.txt
 Thumbs.db
 

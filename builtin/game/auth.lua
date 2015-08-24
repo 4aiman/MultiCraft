@@ -1,4 +1,4 @@
--- Minetest: builtin/auth.lua
+-- MultiCraft: builtin/auth.lua
 
 --
 -- Authentication handler

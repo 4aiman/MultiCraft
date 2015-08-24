@@ -1,164 +1,161 @@
-# German translations for minetest-c55 package.
+# Czech translations for multicraft.
 # Copyright (C) 2011 celeron
-# This file is distributed under the same license as the minetest-c55 package.
-# Constantin Wenger <constantin.wenger@googlemail.com>, 2011.
+# This file is distributed under the same license as the multicraft.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.0.0\n"
+"Project-Id-Version: multicraft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-14 16:32+0100\n"
-"PO-Revision-Date: 2015-03-16 15:50+0100\n"
-"Last-Translator: Wuzzy <almikes@aol.com>\n"
-"Language-Team: Deutsch <>\n"
-"Language: de\n"
+"POT-Creation-Date: 2015-02-12 13:13+0100\n"
+"PO-Revision-Date: 2015-02-12 16:16+0100\n"
+"Last-Translator: Jakub Vanek <vanek.jakub4@seznam.cz>\n"
+"Language-Team: Czech <>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: builtin/fstk/ui.lua:67 builtin/mainmenu/store.lua:165
 msgid "Ok"
 msgstr "OK"
 
-#: builtin/mainmenu/dlg_config_world.lua:29
+#: builtin/mainmenu/dlg_config_world.lua:26
 msgid "World:"
-msgstr "Welt:"
+msgstr "Svět:"
 
-#: builtin/mainmenu/dlg_config_world.lua:33
-#: builtin/mainmenu/dlg_config_world.lua:35
+#: builtin/mainmenu/dlg_config_world.lua:30
+#: builtin/mainmenu/dlg_config_world.lua:32
 msgid "Hide Game"
-msgstr "Spiel verstecken"
+msgstr "Skrýt vnitřní"
 
-#: builtin/mainmenu/dlg_config_world.lua:39
-#: builtin/mainmenu/dlg_config_world.lua:41
+#: builtin/mainmenu/dlg_config_world.lua:36
+#: builtin/mainmenu/dlg_config_world.lua:38
 msgid "Hide mp content"
-msgstr "MP-Mods verstecken"
+msgstr "Skrýt obsahy balíčků"
 
-#: builtin/mainmenu/dlg_config_world.lua:49
+#: builtin/mainmenu/dlg_config_world.lua:46
 msgid "Mod:"
 msgstr "Mod:"
 
-#: builtin/mainmenu/dlg_config_world.lua:51 builtin/mainmenu/tab_mods.lua:99
+#: builtin/mainmenu/dlg_config_world.lua:48 builtin/mainmenu/tab_mods.lua:99
 msgid "Depends:"
-msgstr "Abhängig von:"
+msgstr "Závislosti:"
 
-#: builtin/mainmenu/dlg_config_world.lua:54 src/guiKeyChangeMenu.cpp:192
+#: builtin/mainmenu/dlg_config_world.lua:51 src/guiKeyChangeMenu.cpp:191
 msgid "Save"
-msgstr "Speichern"
+msgstr "Uložit"
 
-#: builtin/mainmenu/dlg_config_world.lua:55
+#: builtin/mainmenu/dlg_config_world.lua:52
 #: builtin/mainmenu/dlg_create_world.lua:64
-#: builtin/mainmenu/dlg_rename_modpack.lua:33 src/guiKeyChangeMenu.cpp:200
+#: builtin/mainmenu/dlg_rename_modpack.lua:33 src/guiKeyChangeMenu.cpp:199
 #: src/keycode.cpp:224
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "Zrušit"
 
-#: builtin/mainmenu/dlg_config_world.lua:71
+#: builtin/mainmenu/dlg_config_world.lua:68
 msgid "Enable MP"
-msgstr "MP aktivieren"
+msgstr "Povolit balíček"
 
-#: builtin/mainmenu/dlg_config_world.lua:73
+#: builtin/mainmenu/dlg_config_world.lua:70
 msgid "Disable MP"
-msgstr "MP deaktivieren"
+msgstr "Zakázat balíček"
 
-#: builtin/mainmenu/dlg_config_world.lua:77
-#: builtin/mainmenu/dlg_config_world.lua:79
+#: builtin/mainmenu/dlg_config_world.lua:74
+#: builtin/mainmenu/dlg_config_world.lua:76
 msgid "enabled"
-msgstr "Aktiviert"
+msgstr "povoleno"
 
-#: builtin/mainmenu/dlg_config_world.lua:85
+#: builtin/mainmenu/dlg_config_world.lua:82
 msgid "Enable all"
-msgstr "Alle an"
+msgstr "Povolit vše"
 
 #: builtin/mainmenu/dlg_create_world.lua:50
 msgid "World name"
-msgstr "Weltname"
+msgstr "Název světa"
 
 #: builtin/mainmenu/dlg_create_world.lua:53
 msgid "Seed"
-msgstr "Seed"
+msgstr "Seedové číslo"
 
 #: builtin/mainmenu/dlg_create_world.lua:56
 msgid "Mapgen"
-msgstr "Weltgenerator"
+msgstr "Generátor mapy"
 
 #: builtin/mainmenu/dlg_create_world.lua:59
 msgid "Game"
-msgstr "Spiel"
+msgstr "Hra"
 
 #: builtin/mainmenu/dlg_create_world.lua:63
 msgid "Create"
-msgstr "Erstellen"
+msgstr "Vytvořit"
 
 #: builtin/mainmenu/dlg_create_world.lua:68
 msgid "You have no subgames installed."
-msgstr "Keine Spiele installiert."
+msgstr "Nemáte nainstalované žádné podhry."
 
 #: builtin/mainmenu/dlg_create_world.lua:69
 msgid "Download one from minetest.net"
-msgstr "Spiele können von minetest.net heruntergeladen werden"
+msgstr "Stáhněte si jednu z minetest.net"
 
 #: builtin/mainmenu/dlg_create_world.lua:72
 msgid "Warning: The minimal development test is meant for developers."
-msgstr "Warnung: Die minimale Testversion ist für Entwickler gedacht."
+msgstr "Varování: \"Minimal development test\" je zamýšlen pouze pro vývojáře."
 
 #: builtin/mainmenu/dlg_create_world.lua:73
-msgid "Download a subgame, such as minetest_game, from minetest.net"
-msgstr ""
-"Andere Spiele (wie minetest_game) können von minetest.net heruntergeladen "
-"werden"
+msgid "Download a subgame, such as multicraft_game, from minetest.net"
+msgstr "Stáhněte si z minetest.net podhru, například multicraft_game."
 
-#: builtin/mainmenu/dlg_create_world.lua:99
+#: builtin/mainmenu/dlg_create_world.lua:97
 msgid "A world named \"$1\" already exists"
-msgstr "Eine Welt namens „$1“ existiert bereits"
+msgstr "Svět s názvem \"$1\" už existuje"
 
 #: builtin/mainmenu/dlg_create_world.lua:116
 msgid "No worldname given or no game selected"
-msgstr "Kein Weltname gegeben oder kein Spiel ausgewählt"
+msgstr "Nebyla vybrána podhra nebo název"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:26
 msgid "Are you sure you want to delete \"$1\"?"
-msgstr "„$1“ wirklich löschen?"
+msgstr "Skutečně chcete odstranit \"$1\"?"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:27
 #: builtin/mainmenu/dlg_delete_world.lua:25
 #: builtin/mainmenu/tab_settings.lua:79
 msgid "Yes"
-msgstr "Ja"
+msgstr "Ano"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:28
 msgid "No of course not!"
-msgstr "Nein, natürlich nicht!"
+msgstr "Jistě že ne!"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:41
 msgid "Modmgr: failed to delete \"$1\""
-msgstr "Modmgr: Fehler beim Löschen von „$1“"
+msgstr "Modmgr: Nepodařilo se odstranit \"$1\""
 
 #: builtin/mainmenu/dlg_delete_mod.lua:45
 msgid "Modmgr: invalid modpath \"$1\""
-msgstr "Modmgr: Unzulässiger Modpfad „$1“"
+msgstr "Modmgr: Neplatná cesta k modu \"$1\""
 
 #: builtin/mainmenu/dlg_delete_world.lua:24
 msgid "Delete World \"$1\"?"
-msgstr "Welt „$1“ löschen?"
+msgstr "Doopravdy chcete smazat svět \"$1\"?"
 
 #: builtin/mainmenu/dlg_delete_world.lua:26
 msgid "No"
-msgstr "Nein"
+msgstr "Ne"
 
 #: builtin/mainmenu/dlg_rename_modpack.lua:26
 msgid "Rename Modpack:"
-msgstr "Modpack umbenennen:"
+msgstr "Přejmenovat balíček modů:"
 
 #: builtin/mainmenu/dlg_rename_modpack.lua:31 src/keycode.cpp:228
 msgid "Accept"
-msgstr "Annehmen"
+msgstr "Přijmout"
 
 #: builtin/mainmenu/modmgr.lua:342
 msgid "Install Mod: file: \"$1\""
-msgstr "Mod installieren: Datei: „$1“"
+msgstr "Instalace modu: ze souboru: \"$1\""
 
 #: builtin/mainmenu/modmgr.lua:343
 msgid ""
@@ -166,193 +163,191 @@ msgid ""
 "Install Mod: unsupported filetype \"$1\" or broken archive"
 msgstr ""
 "\n"
-"Mod installieren: Nicht unterstützter Dateityp „$1“ oder fehlerhaftes Archiv"
+"Instalace modu: špatný archiv nebo nepodporovaný typ souboru \"$1\""
 
 #: builtin/mainmenu/modmgr.lua:363
 msgid "Failed to install $1 to $2"
-msgstr "Fehler bei der Installation von $1 nach $2"
+msgstr "Selhala instalace $1 do $2"
 
 #: builtin/mainmenu/modmgr.lua:366
 msgid "Install Mod: unable to find suitable foldername for modpack $1"
-msgstr ""
-"Mod installieren: Geeigneter Ordnername für Modpack $1 konnte nicht gefunden "
-"werden"
+msgstr "Instalace modu: nenalezen vhodný adresář s příslušným názvem pro balíček $1"
 
 #: builtin/mainmenu/modmgr.lua:386
 msgid "Install Mod: unable to find real modname for: $1"
-msgstr "Mod installieren: Echter Modname für $1 konnte nicht gefunden werden"
+msgstr "Instalace modu: nenašel jsem skutečné jméno modu: $1"
 
 #: builtin/mainmenu/store.lua:88
 msgid "Unsorted"
-msgstr "Unsortiert"
+msgstr "Neřazené"
 
 #: builtin/mainmenu/store.lua:99 builtin/mainmenu/store.lua:580
 msgid "Search"
-msgstr "Suchen"
+msgstr "Hledání"
 
 #: builtin/mainmenu/store.lua:126
 msgid "Downloading $1, please wait..."
-msgstr "$1 wird heruntergeladen, bitte warten ..."
+msgstr "Stahuji $1, prosím čekejte..."
 
 #: builtin/mainmenu/store.lua:160
 msgid "Successfully installed:"
-msgstr "Erfolgreich installiert:"
+msgstr "Úspěšně nainstalováno:"
 
 #: builtin/mainmenu/store.lua:162
 msgid "Shortname:"
-msgstr "Kurzname:"
+msgstr "Zkratka:"
 
 #: builtin/mainmenu/store.lua:472
 msgid "Rating"
-msgstr "Bewertung"
+msgstr "Hodnocení"
 
 #: builtin/mainmenu/store.lua:497
 msgid "re-Install"
-msgstr "Erneut installieren"
+msgstr "Přeinstalovat"
 
 #: builtin/mainmenu/store.lua:499
 msgid "Install"
-msgstr "Installieren"
+msgstr "Instalovat"
 
 #: builtin/mainmenu/store.lua:518
 msgid "Close store"
-msgstr "Schließen"
+msgstr "Zavřít obchod"
 
 #: builtin/mainmenu/store.lua:526
 msgid "Page $1 of $2"
-msgstr "Seite $1 von $2"
+msgstr "Strana $1 z $2"
 
 #: builtin/mainmenu/tab_credits.lua:22
 msgid "Credits"
-msgstr "Mitwirkende"
+msgstr "Autoři"
 
 #: builtin/mainmenu/tab_credits.lua:29
 msgid "Core Developers"
-msgstr "Hauptentwickler"
+msgstr "Vývojáři jádra"
 
 #: builtin/mainmenu/tab_credits.lua:43
 msgid "Active Contributors"
-msgstr "Aktive Mitwirkende"
+msgstr "Aktivní přispěvatelé"
 
 #: builtin/mainmenu/tab_credits.lua:48
 msgid "Previous Contributors"
-msgstr "Frühere Mitwirkende"
+msgstr "Bývalí přispěvatelé"
 
 #: builtin/mainmenu/tab_mods.lua:30
 msgid "Installed Mods:"
-msgstr "Installierte Mods:"
+msgstr "Nainstalované mody:"
 
 #: builtin/mainmenu/tab_mods.lua:39
 msgid "Online mod repository"
-msgstr "Online-Mod-Archiv"
+msgstr "Online repozitář modů"
 
 #: builtin/mainmenu/tab_mods.lua:78
 msgid "No mod description available"
-msgstr "Keine Modbeschreibung verfügbar"
+msgstr "Popis modu není dostupný"
 
 #: builtin/mainmenu/tab_mods.lua:82
 msgid "Mod information:"
-msgstr "Modinformation:"
+msgstr "Informace o modu:"
 
 #: builtin/mainmenu/tab_mods.lua:93
 msgid "Rename"
-msgstr "Umbenennen"
+msgstr "Přejmenovat"
 
 #: builtin/mainmenu/tab_mods.lua:95
 msgid "Uninstall selected modpack"
-msgstr "Ausgewähltes Modpack deinstallieren"
+msgstr "Odinstalovat označený balíček"
 
 #: builtin/mainmenu/tab_mods.lua:106
 msgid "Uninstall selected mod"
-msgstr "Ausgewählte Mod deinstallieren"
+msgstr "Odinstalovat vybraný mod"
 
 #: builtin/mainmenu/tab_mods.lua:121
 msgid "Select Mod File:"
-msgstr "Mod-Datei auswählen:"
+msgstr "Vybrat soubor s modem:"
 
 #: builtin/mainmenu/tab_mods.lua:165
 msgid "Mods"
-msgstr "Mods"
+msgstr "Mody"
 
 #: builtin/mainmenu/tab_multiplayer.lua:23
 msgid "Address / Port :"
-msgstr "Adresse/Port:"
+msgstr "Adresa / Port :"
 
 #: builtin/mainmenu/tab_multiplayer.lua:24
 msgid "Name / Password :"
-msgstr "Name/Passwort:"
+msgstr "Jméno / Heslo :"
 
 #: builtin/mainmenu/tab_multiplayer.lua:29
 #: builtin/mainmenu/tab_simple_main.lua:30
 msgid "Public Serverlist"
-msgstr "Öffentliche Serverliste"
+msgstr "Seznam veřejných serverů"
 
 #: builtin/mainmenu/tab_multiplayer.lua:34 builtin/mainmenu/tab_server.lua:26
 #: builtin/mainmenu/tab_singleplayer.lua:85 src/keycode.cpp:230
 msgid "Delete"
-msgstr "Entfernen"
+msgstr "Smazat"
 
 #: builtin/mainmenu/tab_multiplayer.lua:38
 #: builtin/mainmenu/tab_simple_main.lua:34
 msgid "Connect"
-msgstr "Verbinden"
+msgstr "Připojit"
 
 #: builtin/mainmenu/tab_multiplayer.lua:62
 #: builtin/mainmenu/tab_simple_main.lua:45
 msgid "Creative mode"
-msgstr "Kreativmodus"
+msgstr "Kreativní mód"
 
 #: builtin/mainmenu/tab_multiplayer.lua:63
 #: builtin/mainmenu/tab_simple_main.lua:46
 msgid "Damage enabled"
-msgstr "Schaden aktiviert"
+msgstr "Poškození povoleno"
 
 #: builtin/mainmenu/tab_multiplayer.lua:64
 #: builtin/mainmenu/tab_simple_main.lua:47
 msgid "PvP enabled"
-msgstr "Spielerkampf aktiviert"
+msgstr "PvP povoleno"
 
-#: builtin/mainmenu/tab_multiplayer.lua:257
+#: builtin/mainmenu/tab_multiplayer.lua:247
 msgid "Client"
-msgstr "Client"
+msgstr "Klient"
 
 #: builtin/mainmenu/tab_server.lua:27 builtin/mainmenu/tab_singleplayer.lua:86
 msgid "New"
-msgstr "Neu"
+msgstr "Nový"
 
 #: builtin/mainmenu/tab_server.lua:28 builtin/mainmenu/tab_singleplayer.lua:87
 msgid "Configure"
-msgstr "Konfigurieren"
+msgstr "Nastavit"
 
 #: builtin/mainmenu/tab_server.lua:29
 msgid "Start Game"
-msgstr "Spiel starten"
+msgstr "Spustit hru"
 
 #: builtin/mainmenu/tab_server.lua:30 builtin/mainmenu/tab_singleplayer.lua:89
 msgid "Select World:"
-msgstr "Welt wählen:"
+msgstr "Vyber svět:"
 
-#: builtin/mainmenu/tab_server.lua:31 builtin/mainmenu/tab_simple_main.lua:76
+#: builtin/mainmenu/tab_server.lua:31 builtin/mainmenu/tab_simple_main.lua:75
 #: builtin/mainmenu/tab_singleplayer.lua:90
 msgid "Creative Mode"
-msgstr "Kreativmodus"
+msgstr "Kreativní mód"
 
-#: builtin/mainmenu/tab_server.lua:33 builtin/mainmenu/tab_simple_main.lua:78
+#: builtin/mainmenu/tab_server.lua:33 builtin/mainmenu/tab_simple_main.lua:77
 #: builtin/mainmenu/tab_singleplayer.lua:92
 msgid "Enable Damage"
-msgstr "Schaden einschalten"
+msgstr "Povolit poškození"
 
 #: builtin/mainmenu/tab_server.lua:35
 msgid "Public"
-msgstr "Öffentlich"
+msgstr "Veřejný"
 
 #: builtin/mainmenu/tab_server.lua:37 builtin/mainmenu/tab_simple_main.lua:25
 msgid "Name/Password"
-msgstr "Name/Passwort"
+msgstr "Jméno/Heslo"
 
 #: builtin/mainmenu/tab_server.lua:45
 msgid "Bind Address"
-msgstr "Bind-Adresse"
+msgstr "Svázat adresu"
 
 #: builtin/mainmenu/tab_server.lua:47
 msgid "Port"
@@ -360,7 +355,7 @@ msgstr "Port"
 
 #: builtin/mainmenu/tab_server.lua:51
 msgid "Server Port"
-msgstr "Serverport"
+msgstr "Port serveru"
 
 #: builtin/mainmenu/tab_server.lua:174
 msgid "Server"
@@ -368,111 +363,111 @@ msgstr "Server"
 
 #: builtin/mainmenu/tab_settings.lua:21
 msgid "No Filter"
-msgstr "Kein Filter"
+msgstr "Žádný filtr"
 
 #: builtin/mainmenu/tab_settings.lua:22
 msgid "Bilinear Filter"
-msgstr "Bilinearer Filter"
+msgstr "Bilineární filtr"
 
 #: builtin/mainmenu/tab_settings.lua:23
 msgid "Trilinear Filter"
-msgstr "Trilinearer Filter"
+msgstr "Trilineární filtr"
 
 #: builtin/mainmenu/tab_settings.lua:32
 msgid "No Mipmap"
-msgstr "Keine Mipmap"
+msgstr "Žádné Mipmapy"
 
 #: builtin/mainmenu/tab_settings.lua:33
 msgid "Mipmap"
-msgstr "Mipmap"
+msgstr "Mipmapa"
 
 #: builtin/mainmenu/tab_settings.lua:34
 msgid "Mipmap + Aniso. Filter"
-msgstr "Mipmap u. Aniso. Filter"
+msgstr "Mipmapa + Anizo. filtr"
 
 #: builtin/mainmenu/tab_settings.lua:77
 msgid "Are you sure to reset your singleplayer world?"
-msgstr "Sind Sie sicher, dass Sie die Einzelspielerwelt löschen wollen?"
+msgstr "Jste si jisti, že chcete resetovat místní svět?"
 
 #: builtin/mainmenu/tab_settings.lua:81
 msgid "No!!!"
-msgstr "Nein!!!"
+msgstr "Ne!!!"
 
 #: builtin/mainmenu/tab_settings.lua:181
 msgid "Smooth Lighting"
-msgstr "Besseres Licht"
+msgstr "Plynulé osvětlení"
 
 #: builtin/mainmenu/tab_settings.lua:183
 msgid "Enable Particles"
-msgstr "Partikel aktivieren"
+msgstr "Povolit částice"
 
 #: builtin/mainmenu/tab_settings.lua:185
 msgid "3D Clouds"
-msgstr "3D-Wolken"
+msgstr "3D mraky"
 
 #: builtin/mainmenu/tab_settings.lua:187
 msgid "Fancy Trees"
-msgstr "Schöne Bäume"
+msgstr "Ozdobné stromy"
 
 #: builtin/mainmenu/tab_settings.lua:189
 msgid "Opaque Water"
-msgstr "Undurchs. Wasser"
+msgstr "Neprůhledná voda"
 
 #: builtin/mainmenu/tab_settings.lua:191
 msgid "Connected Glass"
-msgstr "Verbundenes Glas"
+msgstr "Propojené sklo"
 
 #: builtin/mainmenu/tab_settings.lua:193
 msgid "Node Highlighting"
-msgstr "Blöcke hervorheben"
+msgstr "Zvýraznění bloků"
 
 #: builtin/mainmenu/tab_settings.lua:196
 msgid "Texturing:"
-msgstr "Texturierung:"
+msgstr "Texturování:"
 
 #: builtin/mainmenu/tab_settings.lua:201
 msgid "Rendering:"
-msgstr "Rendering:"
+msgstr "Renderování:"
 
 #: builtin/mainmenu/tab_settings.lua:205
-msgid "Restart minetest for driver change to take effect"
-msgstr "Neustart nach Ändern des Treibers erforderlich"
+msgid "Restart multicraft for driver change to take effect"
+msgstr "Aby se změna ovladače projevila, restartujte MultiCraft."
 
 #: builtin/mainmenu/tab_settings.lua:207
 msgid "Shaders"
-msgstr "Shader"
+msgstr "Shadery"
 
 #: builtin/mainmenu/tab_settings.lua:212
 msgid "Change keys"
-msgstr "Tasten ändern"
+msgstr "Změnit nastavení kláves"
 
 #: builtin/mainmenu/tab_settings.lua:215
 msgid "Reset singleplayer world"
-msgstr "Einzelspielerwelt zurücksetzen"
+msgstr "Reset místního světa"
 
 #: builtin/mainmenu/tab_settings.lua:219
 msgid "GUI scale factor"
-msgstr "GUI-Skalierfaktor"
+msgstr "Měřítko GUI"
 
 #: builtin/mainmenu/tab_settings.lua:223
 msgid "Scaling factor applied to menu elements: "
-msgstr "Auf Menüelemente angewandter Skalierfaktor: "
+msgstr "Měřítko aplikované na prvky menu: "
 
 #: builtin/mainmenu/tab_settings.lua:229
 msgid "Touch free target"
-msgstr "Berührungsfreies Ziel"
+msgstr "Středový kurzor"
 
 #: builtin/mainmenu/tab_settings.lua:235
 msgid "Touchthreshold (px)"
-msgstr "Berührungsempfindlichkeit (px)"
+msgstr "Dosah dotyku (px)"
 
 #: builtin/mainmenu/tab_settings.lua:242 builtin/mainmenu/tab_settings.lua:256
 msgid "Bumpmapping"
-msgstr "Bumpmapping"
+msgstr "Bump mapování"
 
 #: builtin/mainmenu/tab_settings.lua:244 builtin/mainmenu/tab_settings.lua:257
 msgid "Generate Normalmaps"
-msgstr "Normalmaps generieren"
+msgstr "Generovat normálové mapy"
 
 #: builtin/mainmenu/tab_settings.lua:246 builtin/mainmenu/tab_settings.lua:258
 msgid "Parallax Occlusion"
@@ -480,125 +475,97 @@ msgstr "Parallax Occlusion"
 
 #: builtin/mainmenu/tab_settings.lua:248 builtin/mainmenu/tab_settings.lua:259
 msgid "Waving Water"
-msgstr "Wasserwellen"
+msgstr "Vlnění vody"
 
 #: builtin/mainmenu/tab_settings.lua:250 builtin/mainmenu/tab_settings.lua:260
 msgid "Waving Leaves"
-msgstr "Wehende Blätter"
+msgstr "Vlnění listů"
 
 #: builtin/mainmenu/tab_settings.lua:252 builtin/mainmenu/tab_settings.lua:261
 msgid "Waving Plants"
-msgstr "Wogende Pflanzen"
+msgstr "Vlnění rostlin"
 
 #: builtin/mainmenu/tab_settings.lua:287
 msgid "To enable shaders the OpenGL driver needs to be used."
-msgstr "Um Shader zu benutzen, muss der OpenGL-Treiber benutzt werden."
+msgstr "Pro povolení shaderů musíte používat OpenGL ovladač."
 
 #: builtin/mainmenu/tab_settings.lua:398
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Nastavení"
 
-#: builtin/mainmenu/tab_simple_main.lua:80
+#: builtin/mainmenu/tab_simple_main.lua:79
 msgid "Fly mode"
-msgstr "Flugmodus"
+msgstr "Létací režim"
+
+#: builtin/mainmenu/tab_simple_main.lua:83
+msgid "Start Singleplayer"
+msgstr "Start místní hry"
 
 #: builtin/mainmenu/tab_simple_main.lua:84
-msgid "Start Singleplayer"
-msgstr "Einzelspieler starten"
-
-#: builtin/mainmenu/tab_simple_main.lua:85
 msgid "Config mods"
-msgstr "Mods konfigurieren"
+msgstr "Nastavení modů"
 
-#: builtin/mainmenu/tab_simple_main.lua:208
+#: builtin/mainmenu/tab_simple_main.lua:203
 msgid "Main"
-msgstr "Hauptmenü"
+msgstr "Hlavní nabídka"
 
 #: builtin/mainmenu/tab_singleplayer.lua:88 src/keycode.cpp:249
 msgid "Play"
-msgstr "Spielen"
+msgstr "Hrát"
 
 #: builtin/mainmenu/tab_singleplayer.lua:224
 msgid "Singleplayer"
-msgstr "Einzelspieler"
+msgstr "Místní hra"
 
 #: builtin/mainmenu/tab_texturepacks.lua:49
 msgid "Select texture pack:"
-msgstr "Texturpaket auswählen:"
+msgstr "Vyberte balíček textur:"
 
 #: builtin/mainmenu/tab_texturepacks.lua:69
 msgid "No information available"
-msgstr "Keine Informationen vorhanden"
+msgstr "Informace nejsou dostupné"
 
 #: builtin/mainmenu/tab_texturepacks.lua:114
 msgid "Texturepacks"
-msgstr "Texturpakete"
+msgstr "Balíčky textur"
 
-#: src/client.cpp:1563
+#: src/client.cpp:2788
 msgid "Loading textures..."
-msgstr "Texturen laden ..."
+msgstr "Načítám textury..."
 
-#: src/client.cpp:1573
+#: src/client.cpp:2798
 msgid "Rebuilding shaders..."
-msgstr "Shader wiederherstellen ..."
+msgstr "Sestavuji shadery..."
 
-#: src/client.cpp:1580
+#: src/client.cpp:2805
 msgid "Initializing nodes..."
-msgstr "Blöcke initialisieren ..."
+msgstr "Inicializuji bloky..."
 
-#: src/client.cpp:1595
+#: src/client.cpp:2820
 msgid "Item textures..."
-msgstr "Inventarbilder ..."
+msgstr "Textury věcí..."
 
-#: src/client.cpp:1620
+#: src/client.cpp:2845
 msgid "Done!"
-msgstr "Fertig!"
-
-#: src/client/clientlauncher.cpp:172
-msgid "Main Menu"
-msgstr "Hauptmenü"
-
-#: src/client/clientlauncher.cpp:210
-msgid "Player name too long."
-msgstr "Spielername zu lang."
-
-#: src/client/clientlauncher.cpp:248
-msgid "Connection error (timed out?)"
-msgstr "Verbindungsfehler (Zeitüberschreitung?)"
-
-#: src/client/clientlauncher.cpp:413
-msgid "No world selected and no address provided. Nothing to do."
-msgstr "Keine Welt ausgewählt und keine Adresse angegeben. Nichts zu tun."
-
-#: src/client/clientlauncher.cpp:420
-msgid "Provided world path doesn't exist: "
-msgstr "Angegebener Weltpfad existiert nicht: "
-
-#: src/client/clientlauncher.cpp:429
-msgid "Could not find or load game \""
-msgstr "Kann Spiel nicht finden/laden \""
-
-#: src/client/clientlauncher.cpp:447
-msgid "Invalid gamespec."
-msgstr "Ungültige Spielspezif."
+msgstr "Hotovo!"
 
 #: src/fontengine.cpp:70 src/fontengine.cpp:226
 msgid "needs_fallback_font"
 msgstr "no"
 
-#: src/game.cpp:1061 src/guiFormSpecMenu.cpp:2008
+#: src/game.cpp:1057 src/guiFormSpecMenu.cpp:2006
 msgid "Proceed"
-msgstr "Fortsetzen"
+msgstr "Pokračovat"
 
-#: src/game.cpp:1081
+#: src/game.cpp:1077
 msgid "You died."
-msgstr "Sie sind gestorben."
+msgstr "Zemřel jsi."
 
-#: src/game.cpp:1082
+#: src/game.cpp:1078
 msgid "Respawn"
-msgstr "Wiederbeleben"
+msgstr "Znovu stvořit"
 
-#: src/game.cpp:1101
+#: src/game.cpp:1097
 msgid ""
 "Default Controls:\n"
 "No menu visible:\n"
@@ -613,20 +580,20 @@ msgid ""
 "- touch&drag, tap 2nd finger\n"
 " --> place single item to slot\n"
 msgstr ""
-"Standardsteuerung:\n"
-"Kein Menü sichtbar:\n"
-"- einmal antippen: Knopf betätigen\n"
-"- doppelt antippen: bauen/benutzen\n"
-"- Finger wischen: umsehen\n"
-"Menü/Inventar sichtbar:\n"
-"- doppelt antippen (außen):\n"
-" -->schließen\n"
-"- Stapel berühren, Feld berühren:\n"
-" --> Stapel verschieben\n"
-"- berühren u. ziehen, mit 2. Finger antippen\n"
-" --> 1 Gegenstand ins Feld platzieren\n"
+"Výchozí ovládání:\n"
+"Bez menu:\n"
+"- klik: aktivace tlačítka\n"
+"- dvojklik: položit/použít\n"
+"- pohyb prstem: rozhlížení\n"
+"Menu/Inventář zobrazen:\n"
+"- dvojklik (mimo):\n"
+" -->zavřít\n"
+"- stisk hromádky, přihrádky :\n"
+" --> přesunutí hromádky\n"
+"- stisk a přesun, klik druhým prstem\n"
+" --> umístit samostatnou věc do přihrádky\n"
 
-#: src/game.cpp:1115
+#: src/game.cpp:1111
 msgid ""
 "Default Controls:\n"
 "- WASD: move\n"
@@ -640,266 +607,262 @@ msgid ""
 "- Mouse wheel: select item\n"
 "- T: chat\n"
 msgstr ""
-"Standard-Tastenbelegung:\n"
-"- WASD: Bewegen\n"
-"- Leertaste: Springen/Klettern\n"
-"- Umschalt: Kriechen/herunterklettern\n"
-"- Q: Item fallen lassen\n"
-"- I: Inventar\n"
-"- Maus: drehen/umschauen\n"
-"- Maus links: Abbauen/Schlagen\n"
-"- Maus rechts: Platzieren/Benutzen\n"
-"- Mausrad: Gegenstand auswählen\n"
-"- T: Chat\n"
+"Výchozí ovládání:\n"
+"- WASD: pohyb\n"
+"- Mezera: skákání/šplhání\n"
+"- Shift: plížení\n"
+"- Q: zahodit věc\n"
+"- I: inventář\n"
+"- Myš: otáčení,rozhlížení\n"
+"- Myš(levé tl.): kopat, štípat\n"
+"- Myš(pravé tl.): položit, použít\n"
+"- Myš(kolečko): vybrat přihrádku\n"
+"- T: chat\n"
+
+#: src/game.cpp:1130
+msgid "Continue"
+msgstr "Pokračovat"
 
 #: src/game.cpp:1134
-msgid "Continue"
-msgstr "Weiter"
-
-#: src/game.cpp:1138
 msgid "Change Password"
-msgstr "Passwort ändern"
+msgstr "Změnit heslo"
 
-#: src/game.cpp:1143
+#: src/game.cpp:1139
 msgid "Sound Volume"
-msgstr "Tonlautstärke"
+msgstr "Hlasitost"
 
-#: src/game.cpp:1145
+#: src/game.cpp:1141
 msgid "Change Keys"
-msgstr "Tasten ändern"
+msgstr "Změnit klávesy"
 
-#: src/game.cpp:1148
+#: src/game.cpp:1144
 msgid "Exit to Menu"
-msgstr "Hauptmenü"
+msgstr "Odejít do nabídky"
 
-#: src/game.cpp:1150
+#: src/game.cpp:1146
 msgid "Exit to OS"
-msgstr "Programm beenden"
+msgstr "Ukončit hru"
 
-#: src/game.cpp:1827
+#: src/game.cpp:1809
 msgid "Shutting down..."
-msgstr "Herunterfahren ..."
+msgstr "Vypínání..."
 
-#: src/game.cpp:1876
+#: src/game.cpp:1858
 msgid "Loading..."
-msgstr "Laden ..."
+msgstr "Nahrávám..."
 
-#: src/game.cpp:1933
+#: src/game.cpp:1915
 msgid "Creating server..."
-msgstr "Server erstellen ..."
+msgstr "Vytvářím server..."
 
-#: src/game.cpp:1970
+#: src/game.cpp:1952
 msgid "Creating client..."
-msgstr "Client erstellen ..."
+msgstr "Vytvářím klienta..."
 
-#: src/game.cpp:2143
+#: src/game.cpp:2125
 msgid "Resolving address..."
-msgstr "Adresse auflösen ..."
+msgstr "Překládám adresu..."
 
-#: src/game.cpp:2234
+#: src/game.cpp:2216
 msgid "Connecting to server..."
-msgstr "Zum Server verbinden ..."
+msgstr "Připojuji se k serveru..."
 
-#: src/game.cpp:2292
+#: src/game.cpp:2274
 msgid "Item definitions..."
-msgstr "Item-Definitionen ..."
+msgstr "Definice věcí..."
 
-#: src/game.cpp:2297
+#: src/game.cpp:2279
 msgid "Node definitions..."
-msgstr "Node-Definitionen ..."
+msgstr "Definice bloků..."
 
-#: src/game.cpp:2304
+#: src/game.cpp:2286
 msgid "Media..."
-msgstr "Medien ..."
+msgstr "Média..."
 
-#: src/game.cpp:2309
+#: src/game.cpp:2291
 msgid " KB/s"
 msgstr " KB/s"
 
-#: src/game.cpp:2313
+#: src/game.cpp:2295
 msgid " MB/s"
 msgstr " MB/s"
 
-#: src/game.cpp:4265
+#: src/game.cpp:4210
 msgid ""
 "\n"
 "Check debug.txt for details."
 msgstr ""
 "\n"
-"Siehe debug.txt für Details."
+"Pro detaily se podívejte do debug.txt."
 
-#: src/guiFormSpecMenu.cpp:2799
+#: src/guiFormSpecMenu.cpp:2797
 msgid "Enter "
-msgstr "Enter "
+msgstr "Zadejte "
 
-#: src/guiFormSpecMenu.cpp:2819
+#: src/guiFormSpecMenu.cpp:2817
 msgid "ok"
 msgstr "OK"
 
-#: src/guiKeyChangeMenu.cpp:126
-msgid "Keybindings. (If this menu screws up, remove stuff from minetest.conf)"
-msgstr ""
-"Steuerung (Falls dieses Menü versagt, entfernen Sie Sachen aus minetest.conf)"
+#: src/guiKeyChangeMenu.cpp:125
+msgid "Keybindings. (If this menu screws up, remove stuff from multicraft.conf)"
+msgstr "Nastavení kláves (Pokud tohle menu nebude v pořádku, odstraňte nastavení z "
+"multicraft.conf)"
 
-#: src/guiKeyChangeMenu.cpp:166
+#: src/guiKeyChangeMenu.cpp:165
 msgid "\"Use\" = climb down"
-msgstr "Benutzen = runterklettern"
+msgstr "\"Použít\" = slézt dolů"
 
-#: src/guiKeyChangeMenu.cpp:181
+#: src/guiKeyChangeMenu.cpp:180
 msgid "Double tap \"jump\" to toggle fly"
-msgstr "2×Sprungtaste zum Fliegen"
+msgstr "Dvojstisk klávesy \"skok\" zapne létání"
 
-#: src/guiKeyChangeMenu.cpp:297
+#: src/guiKeyChangeMenu.cpp:296
 msgid "Key already in use"
-msgstr "Taste bereits in Benutzung"
+msgstr "Klávesa je již používána"
 
-#: src/guiKeyChangeMenu.cpp:372
+#: src/guiKeyChangeMenu.cpp:371
 msgid "press key"
-msgstr "Taste drücken"
+msgstr "stiskni klávesu"
+
+#: src/guiKeyChangeMenu.cpp:397
+msgid "Forward"
+msgstr "Vpřed"
 
 #: src/guiKeyChangeMenu.cpp:398
-msgid "Forward"
-msgstr "Vorwärts"
-
-#: src/guiKeyChangeMenu.cpp:399
 msgid "Backward"
-msgstr "Rückwärts"
+msgstr "Vzad"
+
+#: src/guiKeyChangeMenu.cpp:399 src/keycode.cpp:229
+msgid "Left"
+msgstr "Doleva"
 
 #: src/guiKeyChangeMenu.cpp:400 src/keycode.cpp:229
-msgid "Left"
-msgstr "Links"
-
-#: src/guiKeyChangeMenu.cpp:401 src/keycode.cpp:229
 msgid "Right"
-msgstr "Rechts"
+msgstr "Doprava"
+
+#: src/guiKeyChangeMenu.cpp:401
+msgid "Use"
+msgstr "Použít"
 
 #: src/guiKeyChangeMenu.cpp:402
-msgid "Use"
-msgstr "Benutzen"
+msgid "Jump"
+msgstr "Skok"
 
 #: src/guiKeyChangeMenu.cpp:403
-msgid "Jump"
-msgstr "Springen"
+msgid "Sneak"
+msgstr "Plížit se"
 
 #: src/guiKeyChangeMenu.cpp:404
-msgid "Sneak"
-msgstr "Schleichen"
+msgid "Drop"
+msgstr "Zahodit"
 
 #: src/guiKeyChangeMenu.cpp:405
-msgid "Drop"
-msgstr "Wegwerfen"
+msgid "Inventory"
+msgstr "Inventář"
 
 #: src/guiKeyChangeMenu.cpp:406
-msgid "Inventory"
-msgstr "Inventar"
-
-#: src/guiKeyChangeMenu.cpp:407
 msgid "Chat"
 msgstr "Chat"
 
-#: src/guiKeyChangeMenu.cpp:408
+#: src/guiKeyChangeMenu.cpp:407
 msgid "Command"
-msgstr "Befehl"
+msgstr "Příkaz"
+
+#: src/guiKeyChangeMenu.cpp:408
+msgid "Console"
+msgstr "Konzole"
 
 #: src/guiKeyChangeMenu.cpp:409
-msgid "Console"
-msgstr "Konsole"
+msgid "Toggle fly"
+msgstr "Létání"
 
 #: src/guiKeyChangeMenu.cpp:410
-msgid "Toggle fly"
-msgstr "Flugmodus"
+msgid "Toggle fast"
+msgstr "Turbo"
 
 #: src/guiKeyChangeMenu.cpp:411
-msgid "Toggle fast"
-msgstr "Schnellmodus"
+msgid "Toggle noclip"
+msgstr "Duch"
 
 #: src/guiKeyChangeMenu.cpp:412
-msgid "Toggle Cinematic"
-msgstr "Kinomodus"
+msgid "Range select"
+msgstr "Změna dohledu"
 
 #: src/guiKeyChangeMenu.cpp:413
-msgid "Toggle noclip"
-msgstr "Geistmodus"
-
-#: src/guiKeyChangeMenu.cpp:414
-msgid "Range select"
-msgstr "Weite Sicht"
-
-#: src/guiKeyChangeMenu.cpp:415
 msgid "Print stacks"
-msgstr "Stack ausgeben"
+msgstr "Vypsat hromádky"
 
 #: src/guiPasswordChange.cpp:108
 msgid "Old Password"
-msgstr "Altes Passwort"
+msgstr "Staré heslo"
 
 #: src/guiPasswordChange.cpp:124
 msgid "New Password"
-msgstr "Neues Passwort"
+msgstr "Nové heslo"
 
 #: src/guiPasswordChange.cpp:139
 msgid "Confirm Password"
-msgstr "Passwort wiederholen"
+msgstr "Potvrdit heslo"
 
 #: src/guiPasswordChange.cpp:155
 msgid "Change"
-msgstr "Ändern"
+msgstr "Změnit"
 
 #: src/guiPasswordChange.cpp:164
 msgid "Passwords do not match!"
-msgstr "Passwörter passen nicht zusammen!"
+msgstr "Hesla se neshodují!"
 
 #: src/guiVolumeChange.cpp:106
 msgid "Sound Volume: "
-msgstr "Tonlautstärke: "
+msgstr "Hlasitost: "
 
 #: src/guiVolumeChange.cpp:120
 msgid "Exit"
-msgstr "Zurück"
+msgstr "Odejít"
 
 #: src/keycode.cpp:224
 msgid "Left Button"
-msgstr "Linke Taste"
+msgstr "Levé tlačítko myši"
 
 #: src/keycode.cpp:224
 msgid "Middle Button"
-msgstr "Mittlere Taste"
+msgstr "Prostřední tlačítko myši"
 
 #: src/keycode.cpp:224
 msgid "Right Button"
-msgstr "Rechte Taste"
+msgstr "Pravé tlačítko myši"
 
 #: src/keycode.cpp:224
 msgid "X Button 1"
-msgstr "X-Knopf 1"
+msgstr "X Tlačítko 1"
 
 #: src/keycode.cpp:225
 msgid "Back"
-msgstr "Rücktaste"
+msgstr "Zpět"
 
 #: src/keycode.cpp:225
 msgid "Clear"
-msgstr "Clear"
+msgstr "Vyčistit"
 
 #: src/keycode.cpp:225
 msgid "Return"
-msgstr "Eingabe"
+msgstr "Vrátit"
 
 #: src/keycode.cpp:225
 msgid "Tab"
-msgstr "Tab"
+msgstr "Tabulátor"
 
 #: src/keycode.cpp:225
 msgid "X Button 2"
-msgstr "X-Knopf 2"
+msgstr "X Tlačítko 2"
 
 #: src/keycode.cpp:226
 msgid "Capital"
-msgstr "Feststellen"
+msgstr "Klávesa velkého písmene"
 
 #: src/keycode.cpp:226
 msgid "Control"
-msgstr "Strg"
+msgstr "Control"
 
 #: src/keycode.cpp:226
 msgid "Kana"
@@ -907,15 +870,15 @@ msgstr "Kana"
 
 #: src/keycode.cpp:226
 msgid "Menu"
-msgstr "Menü"
+msgstr "Nabídka"
 
 #: src/keycode.cpp:226
 msgid "Pause"
-msgstr "Pause"
+msgstr "Pauza"
 
 #: src/keycode.cpp:226
 msgid "Shift"
-msgstr "Umsch."
+msgstr "Shift"
 
 #: src/keycode.cpp:227
 msgid "Convert"
@@ -923,7 +886,7 @@ msgstr "Convert"
 
 #: src/keycode.cpp:227
 msgid "Escape"
-msgstr "Escape"
+msgstr "Esc"
 
 #: src/keycode.cpp:227
 msgid "Final"
@@ -943,175 +906,175 @@ msgstr "Nonconvert"
 
 #: src/keycode.cpp:228
 msgid "End"
-msgstr "Ende"
+msgstr "End"
 
 #: src/keycode.cpp:228
 msgid "Home"
-msgstr "Pos1"
+msgstr "Home"
 
 #: src/keycode.cpp:228
 msgid "Mode Change"
-msgstr "Mode Change"
+msgstr "Změna režimu"
 
 #: src/keycode.cpp:228
 msgid "Next"
-msgstr "Bild runter"
+msgstr "Další"
 
 #: src/keycode.cpp:228
 msgid "Prior"
-msgstr "Bild hoch"
+msgstr "Předchozí"
 
 #: src/keycode.cpp:228
 msgid "Space"
-msgstr "Leertaste"
+msgstr "Mezerník"
 
 #: src/keycode.cpp:229
 msgid "Down"
-msgstr "Runter"
+msgstr "Dolů"
 
 #: src/keycode.cpp:229
 msgid "Execute"
-msgstr "Ausführen"
+msgstr "Spustit"
 
 #: src/keycode.cpp:229
 msgid "Print"
-msgstr "Druck"
+msgstr "Print Screen"
 
 #: src/keycode.cpp:229
 msgid "Select"
-msgstr "Select"
+msgstr "Vybrat"
 
 #: src/keycode.cpp:229
 msgid "Up"
-msgstr "Hoch"
+msgstr "Nahoru"
 
 #: src/keycode.cpp:230
 msgid "Help"
-msgstr "Hilfe"
+msgstr "Pomoc"
 
 #: src/keycode.cpp:230
 msgid "Insert"
-msgstr "Einfg"
+msgstr "Insert"
 
 #: src/keycode.cpp:230
 msgid "Snapshot"
-msgstr "Druck"
+msgstr "Snapshot"
 
 #: src/keycode.cpp:233
 msgid "Left Windows"
-msgstr "Win links"
+msgstr "Levá klávesa Windows"
 
 #: src/keycode.cpp:234
 msgid "Apps"
-msgstr "Apps"
+msgstr "Aplikace"
 
 #: src/keycode.cpp:234
 msgid "Numpad 0"
-msgstr "Ziffernblock 0"
+msgstr "Numerická klávesnice: 0"
 
 #: src/keycode.cpp:234
 msgid "Numpad 1"
-msgstr "Ziffernblock 1"
+msgstr "Numerická klávesnice: 1"
 
 #: src/keycode.cpp:234
 msgid "Right Windows"
-msgstr "Win rechts"
+msgstr "Pravá klávesa Windows"
 
 #: src/keycode.cpp:234
 msgid "Sleep"
-msgstr "Schlaf"
+msgstr "Spánek"
 
 #: src/keycode.cpp:235
 msgid "Numpad 2"
-msgstr "Ziffernblock 2"
+msgstr "Numerická klávesnice: 2"
 
 #: src/keycode.cpp:235
 msgid "Numpad 3"
-msgstr "Ziffernblock 3"
+msgstr "Numerická klávesnice: 3"
 
 #: src/keycode.cpp:235
 msgid "Numpad 4"
-msgstr "Ziffernblock 4"
+msgstr "Numerická klávesnice: 4"
 
 #: src/keycode.cpp:235
 msgid "Numpad 5"
-msgstr "Ziffernblock 5"
+msgstr "Numerická klávesnice: 5"
 
 #: src/keycode.cpp:235
 msgid "Numpad 6"
-msgstr "Ziffernblock 6"
+msgstr "Numerická klávesnice: 6"
 
 #: src/keycode.cpp:235
 msgid "Numpad 7"
-msgstr "Ziffernblock 7"
+msgstr "Numerická klávesnice: 7"
 
 #: src/keycode.cpp:236
 msgid "Numpad *"
-msgstr "Ziffernblock *"
+msgstr "Numerická klávesnice: *"
 
 #: src/keycode.cpp:236
 msgid "Numpad +"
-msgstr "Ziffernblock +"
+msgstr "Numerická klávesnice: +"
 
 #: src/keycode.cpp:236
 msgid "Numpad -"
-msgstr "Ziffernblock -"
+msgstr "Numerická klávesnice: -"
 
 #: src/keycode.cpp:236
 msgid "Numpad /"
-msgstr "Ziffernblock /"
+msgstr "Numerická klávesnice: /"
 
 #: src/keycode.cpp:236
 msgid "Numpad 8"
-msgstr "Ziffernblock 8"
+msgstr "Numerická klávesnice: 8"
 
 #: src/keycode.cpp:236
 msgid "Numpad 9"
-msgstr "Ziffernblock 9"
+msgstr "Numerická klávesnice: 9"
 
 #: src/keycode.cpp:240
 msgid "Num Lock"
-msgstr "Num"
+msgstr "Num Lock"
 
 #: src/keycode.cpp:240
 msgid "Scroll Lock"
-msgstr "Rollen"
+msgstr "Scroll Lock"
 
 #: src/keycode.cpp:241
 msgid "Left Shift"
-msgstr "Umsch. links"
+msgstr "Levý Shift"
 
 #: src/keycode.cpp:241
 msgid "Right Shift"
-msgstr "Umsch. rechts"
+msgstr "Pravý Shift"
 
 #: src/keycode.cpp:242
 msgid "Left Control"
-msgstr "Strg links"
+msgstr "Levý Control"
 
 #: src/keycode.cpp:242
 msgid "Left Menu"
-msgstr "Alt"
+msgstr "Levá klávesa Menu"
 
 #: src/keycode.cpp:242
 msgid "Right Control"
-msgstr "Strg rechts"
+msgstr "Pravý Control"
 
 #: src/keycode.cpp:242
 msgid "Right Menu"
-msgstr "Alt Gr"
+msgstr "Pravá klávesa Menu"
 
 #: src/keycode.cpp:244
 msgid "Comma"
-msgstr "Komma"
+msgstr "Čárka"
 
 #: src/keycode.cpp:244
 msgid "Minus"
-msgstr "Minus"
+msgstr "Mínus"
 
 #: src/keycode.cpp:244
 msgid "Period"
-msgstr "Punkt"
+msgstr "Tečka"
 
 #: src/keycode.cpp:244
 msgid "Plus"
@@ -1127,7 +1090,7 @@ msgstr "CrSel"
 
 #: src/keycode.cpp:249
 msgid "Erase OEF"
-msgstr "Erase OEF"
+msgstr "Smazat EOF"
 
 #: src/keycode.cpp:249
 msgid "ExSel"
@@ -1143,178 +1106,113 @@ msgstr "PA1"
 
 #: src/keycode.cpp:249
 msgid "Zoom"
-msgstr "Zoom"
+msgstr "Přiblížení"
+
+#: src/main.cpp:1688
+msgid "Main Menu"
+msgstr "Hlavní nabídka"
+
+#: src/main.cpp:1726
+msgid "Player name too long."
+msgstr "Jméno hráče je příliš dlouhé."
+
+#: src/main.cpp:1764
+msgid "Connection error (timed out?)"
+msgstr "Chyba spojení (vypršel čas?)"
+
+#: src/main.cpp:1929
+msgid "No world selected and no address provided. Nothing to do."
+msgstr "Nebyl vybrán žádný svět a nebyla poskytnuta žádná adresa. Nemám co dělat."
+
+#: src/main.cpp:1936
+msgid "Provided world path doesn't exist: "
+msgstr "Uvedená cesta ke světu neexistuje: "
+
+#: src/main.cpp:1945
+msgid "Could not find or load game \""
+msgstr "Hru nebylo možné nahrát nebo najít \""
+
+#: src/main.cpp:1963
+msgid "Invalid gamespec."
+msgstr "Neplatná specifikace hry."
+
+msgid "Downloading"
+msgstr "Stahuji"
 
 #~ msgid "Game Name"
-#~ msgstr "Spielname"
+#~ msgstr "Název hry"
 
 #~ msgid "Gamemgr: Unable to copy mod \"$1\" to game \"$2\""
-#~ msgstr "Gamemgr: Kann mod \"$1\" nicht in Spiel \"$2\" kopieren"
+#~ msgstr "Gamemgr: Nepovedlo se zkopírovat mod \"$1\" do hry \"$2\""
 
 #~ msgid "GAMES"
-#~ msgstr "SPIELE"
+#~ msgstr "HRY"
 
 #~ msgid "Games"
-#~ msgstr "Spiele"
+#~ msgstr "Hry"
 
 #~ msgid "Mods:"
-#~ msgstr "Mods:"
+#~ msgstr "Mody:"
 
 #~ msgid "edit game"
-#~ msgstr "Spiel ändern"
+#~ msgstr "upravit hru"
 
 #~ msgid "new game"
-#~ msgstr "neues Spiel"
+#~ msgstr "nová hra"
 
 #~ msgid "EDIT GAME"
-#~ msgstr "SPIEL ÄNDERN"
+#~ msgstr "UPRAVIT HRU"
 
 #~ msgid "Remove selected mod"
-#~ msgstr "Ausgewählte Mod löschen"
+#~ msgstr "Odstranit vybraný mod"
 
 #~ msgid "<<-- Add mod"
-#~ msgstr "<<-- Mod hinzufügen"
+#~ msgstr "<<-- Přidat mod"
 
 #~ msgid "CLIENT"
-#~ msgstr "CLIENT"
+#~ msgstr "KLIENT"
 
 #~ msgid "Favorites:"
-#~ msgstr "Favoriten:"
+#~ msgstr "Oblíbené:"
 
 #~ msgid "START SERVER"
-#~ msgstr "SERVER STARTEN"
+#~ msgstr "MÍSTNÍ SERVER"
 
 #~ msgid "Name"
-#~ msgstr "Name"
+#~ msgstr "Jméno"
 
 #~ msgid "Password"
-#~ msgstr "Passwort"
+#~ msgstr "Heslo"
 
 #~ msgid "SETTINGS"
-#~ msgstr "EINSTELLUNGEN"
+#~ msgstr "NASTAVENÍ"
 
 #~ msgid "Preload item visuals"
-#~ msgstr "Lade Inventarbilder vor"
+#~ msgstr "Přednačíst textury předmětů"
 
 #~ msgid "Finite Liquid"
-#~ msgstr "Endliches Wasser"
+#~ msgstr "Konečná voda"
 
 #~ msgid "SINGLE PLAYER"
-#~ msgstr "EINZELSPIELER"
+#~ msgstr "HRA JEDNOHO HRÁČE"
 
 #~ msgid "TEXTURE PACKS"
-#~ msgstr "TEXTUREN PAKETE"
+#~ msgstr "BALÍČKY TEXTUR"
 
 #~ msgid "MODS"
-#~ msgstr "MODS"
+#~ msgstr "MODY"
 
 #~ msgid "Add mod:"
-#~ msgstr "Modifikation hinzufügen:"
+#~ msgstr "Přidat mod:"
 
 #~ msgid "Local install"
-#~ msgstr "Lokale Install."
-
-#~ msgid ""
-#~ "Warning: Some mods are not configured yet.\n"
-#~ "They will be enabled by default when you save the configuration.  "
-#~ msgstr ""
-#~ "Warnung: Einige Mods sind noch nicht konfiguriert.\n"
-#~ "Sie werden aktiviert wenn die Konfiguration gespeichert wird.  "
-
-#~ msgid ""
-#~ "Warning: Some configured mods are missing.\n"
-#~ "Their setting will be removed when you save the configuration.  "
-#~ msgstr ""
-#~ "Warnung: Einige konfigurierte Mods fehlen.\n"
-#~ "Mod Einstellungen werden gelöscht wenn die Konfiguration gespeichert "
-#~ "wird.  "
-
-#~ msgid "KEYBINDINGS"
-#~ msgstr "TASTEN EINST."
-
-#~ msgid "Delete map"
-#~ msgstr "Karte löschen"
-
-#~ msgid ""
-#~ "Default Controls:\n"
-#~ "- WASD: Walk\n"
-#~ "- Mouse left: dig/hit\n"
-#~ "- Mouse right: place/use\n"
-#~ "- Mouse wheel: select item\n"
-#~ "- 0...9: select item\n"
-#~ "- Shift: sneak\n"
-#~ "- R: Toggle viewing all loaded chunks\n"
-#~ "- I: Inventory menu\n"
-#~ "- ESC: This menu\n"
-#~ "- T: Chat\n"
-#~ msgstr ""
-#~ "Steuerung:\n"
-#~ "- WASD: Gehen\n"
-#~ "- Linksklick: Graben/Schlagen\n"
-#~ "- Rechtsklick: Platzieren\n"
-#~ "- Mausrad: Item auswählen\n"
-#~ "- 0...9: Item auswählen\n"
-#~ "- Shift: Schleichen\n"
-#~ "- R: alle geladenen Blöcke anzeigen (wechseln)\n"
-#~ "- I: Inventar\n"
-#~ "- T: Chat\n"
-
-#~ msgid "Failed to delete all world files"
-#~ msgstr "Es konnten nicht alle Welt Dateien gelöscht werden"
-
-#~ msgid "Cannot configure world: Nothing selected"
-#~ msgstr "Kann Welt nicht konfigurieren: Nichts ausgewählt"
-
-#~ msgid "Cannot create world: No games found"
-#~ msgstr "Kann Welt nicht erstellen: Keine Spiele gefunden"
-
-#~ msgid "Files to be deleted"
-#~ msgstr "Zu löschende Dateien"
-
-#~ msgid "Cannot delete world: Nothing selected"
-#~ msgstr "Kann Welt nicht löchen: Nichts ausgewählt"
-
-#~ msgid "Address required."
-#~ msgstr "Adresse benötigt."
-
-#~ msgid "Create world"
-#~ msgstr "Welt erstellen"
-
-#~ msgid "Leave address blank to start a local server."
-#~ msgstr "Lasse die Adresse frei um einen eigenen Server zu starten."
-
-#~ msgid "Show Favorites"
-#~ msgstr "Zeige Favoriten"
-
-#~ msgid "Show Public"
-#~ msgstr "Zeige öffentliche"
-
-#~ msgid "Advanced"
-#~ msgstr "Erweitert"
-
-#~ msgid "Multiplayer"
-#~ msgstr "Mehrspieler"
-
-#~ msgid "Cannot create world: Name contains invalid characters"
-#~ msgstr "Kann Welt nicht erstellen: Name enthält ungültige Zeichen"
-
-#~ msgid "Warning: Configuration not consistent.  "
-#~ msgstr "Warnung: Konfiguration nicht konsistent.  "
-
-#~ msgid "Configuration saved.  "
-#~ msgstr "Konfiguration gespeichert.  "
-
-#~ msgid "is required by:"
-#~ msgstr "wird benötigt von:"
+#~ msgstr "Místní instalace"
 
 #~ msgid "Left click: Move all items, Right click: Move single item"
-#~ msgstr "Linksklick: Alle Items bewegen, Rechtsklick: Einzelnes Item bewegen"
+#~ msgstr "Levý klik: Přesunout všechny předměty, Pravý klik: Přesunout jeden předmět"
 
 #~ msgid "Anisotropic Filtering"
-#~ msgstr "Anisotroper Filter"
+#~ msgstr "Anizotropní filtrování"
 
 #~ msgid "Mip-Mapping"
-#~ msgstr "Mip-Mapping"
-
-#~ msgid "Downloading"
-#~ msgstr "Lade herunter"
+#~ msgstr "Mip-Mapování"

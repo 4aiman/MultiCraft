@@ -1225,7 +1225,7 @@ multicraft.register_node("default:chest", {
        if fields.exit then
           print('test')
           fields.quit = true
-      --    minetest.show_formspec(sender:get_player_name(), 'quit', "")
+      --    multicraft.show_formspec(sender:get_player_name(), 'quit', "")
        end
     end
 })

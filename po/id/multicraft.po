@@ -1,163 +1,166 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Indonesian translation for multicraft-c55 package.
+# Copyright (C) 2014 srifqi
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Muhammad Rifqi Priyo Susanto <muhammadrifqipriyosusanto@gmail.com>, 2014.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: minetest\n"
+"Project-Id-Version: multicraft\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-13 15:24+0100\n"
-"PO-Revision-Date: 2013-12-29 16:58+0200\n"
-"Last-Translator: Сергей Голубев <seria-2@mail.ru>\n"
-"Language-Team: Russian\n"
-"Language: ru\n"
+"PO-Revision-Date: 2015-03-02 00:21+0700\n"
+"Last-Translator: Muhammad Rifqi Priyo Susanto "
+"<muhammadrifqipriyosusanto@gmail.com>\n"
+"Language-Team: Bahasa Indonesia <>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 1.7-dev\n"
 
 #: builtin/fstk/ui.lua:67
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oke"
 
 #: builtin/mainmenu/dlg_config_world.lua:26
 msgid "World:"
-msgstr "Мир:"
+msgstr "Dunia:"
 
 #: builtin/mainmenu/dlg_config_world.lua:30
 #: builtin/mainmenu/dlg_config_world.lua:32
 msgid "Hide Game"
-msgstr "Скрыть игру"
+msgstr ""
+"Sembunyikan\n"
+"permainan"
 
 #: builtin/mainmenu/dlg_config_world.lua:36
 #: builtin/mainmenu/dlg_config_world.lua:38
 msgid "Hide mp content"
-msgstr "Скрыть содержимое модпака"
+msgstr ""
+"Sembunyikan\n"
+"konten pm"
 
 #: builtin/mainmenu/dlg_config_world.lua:46
 msgid "Mod:"
-msgstr "Мод:"
+msgstr "Mod:"
 
 #: builtin/mainmenu/dlg_config_world.lua:48
 msgid "Depends:"
-msgstr "Зависит от:"
+msgstr "Bergantung pada:"
 
 #: builtin/mainmenu/dlg_config_world.lua:51 src/guiKeyChangeMenu.cpp:191
 msgid "Save"
-msgstr "Сохранить"
+msgstr "Simpan"
 
 #: builtin/mainmenu/dlg_config_world.lua:52
 #: builtin/mainmenu/dlg_create_world.lua:64
 #: builtin/mainmenu/dlg_rename_modpack.lua:33 src/guiKeyChangeMenu.cpp:199
 #: src/keycode.cpp:224
 msgid "Cancel"
-msgstr "Отменить"
+msgstr "Batal"
 
 #: builtin/mainmenu/dlg_config_world.lua:68
 msgid "Enable MP"
-msgstr "Включить мультиплеер"
+msgstr "Aktifkan PM"
 
 #: builtin/mainmenu/dlg_config_world.lua:70
 msgid "Disable MP"
-msgstr "Отключить мультиплеер"
+msgstr "Nonaktifkan PM"
 
 #: builtin/mainmenu/dlg_config_world.lua:74
 #: builtin/mainmenu/dlg_config_world.lua:76
 msgid "enabled"
-msgstr "включено"
+msgstr "diaktifkan"
 
 #: builtin/mainmenu/dlg_config_world.lua:82
 msgid "Enable all"
-msgstr "Включить всё"
+msgstr "Aktifkan semua"
 
 #: builtin/mainmenu/dlg_create_world.lua:50
 msgid "World name"
-msgstr "Название мира"
+msgstr "Nama dunia"
 
 #: builtin/mainmenu/dlg_create_world.lua:53
 msgid "Seed"
-msgstr "Сид"
+msgstr "Seed"
 
 #: builtin/mainmenu/dlg_create_world.lua:56
 msgid "Mapgen"
-msgstr "Генератор карты"
+msgstr "Generator peta"
 
 #: builtin/mainmenu/dlg_create_world.lua:59
 msgid "Game"
-msgstr "Игра"
+msgstr "Permainan"
 
 #: builtin/mainmenu/dlg_create_world.lua:63
 msgid "Create"
-msgstr "Создать"
+msgstr "Buat"
 
 #: builtin/mainmenu/dlg_create_world.lua:68
 msgid "You have no subgames installed."
-msgstr ""
+msgstr "Kamu tidak punya sub-permainan terpasang"
 
 #: builtin/mainmenu/dlg_create_world.lua:69
 msgid "Download one from minetest.net"
-msgstr ""
+msgstr "Unduh satu dari minetest.net"
 
 #: builtin/mainmenu/dlg_create_world.lua:72
 msgid "Warning: The minimal development test is meant for developers."
-msgstr ""
+msgstr "Peringatan: minimal development test ditujukan untuk pengembang."
 
 #: builtin/mainmenu/dlg_create_world.lua:73
-msgid "Download a subgame, such as minetest_game, from minetest.net"
-msgstr ""
+msgid "Download a subgame, such as multicraft_game, from minetest.net"
+msgstr "Unduh sebuah sub-permainan, seperti multicraft_game, dari minetest.net"
 
 #: builtin/mainmenu/dlg_create_world.lua:97
 msgid "A world named \"$1\" already exists"
-msgstr "Мир под названием \"$1\" уже существует"
+msgstr "Dunia bernama \"$1\" telah ada"
 
 #: builtin/mainmenu/dlg_create_world.lua:116
 msgid "No worldname given or no game selected"
-msgstr "Не задано имя мира или не выбрана игра"
+msgstr "Tidak ada nama atau permainan yang dipilih"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:26
 msgid "Are you sure you want to delete \"$1\"?"
-msgstr "Уверены, что хотите удалить \"$1\"?"
+msgstr "Kamu yakin ingin menghapus \"$1\"?"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:27
 #: builtin/mainmenu/dlg_delete_world.lua:25
 #: builtin/mainmenu/tab_settings.lua:25
 msgid "Yes"
-msgstr "Да"
+msgstr "Ya"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:28
 msgid "No of course not!"
-msgstr "Никак нет!"
+msgstr "Tentu tidak!"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:41
 msgid "Modmgr: failed to delete \"$1\""
-msgstr "Modmgr: невозможно удалить \"$1\""
+msgstr "Pengelola mod: gagal untuk menghapus \"$1\""
 
 #: builtin/mainmenu/dlg_delete_mod.lua:45
 msgid "Modmgr: invalid modpath \"$1\""
-msgstr "Modmgr: неправильный путь \"$1\""
+msgstr "Pengelola mod: jalur mod tidak sah"
 
 #: builtin/mainmenu/dlg_delete_world.lua:24
 msgid "Delete World \"$1\"?"
-msgstr "Удалить мир \"$1\"?"
+msgstr "Hapus Dunia \"$1\"?"
 
 #: builtin/mainmenu/dlg_delete_world.lua:26
 msgid "No"
-msgstr "Нет"
+msgstr "Tidak"
 
 #: builtin/mainmenu/dlg_rename_modpack.lua:26
 msgid "Rename Modpack:"
-msgstr "Переименовать модпак:"
+msgstr "Ganti Nama Paket Mod:"
 
 #: builtin/mainmenu/dlg_rename_modpack.lua:31 src/keycode.cpp:228
 msgid "Accept"
-msgstr "Принять"
+msgstr "Setuju"
 
 #: builtin/mainmenu/modmgr.lua:342
 msgid "Install Mod: file: \"$1\""
-msgstr "Установка мода: файл \"$1\""
+msgstr "Pemasangan Mod: berkas: \"$1\""
 
 #: builtin/mainmenu/modmgr.lua:343
 #, fuzzy
@@ -166,180 +169,180 @@ msgid ""
 "Install Mod: unsupported filetype \"$1\" or broken archive"
 msgstr ""
 "\n"
-"Установка мода: неподдерживаемый тип \"$1\""
+"Pemasangan Mod: tipe berkas tidak didukung \"$1\" atau kerusakan arsip"
 
 #: builtin/mainmenu/modmgr.lua:363
 msgid "Failed to install $1 to $2"
-msgstr "Ошибка при установке $1 в $2"
+msgstr "Gagal untuk memasang $1 ke $2"
 
 #: builtin/mainmenu/modmgr.lua:366
 msgid "Install Mod: unable to find suitable foldername for modpack $1"
 msgstr ""
-"Установка мода: невозможно найти подходящее имя директории для модпака $1"
+"Pemasangan Mod: tidak dapat mencari nama folder yang sesuai untuk paket mod "
+"$1"
 
 #: builtin/mainmenu/modmgr.lua:386
 msgid "Install Mod: unable to find real modname for: $1"
-msgstr "Установка мода: невозможно определить название мода для $1"
+msgstr "Pemasangan Mod: tidak dapat mencari nama yang sebenarnya dari: $1"
 
 #: builtin/mainmenu/store.lua:88
 msgid "Unsorted"
-msgstr ""
+msgstr "Tidak diurutkan"
 
 #: builtin/mainmenu/store.lua:99 builtin/mainmenu/store.lua:584
 msgid "Search"
-msgstr ""
+msgstr "Cari"
 
 #: builtin/mainmenu/store.lua:125
-#, fuzzy
 msgid "Downloading"
-msgstr "Загрузить"
+msgstr "Mengunduh"
 
 #: builtin/mainmenu/store.lua:127
 msgid "please wait..."
-msgstr ""
+msgstr "mohon tunggu..."
 
 #: builtin/mainmenu/store.lua:159
 msgid "Successfully installed:"
-msgstr ""
+msgstr "Berhasil dipasang:"
 
 #: builtin/mainmenu/store.lua:163
 #, fuzzy
 msgid "Shortname:"
-msgstr "Название мира"
+msgstr "Nama pendek:"
 
 #: builtin/mainmenu/store.lua:167 src/guiFormSpecMenu.cpp:2866
 msgid "ok"
-msgstr ""
+msgstr "oke"
 
 #: builtin/mainmenu/store.lua:476
 msgid "Rating"
-msgstr "Рейтинг"
+msgstr "Peringkat"
 
 #: builtin/mainmenu/store.lua:501
 msgid "re-Install"
-msgstr "Переустановить"
+msgstr "Pasang ulang"
 
 #: builtin/mainmenu/store.lua:503
 msgid "Install"
-msgstr "Установить"
+msgstr "Pasang"
 
 #: builtin/mainmenu/store.lua:522
 msgid "Close store"
-msgstr ""
+msgstr "Tutup toko"
 
 #: builtin/mainmenu/store.lua:530
 msgid "Page $1 of $2"
-msgstr "Страница $1 из $2"
+msgstr "Halaman $1 dari $2"
 
 #: builtin/mainmenu/tab_credits.lua:22
 msgid "Credits"
-msgstr "Благодарности"
+msgstr "Penghargaan"
 
 #: builtin/mainmenu/tab_credits.lua:29
 msgid "Core Developers"
-msgstr "Основные разработчики"
+msgstr "Pengembang Inti"
 
 #: builtin/mainmenu/tab_credits.lua:43
 msgid "Active Contributors"
-msgstr "Активные контрибьюторы"
+msgstr "Kontributor Aktif"
 
 #: builtin/mainmenu/tab_credits.lua:48
 msgid "Previous Contributors"
-msgstr "В отставке"
+msgstr "Kontributor Sebelumnya"
 
 #: builtin/mainmenu/tab_mods.lua:30
 msgid "Installed Mods:"
-msgstr "Установленные моды:"
+msgstr "Mod Terpasang:"
 
 #: builtin/mainmenu/tab_mods.lua:39
 msgid "Online mod repository"
-msgstr "Онлайн хранилище модов"
+msgstr "Gudang mod daring"
 
 #: builtin/mainmenu/tab_mods.lua:78
 msgid "No mod description available"
-msgstr "Описание к моду отсутствует"
+msgstr "Tidak ada deskripsi mod tersedia"
 
 #: builtin/mainmenu/tab_mods.lua:82
 msgid "Mod information:"
-msgstr "Описание мода:"
+msgstr "Informasi mod:"
 
 #: builtin/mainmenu/tab_mods.lua:93
 msgid "Rename"
-msgstr "Переименовать"
+msgstr "Ganti Nama"
 
 #: builtin/mainmenu/tab_mods.lua:95
 msgid "Uninstall selected modpack"
-msgstr "Удалить выбранный мод-пак"
+msgstr "Copot pemasangan paket mod terpilih"
 
 #: builtin/mainmenu/tab_mods.lua:106
 msgid "Uninstall selected mod"
-msgstr "Удалить выбранный мод"
+msgstr "Copot pemasangan mod terpilih"
 
 #: builtin/mainmenu/tab_mods.lua:121
 msgid "Select Mod File:"
-msgstr "Выберите файл с модом:"
+msgstr "Pilih Berkas Mod:"
 
 #: builtin/mainmenu/tab_mods.lua:165
 msgid "Mods"
-msgstr "Моды"
+msgstr "Mod"
 
 #: builtin/mainmenu/tab_multiplayer.lua:23
 msgid "Address/Port"
-msgstr "Адрес/Порт"
+msgstr "Alamat/Port"
 
 #: builtin/mainmenu/tab_multiplayer.lua:24 builtin/mainmenu/tab_server.lua:37
 #: builtin/mainmenu/tab_simple_main.lua:25
 msgid "Name/Password"
-msgstr "Имя/Пароль"
+msgstr "Nama/Kata sandi"
 
 #: builtin/mainmenu/tab_multiplayer.lua:29
 #: builtin/mainmenu/tab_simple_main.lua:30
 msgid "Public Serverlist"
-msgstr "Список публичных серверов"
+msgstr "Daftar Server Publik"
 
 #: builtin/mainmenu/tab_multiplayer.lua:34 builtin/mainmenu/tab_server.lua:26
 #: builtin/mainmenu/tab_singleplayer.lua:85 src/keycode.cpp:230
 msgid "Delete"
-msgstr "Удалить"
+msgstr "Hapus"
 
 #: builtin/mainmenu/tab_multiplayer.lua:38
 #: builtin/mainmenu/tab_simple_main.lua:34
 msgid "Connect"
-msgstr "Подключиться"
+msgstr "Sambung"
 
 #: builtin/mainmenu/tab_multiplayer.lua:252
 msgid "Client"
-msgstr "Клиент"
+msgstr "Klien"
 
 #: builtin/mainmenu/tab_server.lua:27 builtin/mainmenu/tab_singleplayer.lua:86
 msgid "New"
-msgstr "Новый"
+msgstr "Baru"
 
 #: builtin/mainmenu/tab_server.lua:28 builtin/mainmenu/tab_singleplayer.lua:87
 msgid "Configure"
-msgstr "Настроить"
+msgstr "Konfigurasi"
 
 #: builtin/mainmenu/tab_server.lua:29
 msgid "Start Game"
-msgstr "Начать игру"
+msgstr "Mulai Permainan"
 
 #: builtin/mainmenu/tab_server.lua:30 builtin/mainmenu/tab_singleplayer.lua:89
 msgid "Select World:"
-msgstr "Выберите мир:"
+msgstr "Pilih Dunia:"
 
 #: builtin/mainmenu/tab_server.lua:31 builtin/mainmenu/tab_simple_main.lua:63
 #: builtin/mainmenu/tab_singleplayer.lua:90
 msgid "Creative Mode"
-msgstr "Режим создания"
+msgstr "Mode Kreatif"
 
 #: builtin/mainmenu/tab_server.lua:33 builtin/mainmenu/tab_simple_main.lua:65
 #: builtin/mainmenu/tab_singleplayer.lua:92
 msgid "Enable Damage"
-msgstr "Включить урон"
+msgstr "Aktifkan Kerusakan"
 
 #: builtin/mainmenu/tab_server.lua:35
 msgid "Public"
-msgstr "Публичные"
+msgstr "Publik"
 
 #: builtin/mainmenu/tab_server.lua:45
 msgid "Bind Address"
@@ -347,203 +350,203 @@ msgstr ""
 
 #: builtin/mainmenu/tab_server.lua:47
 msgid "Port"
-msgstr ""
+msgstr "Port"
 
 #: builtin/mainmenu/tab_server.lua:51
 msgid "Server Port"
-msgstr "Порт"
+msgstr "Port Server"
 
 #: builtin/mainmenu/tab_server.lua:174
 msgid "Server"
-msgstr "Сервер"
+msgstr "Server"
 
 #: builtin/mainmenu/tab_settings.lua:23
 msgid "Are you sure to reset your singleplayer world?"
-msgstr ""
+msgstr "Yakin ingin mengaturulang dunia anda?"
 
 #: builtin/mainmenu/tab_settings.lua:27
 msgid "No!!!"
-msgstr ""
+msgstr "Tidak!!!"
 
 #: builtin/mainmenu/tab_settings.lua:134
 msgid "Smooth Lighting"
-msgstr "Мягкое освещение"
+msgstr "Pencahayaan Halus"
 
 #: builtin/mainmenu/tab_settings.lua:136
 msgid "Enable Particles"
-msgstr "Включить частицы"
+msgstr "Aktifkan Partikel"
 
 #: builtin/mainmenu/tab_settings.lua:138
 msgid "3D Clouds"
-msgstr "3D облака"
+msgstr "Awan 3D"
 
 #: builtin/mainmenu/tab_settings.lua:140
 #, fuzzy
 msgid "Fancy Trees"
-msgstr "Красивые деревья"
+msgstr "Pohon Indah"
 
 #: builtin/mainmenu/tab_settings.lua:142
 msgid "Opaque Water"
-msgstr "Непрозрачная вода"
+msgstr "Air Buram"
 
 #: builtin/mainmenu/tab_settings.lua:144
 #, fuzzy
 msgid "Connected Glass"
-msgstr "Подключиться"
+msgstr "Kaca Tersambung"
 
 #: builtin/mainmenu/tab_settings.lua:149
-msgid "Restart minetest for driver change to take effect"
-msgstr ""
+msgid "Restart multicraft for driver change to take effect"
+msgstr "Mulai ulang multicraft untuk beralih ke driver yang dipilih"
 
 #: builtin/mainmenu/tab_settings.lua:151
 msgid "Mip-Mapping"
-msgstr "Mip-текстурирование"
+msgstr "Mip-Mapping"
 
 #: builtin/mainmenu/tab_settings.lua:153
 msgid "Anisotropic Filtering"
-msgstr "Анизотропная фильтрация"
+msgstr "Anisotropic Filtering"
 
 #: builtin/mainmenu/tab_settings.lua:155
 msgid "Bi-Linear Filtering"
-msgstr "Билинейная фильтрация"
+msgstr "Bi-Linear Filtering"
 
 #: builtin/mainmenu/tab_settings.lua:157
 msgid "Tri-Linear Filtering"
-msgstr "Трилинейная фильтрация"
+msgstr "Tri-Linear Filtering"
 
 #: builtin/mainmenu/tab_settings.lua:160
 msgid "Shaders"
-msgstr "Шейдеры"
+msgstr "Shaders"
 
 #: builtin/mainmenu/tab_settings.lua:164
 msgid "Change keys"
-msgstr "Смена управления"
+msgstr "Ubah tombol"
 
 #: builtin/mainmenu/tab_settings.lua:167
 #, fuzzy
 msgid "Reset singleplayer world"
-msgstr "Одиночная игра"
+msgstr "Atur ulang dunia pemain tunggal"
 
 #: builtin/mainmenu/tab_settings.lua:171
 msgid "GUI scale factor"
-msgstr ""
+msgstr "Skala antarmuka"
 
 #: builtin/mainmenu/tab_settings.lua:175
 msgid "Scaling factor applied to menu elements: "
-msgstr ""
+msgstr "Faktor skala yang diatur untuk elemen menu: "
 
 #: builtin/mainmenu/tab_settings.lua:181
 msgid "Touch free target"
-msgstr ""
+msgstr "Bebas sentuhan"
 
 #: builtin/mainmenu/tab_settings.lua:187
 msgid "Touchthreshold (px)"
-msgstr ""
+msgstr "Batas sentuhan (px)"
 
 #: builtin/mainmenu/tab_settings.lua:194 builtin/mainmenu/tab_settings.lua:208
 #, fuzzy
 msgid "Bumpmapping"
-msgstr "Mip-текстурирование"
+msgstr "Bumpmapping"
 
 #: builtin/mainmenu/tab_settings.lua:196 builtin/mainmenu/tab_settings.lua:209
 msgid "Generate Normalmaps"
-msgstr ""
+msgstr "Gunakan Normalmaps"
 
 #: builtin/mainmenu/tab_settings.lua:198 builtin/mainmenu/tab_settings.lua:210
 msgid "Parallax Occlusion"
-msgstr ""
+msgstr "Parallax Occlusion"
 
 #: builtin/mainmenu/tab_settings.lua:200 builtin/mainmenu/tab_settings.lua:211
 msgid "Waving Water"
-msgstr ""
+msgstr "Air Berombak"
 
 #: builtin/mainmenu/tab_settings.lua:202 builtin/mainmenu/tab_settings.lua:212
 msgid "Waving Leaves"
-msgstr ""
+msgstr "Daun Melambai"
 
 #: builtin/mainmenu/tab_settings.lua:204 builtin/mainmenu/tab_settings.lua:213
 msgid "Waving Plants"
-msgstr ""
+msgstr "Tanaman Berayun"
 
 #: builtin/mainmenu/tab_settings.lua:255
 msgid "To enable shaders the OpenGL driver needs to be used."
-msgstr "Для включения шейдеров необходим драйвер OpenGL."
+msgstr "Untuk mengaktifkan shaders OpenGL driver harus digunakan."
 
 #: builtin/mainmenu/tab_settings.lua:330
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Pengaturan"
 
 #: builtin/mainmenu/tab_simple_main.lua:67
 msgid "Fly mode"
-msgstr ""
+msgstr "Mode terbang"
 
 #: builtin/mainmenu/tab_simple_main.lua:71
 #, fuzzy
 msgid "Start Singleplayer"
-msgstr "Одиночная игра"
+msgstr "Mulai Pemain Tunggal"
 
 #: builtin/mainmenu/tab_simple_main.lua:72
 #, fuzzy
 msgid "Config mods"
-msgstr "Настроить"
+msgstr "Konfigurasi mod"
 
 #: builtin/mainmenu/tab_simple_main.lua:191
 #, fuzzy
 msgid "Main"
-msgstr "Главное меню"
+msgstr "Beranda"
 
 #: builtin/mainmenu/tab_singleplayer.lua:88 src/keycode.cpp:249
 msgid "Play"
-msgstr "Играть"
+msgstr "Mainkan"
 
 #: builtin/mainmenu/tab_singleplayer.lua:224
 msgid "Singleplayer"
-msgstr "Одиночная игра"
+msgstr "Pemain Tunggal"
 
 #: builtin/mainmenu/tab_texturepacks.lua:49
 msgid "Select texture pack:"
-msgstr "Выберите пакет текстур:"
+msgstr "Pilih paket tekstur:"
 
 #: builtin/mainmenu/tab_texturepacks.lua:69
 msgid "No information available"
-msgstr "Описание отсутствует"
+msgstr "Tidak ada informasi tersedia"
 
 #: builtin/mainmenu/tab_texturepacks.lua:114
 #, fuzzy
 msgid "Texturepacks"
-msgstr "Пакеты текстур"
+msgstr "Paket Tekstur"
 
 #: src/client.cpp:2726
 msgid "Item textures..."
-msgstr "Текстуры предметов..."
+msgstr "Tekstur barang..."
 
 #: src/fontengine.cpp:70 src/fontengine.cpp:226
 msgid "needs_fallback_font"
-msgstr "no"
+msgstr "needs_fallback_font"
 
 #: src/game.cpp:1063
 msgid "Respawn"
-msgstr "Возродиться"
+msgstr "Bangkit"
 
 #: src/game.cpp:2250
 msgid "Item definitions..."
-msgstr "Описания предметов..."
+msgstr "Definisi barang..."
 
 #: src/game.cpp:2255
 msgid "Node definitions..."
-msgstr "Описания нод..."
+msgstr "Definisi node..."
 
 #: src/game.cpp:2262
 msgid "Media..."
-msgstr "Медиафайлы..."
+msgstr "Media..."
 
 #: src/game.cpp:2267
 msgid " KB/s"
-msgstr ""
+msgstr " KB/detik"
 
 #: src/game.cpp:2271
 msgid " MB/s"
-msgstr ""
+msgstr " MB/detik"
 
 #: src/game.cpp:4220
 msgid ""
@@ -551,161 +554,161 @@ msgid ""
 "Check debug.txt for details."
 msgstr ""
 "\n"
-"Подробная информация в debug.txt."
+"Cek debug.txt untuk detail."
 
 #: src/guiFormSpecMenu.cpp:2055
 msgid "Proceed"
-msgstr "Продолжить"
+msgstr "Lanjut"
 
 #: src/guiFormSpecMenu.cpp:2846
 msgid "Enter "
-msgstr ""
+msgstr "Masuk "
 
 #: src/guiKeyChangeMenu.cpp:125
-msgid "Keybindings. (If this menu screws up, remove stuff from minetest.conf)"
+msgid "Keybindings. (If this menu screws up, remove stuff from multicraft.conf)"
 msgstr ""
-"Сочетания клавиш. (Если это меню сломалось, удалите настройки из minetest."
-"conf)"
+"Pengaturan tombol. (Jika menu ini kacau, hapus pengaturan kontrol dari multicraft.conf)"
 
 #: src/guiKeyChangeMenu.cpp:165
 msgid "\"Use\" = climb down"
-msgstr "\"Использовать\" = вниз"
+msgstr "\"Pakai\" = turun"
 
 #: src/guiKeyChangeMenu.cpp:180
 msgid "Double tap \"jump\" to toggle fly"
-msgstr "Двойной прыжок = летать"
+msgstr "Tekan ganda \"lompat\" untuk\n"
+"beralih terbang"
 
 #: src/guiKeyChangeMenu.cpp:296
 msgid "Key already in use"
-msgstr "Клавиша уже используется"
+msgstr "Tombol telah terpakai"
 
 #: src/guiKeyChangeMenu.cpp:371
 msgid "press key"
-msgstr "нажмите клавишу"
+msgstr "tekan tombol"
 
 #: src/guiKeyChangeMenu.cpp:397
 msgid "Forward"
-msgstr "Вперед"
+msgstr "Maju"
 
 #: src/guiKeyChangeMenu.cpp:398
 msgid "Backward"
-msgstr "Назад"
+msgstr "Mundur"
 
 #: src/guiKeyChangeMenu.cpp:399 src/keycode.cpp:229
 msgid "Left"
-msgstr "Влево"
+msgstr "Kiri"
 
 #: src/guiKeyChangeMenu.cpp:400 src/keycode.cpp:229
 msgid "Right"
-msgstr "Вправо"
+msgstr "Kanan"
 
 #: src/guiKeyChangeMenu.cpp:401
 msgid "Use"
-msgstr "Использовать"
+msgstr "Pakai"
 
 #: src/guiKeyChangeMenu.cpp:402
 msgid "Jump"
-msgstr "Прыжок"
+msgstr "Lompat"
 
 #: src/guiKeyChangeMenu.cpp:403
 msgid "Sneak"
-msgstr "Красться"
+msgstr "Menyelinap"
 
 #: src/guiKeyChangeMenu.cpp:404
 msgid "Drop"
-msgstr "Бросить"
+msgstr "Jatuhkan"
 
 #: src/guiKeyChangeMenu.cpp:405
 msgid "Inventory"
-msgstr "Инвентарь"
+msgstr "Inventaris"
 
 #: src/guiKeyChangeMenu.cpp:406
 msgid "Chat"
-msgstr "Чат"
+msgstr "Obrolan"
 
 #: src/guiKeyChangeMenu.cpp:407
 msgid "Command"
-msgstr "Команда"
+msgstr "Perintah"
 
 #: src/guiKeyChangeMenu.cpp:408
 msgid "Console"
-msgstr "Консоль"
+msgstr "Konsol"
 
 #: src/guiKeyChangeMenu.cpp:409
 msgid "Toggle fly"
-msgstr "Полёт"
+msgstr "Terbang"
 
 #: src/guiKeyChangeMenu.cpp:410
 msgid "Toggle fast"
-msgstr "Ускорение"
+msgstr "Gerak cepat"
 
 #: src/guiKeyChangeMenu.cpp:411
 msgid "Toggle noclip"
-msgstr "Включить noclip"
+msgstr "Tembus blok"
 
 #: src/guiKeyChangeMenu.cpp:412
 msgid "Range select"
-msgstr "Зона видимости"
+msgstr "Jarak pandang"
 
 #: src/guiKeyChangeMenu.cpp:413
 msgid "Print stacks"
-msgstr "Печать стеков"
+msgstr "Cetak tumpukan"
 
 #: src/guiPasswordChange.cpp:106
 msgid "Old Password"
-msgstr "Старый пароль"
+msgstr "Kata Sandi Lama"
 
 #: src/guiPasswordChange.cpp:122
 msgid "New Password"
-msgstr "Новый пароль"
+msgstr "Kata Sandi Baru"
 
 #: src/guiPasswordChange.cpp:137
 msgid "Confirm Password"
-msgstr "Подтверждение пароля"
+msgstr "Konfirmasi Kata Sandi"
 
 #: src/guiPasswordChange.cpp:153
 msgid "Change"
-msgstr "Изменить"
+msgstr "Ubah"
 
 #: src/guiPasswordChange.cpp:162
 msgid "Passwords do not match!"
-msgstr "Пароли не совпадают!"
+msgstr "Kata sandi tidak cocok!"
 
 #: src/guiVolumeChange.cpp:106
 msgid "Sound Volume: "
-msgstr "Громкость звука: "
+msgstr "Volume Suara: "
 
 #: src/guiVolumeChange.cpp:120
 msgid "Exit"
-msgstr "Выход"
+msgstr "Keluar"
 
 #: src/keycode.cpp:224
 msgid "Left Button"
-msgstr "Левая кнопка"
+msgstr "Klik Kiri"
 
 #: src/keycode.cpp:224
 msgid "Middle Button"
-msgstr "Средняя кнопка"
+msgstr "Klik Tengah"
 
 #: src/keycode.cpp:224
 msgid "Right Button"
-msgstr "Правая кнопка"
+msgstr "Klik Kanan"
 
 #: src/keycode.cpp:224
 msgid "X Button 1"
-msgstr "Доп. кнопка 1"
+msgstr "Tombol X 1"
 
 #: src/keycode.cpp:225
 msgid "Back"
-msgstr "Назад"
+msgstr "Backspace"
 
 #: src/keycode.cpp:225
 msgid "Clear"
-msgstr "Очистить"
+msgstr "Bersihkan"
 
 #: src/keycode.cpp:225
 msgid "Return"
-msgstr "Вернуться"
+msgstr "Enter"
 
 #: src/keycode.cpp:225
 msgid "Tab"
@@ -713,7 +716,7 @@ msgstr "Tab"
 
 #: src/keycode.cpp:225
 msgid "X Button 2"
-msgstr "Доп. кнопка 2"
+msgstr "Tombol X 2"
 
 #: src/keycode.cpp:226
 msgid "Capital"
@@ -725,15 +728,15 @@ msgstr "Ctrl"
 
 #: src/keycode.cpp:226
 msgid "Kana"
-msgstr "Кана"
+msgstr "Kana"
 
 #: src/keycode.cpp:226
 msgid "Menu"
-msgstr "Меню"
+msgstr "Alt"
 
 #: src/keycode.cpp:226
 msgid "Pause"
-msgstr "Пауза"
+msgstr "Pause"
 
 #: src/keycode.cpp:226
 msgid "Shift"
@@ -741,15 +744,15 @@ msgstr "Shift"
 
 #: src/keycode.cpp:227
 msgid "Convert"
-msgstr "Преобразовать"
+msgstr "Convert"
 
 #: src/keycode.cpp:227
 msgid "Escape"
-msgstr "Escape"
+msgstr "Esc"
 
 #: src/keycode.cpp:227
 msgid "Final"
-msgstr "Конец"
+msgstr "Final"
 
 #: src/keycode.cpp:227
 msgid "Junja"
@@ -757,11 +760,11 @@ msgstr "Junja"
 
 #: src/keycode.cpp:227
 msgid "Kanji"
-msgstr "Кандзи"
+msgstr "Kanji"
 
 #: src/keycode.cpp:227
 msgid "Nonconvert"
-msgstr "Не преобразовано"
+msgstr "Nonconvert"
 
 #: src/keycode.cpp:228
 msgid "End"
@@ -777,23 +780,23 @@ msgstr "Mode Change"
 
 #: src/keycode.cpp:228
 msgid "Next"
-msgstr "Next"
+msgstr "Page Up"
 
 #: src/keycode.cpp:228
 msgid "Prior"
-msgstr "Prior"
+msgstr "Page Down"
 
 #: src/keycode.cpp:228
 msgid "Space"
-msgstr "Пробел"
+msgstr "Spasi"
 
 #: src/keycode.cpp:229
 msgid "Down"
-msgstr "Вниз"
+msgstr "Turun"
 
 #: src/keycode.cpp:229
 msgid "Execute"
-msgstr "Выполнить"
+msgstr "Execute"
 
 #: src/keycode.cpp:229
 msgid "Print"
@@ -801,15 +804,15 @@ msgstr "Print"
 
 #: src/keycode.cpp:229
 msgid "Select"
-msgstr "Выбор"
+msgstr "Select"
 
 #: src/keycode.cpp:229
 msgid "Up"
-msgstr "Вверх"
+msgstr "Atas"
 
 #: src/keycode.cpp:230
 msgid "Help"
-msgstr "Справка"
+msgstr "Help"
 
 #: src/keycode.cpp:230
 msgid "Insert"
@@ -817,27 +820,27 @@ msgstr "Insert"
 
 #: src/keycode.cpp:230
 msgid "Snapshot"
-msgstr "Cнимок"
+msgstr "Snapshot"
 
 #: src/keycode.cpp:233
 msgid "Left Windows"
-msgstr "Левая кл. Win"
+msgstr "Start Kiri"
 
 #: src/keycode.cpp:234
 msgid "Apps"
-msgstr "Приложения"
+msgstr "Tombol Menu"
 
 #: src/keycode.cpp:234
 msgid "Numpad 0"
-msgstr "Доп. клав. 0"
+msgstr "Numpad 0"
 
 #: src/keycode.cpp:234
 msgid "Numpad 1"
-msgstr "Доп. клав. 1"
+msgstr "Numpad 1"
 
 #: src/keycode.cpp:234
 msgid "Right Windows"
-msgstr "Прав. кл. Win"
+msgstr "Start Kanan"
 
 #: src/keycode.cpp:234
 msgid "Sleep"
@@ -845,51 +848,51 @@ msgstr "Sleep"
 
 #: src/keycode.cpp:235
 msgid "Numpad 2"
-msgstr "Доп. клав. 2"
+msgstr "Numpad 2"
 
 #: src/keycode.cpp:235
 msgid "Numpad 3"
-msgstr "Доп. клав. 3"
+msgstr "Numpad 3"
 
 #: src/keycode.cpp:235
 msgid "Numpad 4"
-msgstr "Доп. клав. 4"
+msgstr "Numpad 4"
 
 #: src/keycode.cpp:235
 msgid "Numpad 5"
-msgstr "Доп. клав. 5"
+msgstr "Numpad 5"
 
 #: src/keycode.cpp:235
 msgid "Numpad 6"
-msgstr "Доп. клав. 6"
+msgstr "Numpad 6"
 
 #: src/keycode.cpp:235
 msgid "Numpad 7"
-msgstr "Доп. клав. 7"
+msgstr "Numpad 7"
 
 #: src/keycode.cpp:236
 msgid "Numpad *"
-msgstr "Доп. клав. *"
+msgstr "Numpad *"
 
 #: src/keycode.cpp:236
 msgid "Numpad +"
-msgstr "Доп. клав. +"
+msgstr "Numpad +"
 
 #: src/keycode.cpp:236
 msgid "Numpad -"
-msgstr "Доп. клав. -"
+msgstr "Numpad -"
 
 #: src/keycode.cpp:236
 msgid "Numpad /"
-msgstr "Доп. клав. /"
+msgstr "Numpad /"
 
 #: src/keycode.cpp:236
 msgid "Numpad 8"
-msgstr "Доп. клав. 8"
+msgstr "Numpad 8"
 
 #: src/keycode.cpp:236
 msgid "Numpad 9"
-msgstr "Доп. клав. 9"
+msgstr "Numpad 9"
 
 #: src/keycode.cpp:240
 msgid "Num Lock"
@@ -901,47 +904,47 @@ msgstr "Scroll Lock"
 
 #: src/keycode.cpp:241
 msgid "Left Shift"
-msgstr "Левый Shift"
+msgstr "Shift Kiri"
 
 #: src/keycode.cpp:241
 msgid "Right Shift"
-msgstr "Правый Shift"
+msgstr "Shift Kanan"
 
 #: src/keycode.cpp:242
 msgid "Left Control"
-msgstr "Левый Ctrl"
+msgstr "Ctrl Kiri"
 
 #: src/keycode.cpp:242
 msgid "Left Menu"
-msgstr "Левая клавиша меню"
+msgstr "Left Menu"
 
 #: src/keycode.cpp:242
 msgid "Right Control"
-msgstr "Правый Ctrl"
+msgstr "Ctrl Kanan"
 
 #: src/keycode.cpp:242
 msgid "Right Menu"
-msgstr "Правая клавиша меню"
+msgstr "Right Menu"
 
 #: src/keycode.cpp:244
 msgid "Comma"
-msgstr "Запятая"
+msgstr "Koma"
 
 #: src/keycode.cpp:244
 msgid "Minus"
-msgstr "Минус"
+msgstr "Kurang"
 
 #: src/keycode.cpp:244
 msgid "Period"
-msgstr "Период"
+msgstr "Titik"
 
 #: src/keycode.cpp:244
 msgid "Plus"
-msgstr "Плюс"
+msgstr "Tambah"
 
 #: src/keycode.cpp:248
 msgid "Attn"
-msgstr "Внимание"
+msgstr "Attn"
 
 #: src/keycode.cpp:248
 msgid "CrSel"
@@ -949,7 +952,7 @@ msgstr "CrSel"
 
 #: src/keycode.cpp:249
 msgid "Erase OEF"
-msgstr "Стереть ОНС"
+msgstr "Erase OEF"
 
 #: src/keycode.cpp:249
 msgid "ExSel"
@@ -957,7 +960,7 @@ msgstr "ExSel"
 
 #: src/keycode.cpp:249
 msgid "OEM Clear"
-msgstr "Очистить OEM"
+msgstr "OEM Clear"
 
 #: src/keycode.cpp:249
 msgid "PA1"
@@ -965,253 +968,32 @@ msgstr "PA1"
 
 #: src/keycode.cpp:249
 msgid "Zoom"
-msgstr "Масштаб"
+msgstr "Zoom"
 
 #: src/main.cpp:1681
 msgid "Main Menu"
-msgstr "Главное меню"
+msgstr "Menu Utama"
 
 #: src/main.cpp:1719
 msgid "Player name too long."
-msgstr ""
+msgstr "Nama pemain terlalu panjang."
 
 #: src/main.cpp:1757
 msgid "Connection error (timed out?)"
-msgstr "Ошибка соединения (таймаут?)"
+msgstr "Koneksi rusak (terlalu lama?)"
 
 #: src/main.cpp:1919
 msgid "No world selected and no address provided. Nothing to do."
-msgstr "Не выбран мир и не введен адрес."
+msgstr "Tidak ada dunia yang dipilih dan tidak ada alamat yang diberikan."
 
 #: src/main.cpp:1926
 msgid "Provided world path doesn't exist: "
-msgstr ""
+msgstr "Jalur dunia yang diberikan tidak ada: "
 
 #: src/main.cpp:1935
 msgid "Could not find or load game \""
-msgstr "Невозможно найти или загрузить игру \""
+msgstr "Tidak dapat mencari atau memuat permainan \""
 
 #: src/main.cpp:1953
 msgid "Invalid gamespec."
-msgstr "Неправильная конфигурация игры."
-
-#~ msgid "Left click: Move all items, Right click: Move single item"
-#~ msgstr "ЛКМ: Переместить все предметы, ПКМ: Переместить один предмет"
-
-#~ msgid "is required by:"
-#~ msgstr "требуется для:"
-
-#~ msgid "Configuration saved.  "
-#~ msgstr "Настройки сохранены.  "
-
-#~ msgid "Warning: Configuration not consistent.  "
-#~ msgstr "Предупреждение: Неверная конфигурация.  "
-
-#~ msgid "Cannot create world: Name contains invalid characters"
-#~ msgstr "Невозможно создать мир: Имя содержит недопустимые символы"
-
-#~ msgid "Multiplayer"
-#~ msgstr "Сетевая игра"
-
-#~ msgid "Advanced"
-#~ msgstr "Дополнительно"
-
-#~ msgid "Show Public"
-#~ msgstr "Публичные"
-
-#~ msgid "Show Favorites"
-#~ msgstr "Избранные"
-
-#~ msgid "Leave address blank to start a local server."
-#~ msgstr "Оставьте адрес пустым для запуска локального сервера."
-
-#~ msgid "Create world"
-#~ msgstr "Создать мир"
-
-#~ msgid "Address required."
-#~ msgstr "Нужно ввести адрес."
-
-#~ msgid "Cannot delete world: Nothing selected"
-#~ msgstr "Невозможно удалить мир: Ничего не выбрано"
-
-#~ msgid "Files to be deleted"
-#~ msgstr "Следующие файлы будут удалены"
-
-#~ msgid "Cannot create world: No games found"
-#~ msgstr "Невозможно создать мир: Ни одной игры не найдено"
-
-#~ msgid "Cannot configure world: Nothing selected"
-#~ msgstr "Невозможно настроить мир: ничего не выбрано"
-
-#~ msgid "Failed to delete all world files"
-#~ msgstr "Ошибка при удалении файлов мира"
-
-#~ msgid ""
-#~ "Default Controls:\n"
-#~ "- WASD: Walk\n"
-#~ "- Mouse left: dig/hit\n"
-#~ "- Mouse right: place/use\n"
-#~ "- Mouse wheel: select item\n"
-#~ "- 0...9: select item\n"
-#~ "- Shift: sneak\n"
-#~ "- R: Toggle viewing all loaded chunks\n"
-#~ "- I: Inventory menu\n"
-#~ "- ESC: This menu\n"
-#~ "- T: Chat\n"
-#~ msgstr ""
-#~ "Управление по умолчанию:\n"
-#~ "- WASD: перемещение\n"
-#~ "- ЛКМ: копать/ударить\n"
-#~ "- ПКМ: поставить/использовать\n"
-#~ "- Колесо мыши: выбор предмета\n"
-#~ "- 0...9: выбор предмета\n"
-#~ "- Shift: красться\n"
-#~ "- R: смотреть далеко\n"
-#~ "- I: инвентарь\n"
-#~ "- ESC: это меню\n"
-#~ "- T: чат\n"
-
-#~ msgid ""
-#~ "Warning: Some configured mods are missing.\n"
-#~ "Their setting will be removed when you save the configuration.  "
-#~ msgstr ""
-#~ "Предупреждение: Некоторые моды не найдены.\n"
-#~ "Их настройки будут удалены, когда вы сохраните конфигурацию.  "
-
-#~ msgid ""
-#~ "Warning: Some mods are not configured yet.\n"
-#~ "They will be enabled by default when you save the configuration.  "
-#~ msgstr ""
-#~ "Предупреждение: Некоторые моды еще не настроены.\n"
-#~ "Их стандартные настройки будут установлены, когда вы сохраните "
-#~ "конфигурацию.  "
-
-#~ msgid ""
-#~ "Default Controls:\n"
-#~ "- WASD: move\n"
-#~ "- Space: jump/climb\n"
-#~ "- Shift: sneak/go down\n"
-#~ "- Q: drop item\n"
-#~ "- I: inventory\n"
-#~ "- Mouse: turn/look\n"
-#~ "- Mouse left: dig/punch\n"
-#~ "- Mouse right: place/use\n"
-#~ "- Mouse wheel: select item\n"
-#~ "- T: chat\n"
-#~ msgstr ""
-#~ "Управление по умолчанию:\n"
-#~ "- WASD: движение\n"
-#~ "- Пробел: прыжок/вверх\n"
-#~ "- Shift: красться/вниз\n"
-#~ "- Q: бросить предмет\n"
-#~ "- I: инвентарь\n"
-#~ "- Мышка: поворот\n"
-#~ "- ЛКМ: копать/удар\n"
-#~ "- ПКМ: поставить/использовать\n"
-#~ "- Колесико мыши: выбор предмета\n"
-#~ "- T: чат\n"
-
-#~ msgid "Exit to OS"
-#~ msgstr "Выход в ОС"
-
-#~ msgid "Exit to Menu"
-#~ msgstr "Выход в меню"
-
-#~ msgid "Sound Volume"
-#~ msgstr "Громкость звука"
-
-#~ msgid "Change Password"
-#~ msgstr "Изменить пароль"
-
-#~ msgid "Continue"
-#~ msgstr "Продолжить"
-
-#~ msgid "You died."
-#~ msgstr "Вы умерли."
-
-#~ msgid "Shutting down stuff..."
-#~ msgstr "Завершение работы..."
-
-#~ msgid "Connecting to server..."
-#~ msgstr "Подключение к серверу..."
-
-#~ msgid "Resolving address..."
-#~ msgstr "Получение адреса..."
-
-#~ msgid "Creating client..."
-#~ msgstr "Создание клиента..."
-
-#~ msgid "Creating server...."
-#~ msgstr "Создание сервера..."
-
-#~ msgid "Loading..."
-#~ msgstr "Загрузка..."
-
-#~ msgid "Local install"
-#~ msgstr "Локальная установка"
-
-#~ msgid "Add mod:"
-#~ msgstr "Добавить мод:"
-
-#~ msgid "MODS"
-#~ msgstr "МОДЫ"
-
-#~ msgid "TEXTURE PACKS"
-#~ msgstr "ПАКЕТЫ ТЕКСТУР"
-
-#~ msgid "SINGLE PLAYER"
-#~ msgstr "ОДИНОЧНАЯ ИГРА"
-
-#~ msgid "Finite Liquid"
-#~ msgstr "Конечные жидкости"
-
-#~ msgid "Preload item visuals"
-#~ msgstr "Предзагрузка изображений"
-
-#~ msgid "SETTINGS"
-#~ msgstr "НАСТРОЙКИ"
-
-#~ msgid "Password"
-#~ msgstr "Пароль"
-
-#~ msgid "Name"
-#~ msgstr "Имя"
-
-#~ msgid "START SERVER"
-#~ msgstr "СЕРВЕР"
-
-#~ msgid "Favorites:"
-#~ msgstr "Избранное:"
-
-#~ msgid "CLIENT"
-#~ msgstr "КЛИЕНТ"
-
-#~ msgid "<<-- Add mod"
-#~ msgstr "<<-- Добавить мод"
-
-#~ msgid "Remove selected mod"
-#~ msgstr "Удалить мод"
-
-#~ msgid "EDIT GAME"
-#~ msgstr "РЕДАКТИРОВАНИЕ"
-
-#~ msgid "new game"
-#~ msgstr "Создать игру"
-
-#~ msgid "edit game"
-#~ msgstr "Редактировать"
-
-#~ msgid "Mods:"
-#~ msgstr "Моды:"
-
-#~ msgid "Games"
-#~ msgstr "Игры"
-
-#~ msgid "GAMES"
-#~ msgstr "ИГРЫ"
-
-#~ msgid "Gamemgr: Unable to copy mod \"$1\" to game \"$2\""
-#~ msgstr "Gamemgr: Не могу скопировать мод \"$1\" в игру \"$2\""
-
-#~ msgid "Game Name"
-#~ msgstr "Название"
+msgstr "Spesifikasi permainan tidak sah."

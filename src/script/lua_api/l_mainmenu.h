@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 sapier
 
 This program is free software; you can redistribute it and/or modify
@@ -53,11 +53,11 @@ private:
 	static int getBoolData(lua_State *L, std::string name,bool& valid);
 
 	/**
-	 * check if a path is within some of minetests folders
+	 * check if a path is within some of multicrafts folders
 	 * @param path path to check
 	 * @return true/false
 	 */
-	static bool isMinetestPath(std::string path);
+	static bool isMultiCraftPath(std::string path);
 
 	//api calls
 

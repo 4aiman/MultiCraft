@@ -1,4 +1,4 @@
---Minetest
+--MultiCraft
 --Copyright (C) 2014 sapier
 --
 --This program is free software; you can redistribute it and/or modify
@@ -75,7 +75,7 @@ local function create_world_formspec(dialogdata)
         elseif #gamemgr.games == 1 and gamemgr.games[1].id == "minimal" then
                 retval = retval .. "box[3.50,7;9,1;#ff8800]label[3.75,7;" ..
                                 fgettext("Warning: The minimal development test is meant for developers.") .. "]label[3.75,7.4;" ..
-                                fgettext("Download a subgame, such as minetest_game, from minetest.net") .. "]"
+                                fgettext("Download a subgame, such as multicraft_game, from minetest.net") .. "]"
         end
 
         return retval

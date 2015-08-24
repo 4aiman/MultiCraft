@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 celeron55, Perttu Ahola <celeron55@gmail.com>
 
 This program is free software; you can redistribute it and/or modify
@@ -157,7 +157,7 @@ void ClientMediaDownloader::step(Client *client)
 			startRemoteMediaTransfers();
 
 		// Did all remote transfers end and no new ones can be started?
-		// If so, request still missing files from the minetest server
+		// If so, request still missing files from the multicraft server
 		// (Or report that we have all files.)
 		if (m_httpfetch_active == 0) {
 			if (m_uncached_received_count < m_uncached_count) {
@@ -487,7 +487,7 @@ void ClientMediaDownloader::startConventionalTransfers(Client *client)
 
 	if (m_uncached_received_count != m_uncached_count) {
 		// Some media files have not been received yet, use the
-		// conventional slow method (minetest protocol) to get them
+		// conventional slow method (multicraft protocol) to get them
 		std::vector<std::string> file_requests;
 		for (std::map<std::string, FileStatus*>::iterator
 				it = m_files.begin();
@@ -591,7 +591,7 @@ bool ClientMediaDownloader::checkAndLoad(
 
 
 /*
-	Minetest Hashset File Format
+	MultiCraft Hashset File Format
 
 	All values are stored in big-endian byte order.
 	[u32] signature: 'MTHS'

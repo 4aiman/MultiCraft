@@ -1,4 +1,4 @@
--- Minetest: builtin/item.lua
+-- MultiCraft: builtin/item.lua
 
 local function copy_pointed_thing(pointed_thing)
 	return {

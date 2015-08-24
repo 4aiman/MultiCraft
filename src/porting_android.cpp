@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2014 celeron55, Perttu Ahola <celeron55@gmail.com>
 
 This program is free software; you can redistribute it and/or modify
@@ -63,7 +63,7 @@ void android_main(android_app *app)
 	}
 
 	porting::cleanupAndroid();
-	errorstream << "Shutting down minetest." << std::endl;
+	errorstream << "Shutting down multicraft." << std::endl;
 
 	exit(0);
 }
@@ -139,7 +139,7 @@ void initAndroid()
 	JavaVM *jvm = app_global->activity->vm;
 	JavaVMAttachArgs lJavaVMAttachArgs;
 	lJavaVMAttachArgs.version = JNI_VERSION_1_6;
-	lJavaVMAttachArgs.name = "MinetestNativeThread";
+	lJavaVMAttachArgs.name = "MultiCraftNativeThread";
 	lJavaVMAttachArgs.group = NULL;
 #ifdef NDEBUG
 	// This is a ugly hack as arm v7a non debuggable builds crash without this
@@ -162,7 +162,7 @@ void initAndroid()
 	/* in the start-up code */
 	__android_log_print(ANDROID_LOG_ERROR, PROJECT_NAME,
 			"Initializing GPROF profiler");
-	monstartup("libminetest.so");
+	monstartup("libmulticraft.so");
 #endif
 }
 

@@ -1,4 +1,4 @@
--- Minetest: builtin/privileges.lua
+-- MultiCraft: builtin/privileges.lua
 
 --
 -- Privileges

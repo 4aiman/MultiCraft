@@ -1,4 +1,4 @@
--- Minetest: builtin/chatcommands.lua
+-- MultiCraft: builtin/chatcommands.lua
 
 --
 -- Chat command handler

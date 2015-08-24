@@ -1,6 +1,6 @@
 DOXYFILE_ENCODING      = UTF-8
 
-PROJECT_NAME           = "Minetest"
+PROJECT_NAME           = "MultiCraft"
 PROJECT_NUMBER         = @VERSION_STRING@
 
 STRIP_FROM_PATH        = @CMAKE_CURRENT_SOURCE_DIR@/src

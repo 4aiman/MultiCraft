@@ -1,10 +1,10 @@
--- minetest.lua
--- Packet dissector for the UDP-based Minetest protocol
+-- multicraft.lua
+-- Packet dissector for the UDP-based MultiCraft protocol
 -- Copy this to $HOME/.wireshark/plugins/
 
 
 --
--- Minetest
+-- MultiCraft
 -- Copyright (C) 2011 celeron55, Perttu Ahola <celeron55@gmail.com>
 --
 -- This program is free software; you can redistribute it and/or modify
@@ -38,19 +38,19 @@
 -- Client command dissectors (TOSERVER_*) --
 --------------------------------------------
 
-minetest_client_commands = {}
-minetest_client_obsolete = {}
+multicraft_client_commands = {}
+multicraft_client_obsolete = {}
 
 -- TOSERVER_INIT
 
 do
-	local f_ser_fmt = ProtoField.uint8("minetest.client.init_ser_version",
+	local f_ser_fmt = ProtoField.uint8("multicraft.client.init_ser_version",
 		"Maximum serialization format version", base.DEC)
-	local f_player_name = ProtoField.stringz("minetest.client.init_player_name", "Player Name")
-	local f_password = ProtoField.stringz("minetest.client.init_password", "Password")
-	local f_version = ProtoField.uint16("minetest.client.init_version", "Version", base.DEC)
+	local f_player_name = ProtoField.stringz("multicraft.client.init_player_name", "Player Name")
+	local f_password = ProtoField.stringz("multicraft.client.init_password", "Password")
+	local f_version = ProtoField.uint16("multicraft.client.init_version", "Version", base.DEC)
 
-	minetest_client_commands[0x10] = {
+	multicraft_client_commands[0x10] = {
 		"INIT",                             -- Command name
 		53,                                 -- Minimum message length including code
 		{ f_ser_fmt,                        -- List of fields [optional]
@@ -68,36 +68,36 @@ end
 
 -- TOSERVER_INIT2
 
-minetest_client_commands[0x11] = { "INIT2", 2 }
+multicraft_client_commands[0x11] = { "INIT2", 2 }
 
 -- TOSERVER_GETBLOCK (obsolete)
 
-minetest_client_commands[0x20] = { "GETBLOCK", 2 }
-minetest_client_obsolete[0x20] = true
+multicraft_client_commands[0x20] = { "GETBLOCK", 2 }
+multicraft_client_obsolete[0x20] = true
 
 -- TOSERVER_ADDNODE (obsolete)
 
-minetest_client_commands[0x21] = { "ADDNODE", 2 }
-minetest_client_obsolete[0x21] = true
+multicraft_client_commands[0x21] = { "ADDNODE", 2 }
+multicraft_client_obsolete[0x21] = true
 
 -- TOSERVER_REMOVENODE (obsolete)
 
-minetest_client_commands[0x22] = { "REMOVENODE", 2 }
-minetest_client_obsolete[0x22] = true
+multicraft_client_commands[0x22] = { "REMOVENODE", 2 }
+multicraft_client_obsolete[0x22] = true
 
 -- TOSERVER_PLAYERPOS
 
 do
-	local f_x = ProtoField.int32("minetest.client.playerpos_x", "Position X", base.DEC)
-	local f_y = ProtoField.int32("minetest.client.playerpos_y", "Position Y", base.DEC)
-	local f_z = ProtoField.int32("minetest.client.playerpos_z", "Position Z", base.DEC)
-	local f_speed_x = ProtoField.int32("minetest.client.playerpos_speed_x", "Speed X", base.DEC)
-	local f_speed_y = ProtoField.int32("minetest.client.playerpos_speed_y", "Speed Y", base.DEC)
-	local f_speed_z = ProtoField.int32("minetest.client.playerpos_speed_z", "Speed Z", base.DEC)
-	local f_pitch = ProtoField.int32("minetest.client.playerpos_pitch", "Pitch", base.DEC)
-	local f_yaw = ProtoField.int32("minetest.client.playerpos_yaw", "Yaw", base.DEC)
+	local f_x = ProtoField.int32("multicraft.client.playerpos_x", "Position X", base.DEC)
+	local f_y = ProtoField.int32("multicraft.client.playerpos_y", "Position Y", base.DEC)
+	local f_z = ProtoField.int32("multicraft.client.playerpos_z", "Position Z", base.DEC)
+	local f_speed_x = ProtoField.int32("multicraft.client.playerpos_speed_x", "Speed X", base.DEC)
+	local f_speed_y = ProtoField.int32("multicraft.client.playerpos_speed_y", "Speed Y", base.DEC)
+	local f_speed_z = ProtoField.int32("multicraft.client.playerpos_speed_z", "Speed Z", base.DEC)
+	local f_pitch = ProtoField.int32("multicraft.client.playerpos_pitch", "Pitch", base.DEC)
+	local f_yaw = ProtoField.int32("multicraft.client.playerpos_yaw", "Yaw", base.DEC)
 
-	minetest_client_commands[0x23] = {
+	multicraft_client_commands[0x23] = {
 		"PLAYERPOS", 34,
 		{ f_x, f_y, f_z, f_speed_x, f_speed_y, f_speed_z, f_pitch, f_yaw },
 		function(buffer, pinfo, tree, t)
@@ -116,19 +116,19 @@ end
 -- TOSERVER_GOTBLOCKS
 
 do
-	local f_count = ProtoField.uint8("minetest.client.gotblocks_count", "Count", base.DEC)
-	local f_block = ProtoField.bytes("minetest.client.gotblocks_block", "Block", base.DEC)
-	local f_x = ProtoField.int16("minetest.client.gotblocks_x", "Block position X", base.DEC)
-	local f_y = ProtoField.int16("minetest.client.gotblocks_y", "Block position Y", base.DEC)
-	local f_z = ProtoField.int16("minetest.client.gotblocks_z", "Block position Z", base.DEC)
+	local f_count = ProtoField.uint8("multicraft.client.gotblocks_count", "Count", base.DEC)
+	local f_block = ProtoField.bytes("multicraft.client.gotblocks_block", "Block", base.DEC)
+	local f_x = ProtoField.int16("multicraft.client.gotblocks_x", "Block position X", base.DEC)
+	local f_y = ProtoField.int16("multicraft.client.gotblocks_y", "Block position Y", base.DEC)
+	local f_z = ProtoField.int16("multicraft.client.gotblocks_z", "Block position Z", base.DEC)
 
-	minetest_client_commands[0x24] = {
+	multicraft_client_commands[0x24] = {
 		"GOTBLOCKS", 3,
 		{ f_count, f_block, f_x, f_y, f_z },
 		function(buffer, pinfo, tree, t)
 			t:add(f_count, buffer(2,1))
 			local count = buffer(2,1):uint()
-			if minetest_check_length(buffer, 3 + 6*count, t) then
+			if multicraft_check_length(buffer, 3 + 6*count, t) then
 				pinfo.cols.info:append(" * " .. count)
 				local index
 				for index = 0, count - 1 do
@@ -150,19 +150,19 @@ end
 -- TODO: Test this
 
 do
-	local f_count = ProtoField.uint8("minetest.client.deletedblocks_count", "Count", base.DEC)
-	local f_block = ProtoField.bytes("minetest.client.deletedblocks_block", "Block", base.DEC)
-	local f_x = ProtoField.int16("minetest.client.deletedblocks_x", "Block position X", base.DEC)
-	local f_y = ProtoField.int16("minetest.client.deletedblocks_y", "Block position Y", base.DEC)
-	local f_z = ProtoField.int16("minetest.client.deletedblocks_z", "Block position Z", base.DEC)
+	local f_count = ProtoField.uint8("multicraft.client.deletedblocks_count", "Count", base.DEC)
+	local f_block = ProtoField.bytes("multicraft.client.deletedblocks_block", "Block", base.DEC)
+	local f_x = ProtoField.int16("multicraft.client.deletedblocks_x", "Block position X", base.DEC)
+	local f_y = ProtoField.int16("multicraft.client.deletedblocks_y", "Block position Y", base.DEC)
+	local f_z = ProtoField.int16("multicraft.client.deletedblocks_z", "Block position Z", base.DEC)
 
-	minetest_client_commands[0x25] = {
+	multicraft_client_commands[0x25] = {
 		"DELETEDBLOCKS", 3,
 		{ f_count, f_block, f_x, f_y, f_z },
 		function(buffer, pinfo, tree, t)
 			t:add(f_count, buffer(2,1))
 			local count = buffer(2,1):uint()
-			if minetest_check_length(buffer, 3 + 6*count, t) then
+			if multicraft_check_length(buffer, 3 + 6*count, t) then
 				pinfo.cols.info:append(" * " .. count)
 				local index
 				for index = 0, count - 1 do
@@ -182,8 +182,8 @@ end
 
 -- TOSERVER_ADDNODE_FROM_INVENTORY (obsolete)
 
-minetest_client_commands[0x26] = { "ADDNODE_FROM_INVENTORY", 2 }
-minetest_client_obsolete[0x26] = true
+multicraft_client_commands[0x26] = { "ADDNODE_FROM_INVENTORY", 2 }
+multicraft_client_obsolete[0x26] = true
 
 -- TOSERVER_CLICK_OBJECT
 -- TODO: Test this
@@ -194,14 +194,14 @@ do
 		[1] = "right"
 	}
 
-	local f_button = ProtoField.uint8("minetest.client.click_object_button", "Button", base.DEC, vs_button)
-	local f_blockpos_x = ProtoField.int16("minetest.client.click_object_blockpos_x", "Block position X", base.DEC)
-	local f_blockpos_y = ProtoField.int16("minetest.client.click_object_blockpos_y", "Block position Y", base.DEC)
-	local f_blockpos_z = ProtoField.int16("minetest.client.click_object_blockpos_z", "Block position Z", base.DEC)
-	local f_id = ProtoField.int16("minetest.client.click_object_id", "ID", base.DEC)
-	local f_item = ProtoField.uint16("minetest.client.click_object_item", "Item", base.DEC)
+	local f_button = ProtoField.uint8("multicraft.client.click_object_button", "Button", base.DEC, vs_button)
+	local f_blockpos_x = ProtoField.int16("multicraft.client.click_object_blockpos_x", "Block position X", base.DEC)
+	local f_blockpos_y = ProtoField.int16("multicraft.client.click_object_blockpos_y", "Block position Y", base.DEC)
+	local f_blockpos_z = ProtoField.int16("multicraft.client.click_object_blockpos_z", "Block position Z", base.DEC)
+	local f_id = ProtoField.int16("multicraft.client.click_object_id", "ID", base.DEC)
+	local f_item = ProtoField.uint16("multicraft.client.click_object_item", "Item", base.DEC)
 
-	minetest_client_commands[0x27] = {
+	multicraft_client_commands[0x27] = {
 		"CLICK_OBJECT", 13,
 		{ f_button, f_blockpos_x, f_blockpos_y, f_blockpos_z, f_id, f_item },
 		function(buffer, pinfo, tree, t)
@@ -225,28 +225,28 @@ do
 		[3] = "Digging completed"
 	}
 
-	local f_action = ProtoField.uint8("minetest.client.ground_action", "Action", base.DEC, vs_action)
+	local f_action = ProtoField.uint8("multicraft.client.ground_action", "Action", base.DEC, vs_action)
 	local f_nodepos_undersurface_x = ProtoField.int16(
-		"minetest.client.ground_action_nodepos_undersurface_x",
+		"multicraft.client.ground_action_nodepos_undersurface_x",
 		"Node position (under surface) X")
 	local f_nodepos_undersurface_y = ProtoField.int16(
-		"minetest.client.ground_action_nodepos_undersurface_y",
+		"multicraft.client.ground_action_nodepos_undersurface_y",
 		"Node position (under surface) Y")
 	local f_nodepos_undersurface_z = ProtoField.int16(
-		"minetest.client.ground_action_nodepos_undersurface_z",
+		"multicraft.client.ground_action_nodepos_undersurface_z",
 		"Node position (under surface) Z")
 	local f_nodepos_abovesurface_x = ProtoField.int16(
-		"minetest.client.ground_action_nodepos_abovesurface_x",
+		"multicraft.client.ground_action_nodepos_abovesurface_x",
 		"Node position (above surface) X")
 	local f_nodepos_abovesurface_y = ProtoField.int16(
-		"minetest.client.ground_action_nodepos_abovesurface_y",
+		"multicraft.client.ground_action_nodepos_abovesurface_y",
 		"Node position (above surface) Y")
 	local f_nodepos_abovesurface_z = ProtoField.int16(
-		"minetest.client.ground_action_nodepos_abovesurface_z",
+		"multicraft.client.ground_action_nodepos_abovesurface_z",
 		"Node position (above surface) Z")
-	local f_item = ProtoField.uint16("minetest.client.ground_action_item", "Item")
+	local f_item = ProtoField.uint16("multicraft.client.ground_action_item", "Item")
 
-	minetest_client_commands[0x28] = {
+	multicraft_client_commands[0x28] = {
 		"GROUND_ACTION", 17,
 		{ f_action,
 		  f_nodepos_undersurface_x,
@@ -271,21 +271,21 @@ end
 
 -- TOSERVER_RELEASE (obsolete)
 
-minetest_client_commands[0x29] = { "RELEASE", 2 }
-minetest_client_obsolete[0x29] = true
+multicraft_client_commands[0x29] = { "RELEASE", 2 }
+multicraft_client_obsolete[0x29] = true
 
 -- TOSERVER_SIGNTEXT (old signs)
 -- TODO: Test this or mark obsolete
 
 do
-	local f_blockpos_x = ProtoField.int16("minetest.client.signtext_blockpos_x", "Block position X", base.DEC)
-	local f_blockpos_y = ProtoField.int16("minetest.client.signtext_blockpos_y", "Block position Y", base.DEC)
-	local f_blockpos_z = ProtoField.int16("minetest.client.signtext_blockpos_z", "Block position Z", base.DEC)
-	local f_id = ProtoField.int16("minetest.client.signtext_id", "ID", base.DEC)
-	local f_textlen = ProtoField.uint16("minetest.client.signtext_textlen", "Text length", base.DEC)
-	local f_text = ProtoField.string("minetest.client.signtext_text", "Text")
+	local f_blockpos_x = ProtoField.int16("multicraft.client.signtext_blockpos_x", "Block position X", base.DEC)
+	local f_blockpos_y = ProtoField.int16("multicraft.client.signtext_blockpos_y", "Block position Y", base.DEC)
+	local f_blockpos_z = ProtoField.int16("multicraft.client.signtext_blockpos_z", "Block position Z", base.DEC)
+	local f_id = ProtoField.int16("multicraft.client.signtext_id", "ID", base.DEC)
+	local f_textlen = ProtoField.uint16("multicraft.client.signtext_textlen", "Text length", base.DEC)
+	local f_text = ProtoField.string("multicraft.client.signtext_text", "Text")
 
-	minetest_client_commands[0x30] = {
+	multicraft_client_commands[0x30] = {
 		"SIGNTEXT", 12,
 		{ f_blockpos_x, f_blockpos_y, f_blockpos_z, f_id, f_textlen, f_text },
 		function(buffer, pinfo, tree, t)
@@ -295,7 +295,7 @@ do
 			t:add(f_id, buffer(8,2))
 			t:add(f_textlen, buffer(10,2))
 			local textlen = buffer(10,2):uint()
-			if minetest_check_length(buffer, 12 + textlen, t) then
+			if multicraft_check_length(buffer, 12 + textlen, t) then
 				t:add(f_text, buffer, buffer(12,textlen))
 			end
 		end
@@ -305,9 +305,9 @@ end
 -- TOSERVER_INVENTORY_ACTION
 
 do
-	local f_action = ProtoField.string("minetest.client.inventory_action", "Action")
+	local f_action = ProtoField.string("multicraft.client.inventory_action", "Action")
 
-	minetest_client_commands[0x31] = {
+	multicraft_client_commands[0x31] = {
 		"INVENTORY_ACTION", 2,
 		{ f_action },
 		function(buffer, pinfo, tree, t)
@@ -319,17 +319,17 @@ end
 -- TOSERVER_CHAT_MESSAGE
 
 do
-	local f_length = ProtoField.uint16("minetest.client.chat_message_length", "Length", base.DEC)
-	local f_message = ProtoField.string("minetest.client.chat_message", "Message")
+	local f_length = ProtoField.uint16("multicraft.client.chat_message_length", "Length", base.DEC)
+	local f_message = ProtoField.string("multicraft.client.chat_message", "Message")
 
-	minetest_client_commands[0x32] = {
+	multicraft_client_commands[0x32] = {
 		"CHAT_MESSAGE", 4,
 		{ f_length, f_message },
 		function(buffer, pinfo, tree, t)
 			t:add(f_length, buffer(2,2))
 			local textlen = buffer(2,2):uint()
-			if minetest_check_length(buffer, 4 + textlen*2, t) then
-				t:add(f_message, minetest_convert_utf16(buffer(4, textlen*2), "Converted chat message"))
+			if multicraft_check_length(buffer, 4 + textlen*2, t) then
+				t:add(f_message, multicraft_convert_utf16(buffer(4, textlen*2), "Converted chat message"))
 			end
 		end
 	}
@@ -338,13 +338,13 @@ end
 -- TOSERVER_SIGNNODETEXT
 
 do
-	local f_pos_x = ProtoField.int16("minetest.client.signnodetext_pos_x", "Block position X", base.DEC)
-	local f_pos_y = ProtoField.int16("minetest.client.signnodetext_pos_y", "Block position Y", base.DEC)
-	local f_pos_z = ProtoField.int16("minetest.client.signnodetext_pos_z", "Block position Z", base.DEC)
-	local f_textlen = ProtoField.uint16("minetest.client.signnodetext_textlen", "Text length", base.DEC)
-	local f_text = ProtoField.string("minetest.client.signnodetext_text", "Text")
+	local f_pos_x = ProtoField.int16("multicraft.client.signnodetext_pos_x", "Block position X", base.DEC)
+	local f_pos_y = ProtoField.int16("multicraft.client.signnodetext_pos_y", "Block position Y", base.DEC)
+	local f_pos_z = ProtoField.int16("multicraft.client.signnodetext_pos_z", "Block position Z", base.DEC)
+	local f_textlen = ProtoField.uint16("multicraft.client.signnodetext_textlen", "Text length", base.DEC)
+	local f_text = ProtoField.string("multicraft.client.signnodetext_text", "Text")
 
-	minetest_client_commands[0x33] = {
+	multicraft_client_commands[0x33] = {
 		"SIGNNODETEXT", 10,
 		{ f_pos_x, f_pos_y, f_pos_z, f_textlen, f_text },
 		function(buffer, pinfo, tree, t)
@@ -353,7 +353,7 @@ do
 			t:add(f_pos_z, buffer(6,2))
 			t:add(f_textlen, buffer(8,2))
 			local textlen = buffer(8,2):uint()
-			if minetest_check_length(buffer, 10 + textlen, t) then
+			if multicraft_check_length(buffer, 10 + textlen, t) then
 				t:add(f_text, buffer(10, textlen))
 			end
 		end
@@ -368,11 +368,11 @@ do
 		[1] = "right"
 	}
 
-	local f_button = ProtoField.uint8("minetest.client.click_activeobject_button", "Button", base.DEC, vs_button)
-	local f_id = ProtoField.uint16("minetest.client.click_activeobject_id", "ID", base.DEC)
-	local f_item = ProtoField.uint16("minetest.client.click_activeobject_item", "Item", base.DEC)
+	local f_button = ProtoField.uint8("multicraft.client.click_activeobject_button", "Button", base.DEC, vs_button)
+	local f_id = ProtoField.uint16("multicraft.client.click_activeobject_id", "ID", base.DEC)
+	local f_item = ProtoField.uint16("multicraft.client.click_activeobject_item", "Item", base.DEC)
 
-	minetest_client_commands[0x34] = {
+	multicraft_client_commands[0x34] = {
 		"CLICK_ACTIVEOBJECT", 7,
 		{ f_button, f_id, f_item },
 		function(buffer, pinfo, tree, t)
@@ -386,9 +386,9 @@ end
 -- TOSERVER_DAMAGE
 
 do
-	local f_amount = ProtoField.uint8("minetest.client.damage_amount", "Amount", base.DEC)
+	local f_amount = ProtoField.uint8("multicraft.client.damage_amount", "Amount", base.DEC)
 
-	minetest_client_commands[0x35] = {
+	multicraft_client_commands[0x35] = {
 		"DAMAGE", 3,
 		{ f_amount },
 		function(buffer, pinfo, tree, t)
@@ -400,10 +400,10 @@ end
 -- TOSERVER_PASSWORD
 
 do
-	local f_old_password = ProtoField.string("minetest.client.password_old", "Old password")
-	local f_new_password = ProtoField.string("minetest.client.password_new", "New password")
+	local f_old_password = ProtoField.string("multicraft.client.password_old", "Old password")
+	local f_new_password = ProtoField.string("multicraft.client.password_new", "New password")
 
-	minetest_client_commands[0x36] = {
+	multicraft_client_commands[0x36] = {
 		"PASSWORD", 58,
 		{ f_old_password, f_new_password },
 		function(buffer, pinfo, tree, t)
@@ -416,9 +416,9 @@ end
 -- TOSERVER_PLAYERITEM
 
 do
-	local f_item = ProtoField.uint16("minetest.client.playeritem_item", "Wielded item")
+	local f_item = ProtoField.uint16("multicraft.client.playeritem_item", "Wielded item")
 
-	minetest_client_commands[0x37] = {
+	multicraft_client_commands[0x37] = {
 		"PLAYERITEM", 4,
 		{ f_item },
 		function(buffer, pinfo, tree, t)
@@ -429,7 +429,7 @@ end
 
 -- TOSERVER_RESPAWN
 
-minetest_client_commands[0x38] = { "RESPAWN", 2 }
+multicraft_client_commands[0x38] = { "RESPAWN", 2 }
 
 
 
@@ -439,19 +439,19 @@ minetest_client_commands[0x38] = { "RESPAWN", 2 }
 -- Server command dissectors (TOCLIENT_*) --
 --------------------------------------------
 
-minetest_server_commands = {}
-minetest_server_obsolete = {}
+multicraft_server_commands = {}
+multicraft_server_obsolete = {}
 
 -- TOCLIENT_INIT
 
 do
-	local f_version = ProtoField.uint8("minetest.server.init_version", "Deployed version", base.DEC)
-	local f_pos_x = ProtoField.int16("minetest.server.init_pos_x", "Position X", base.DEC)
-	local f_pos_y = ProtoField.int16("minetest.server.init_pos_y", "Position Y", base.DEC)
-	local f_pos_z = ProtoField.int16("minetest.server.init_pos_x", "Position Z", base.DEC)
-	local f_map_seed = ProtoField.uint64("minetest.server.init_map_seed", "Map seed", base.DEC)
+	local f_version = ProtoField.uint8("multicraft.server.init_version", "Deployed version", base.DEC)
+	local f_pos_x = ProtoField.int16("multicraft.server.init_pos_x", "Position X", base.DEC)
+	local f_pos_y = ProtoField.int16("multicraft.server.init_pos_y", "Position Y", base.DEC)
+	local f_pos_z = ProtoField.int16("multicraft.server.init_pos_x", "Position Z", base.DEC)
+	local f_map_seed = ProtoField.uint64("multicraft.server.init_map_seed", "Map seed", base.DEC)
 
-	minetest_server_commands[0x10] = {
+	multicraft_server_commands[0x10] = {
 		"INIT", 17,
 		{ f_version, f_pos_x, f_pos_y, f_pos_z, f_map_seed },
 		function(buffer, pinfo, tree, t)
@@ -467,12 +467,12 @@ end
 -- TOCLIENT_BLOCKDATA
 
 do
-	local f_x = ProtoField.int16("minetest.server.blockdata_x", "Block position X", base.DEC)
-	local f_y = ProtoField.int16("minetest.server.blockdata_y", "Block position Y", base.DEC)
-	local f_z = ProtoField.int16("minetest.server.blockdata_z", "Block position Z", base.DEC)
-	local f_data = ProtoField.bytes("minetest.server.blockdata_block", "Serialized MapBlock")
+	local f_x = ProtoField.int16("multicraft.server.blockdata_x", "Block position X", base.DEC)
+	local f_y = ProtoField.int16("multicraft.server.blockdata_y", "Block position Y", base.DEC)
+	local f_z = ProtoField.int16("multicraft.server.blockdata_z", "Block position Z", base.DEC)
+	local f_data = ProtoField.bytes("multicraft.server.blockdata_block", "Serialized MapBlock")
 
-	minetest_server_commands[0x20] = {
+	multicraft_server_commands[0x20] = {
 		"BLOCKDATA", 8,
 		{ f_x, f_y, f_z, f_data },
 		function(buffer, pinfo, tree, t)
@@ -487,12 +487,12 @@ end
 -- TOCLIENT_ADDNODE
 
 do
-	local f_x = ProtoField.int16("minetest.server.addnode_x", "Position X", base.DEC)
-	local f_y = ProtoField.int16("minetest.server.addnode_y", "Position Y", base.DEC)
-	local f_z = ProtoField.int16("minetest.server.addnode_z", "Position Z", base.DEC)
-	local f_data = ProtoField.bytes("minetest.server.addnode_node", "Serialized MapNode")
+	local f_x = ProtoField.int16("multicraft.server.addnode_x", "Position X", base.DEC)
+	local f_y = ProtoField.int16("multicraft.server.addnode_y", "Position Y", base.DEC)
+	local f_z = ProtoField.int16("multicraft.server.addnode_z", "Position Z", base.DEC)
+	local f_data = ProtoField.bytes("multicraft.server.addnode_node", "Serialized MapNode")
 
-	minetest_server_commands[0x21] = {
+	multicraft_server_commands[0x21] = {
 		"ADDNODE", 8,
 		{ f_x, f_y, f_z, f_data },
 		function(buffer, pinfo, tree, t)
@@ -507,11 +507,11 @@ end
 -- TOCLIENT_REMOVENODE
 
 do
-	local f_x = ProtoField.int16("minetest.server.removenode_x", "Position X", base.DEC)
-	local f_y = ProtoField.int16("minetest.server.removenode_y", "Position Y", base.DEC)
-	local f_z = ProtoField.int16("minetest.server.removenode_z", "Position Z", base.DEC)
+	local f_x = ProtoField.int16("multicraft.server.removenode_x", "Position X", base.DEC)
+	local f_y = ProtoField.int16("multicraft.server.removenode_y", "Position Y", base.DEC)
+	local f_z = ProtoField.int16("multicraft.server.removenode_z", "Position Z", base.DEC)
 
-	minetest_server_commands[0x22] = {
+	multicraft_server_commands[0x22] = {
 		"REMOVENODE", 8,
 		{ f_x, f_y, f_z },
 		function(buffer, pinfo, tree, t)
@@ -524,18 +524,18 @@ end
 
 -- TOCLIENT_PLAYERPOS (obsolete)
 
-minetest_server_commands[0x23] = { "PLAYERPOS", 2 }
-minetest_server_obsolete[0x23] = true
+multicraft_server_commands[0x23] = { "PLAYERPOS", 2 }
+multicraft_server_obsolete[0x23] = true
 
 -- TOCLIENT_PLAYERINFO
 
 do
-	local f_count = ProtoField.uint16("minetest.server.playerinfo_count", "Count", base.DEC)
-	local f_player = ProtoField.bytes("minetest.server.playerinfo_player", "Player", base.DEC)
-	local f_peer_id = ProtoField.uint16("minetest.server.playerinfo_peer_id", "Peer ID", base.DEC)
-	local f_name = ProtoField.string("minetest.server.playerinfo_name", "Name")
+	local f_count = ProtoField.uint16("multicraft.server.playerinfo_count", "Count", base.DEC)
+	local f_player = ProtoField.bytes("multicraft.server.playerinfo_player", "Player", base.DEC)
+	local f_peer_id = ProtoField.uint16("multicraft.server.playerinfo_peer_id", "Peer ID", base.DEC)
+	local f_name = ProtoField.string("multicraft.server.playerinfo_name", "Name")
 
-	minetest_server_commands[0x24] = {
+	multicraft_server_commands[0x24] = {
 		"PLAYERINFO", 2,
 		{ f_count, f_player, f_peer_id, f_name },
 		function(buffer, pinfo, tree, t)
@@ -561,20 +561,20 @@ end
 
 -- TOCLIENT_OPT_BLOCK_NOT_FOUND (obsolete)
 
-minetest_server_commands[0x25] = { "OPT_BLOCK_NOT_FOUND", 2 }
-minetest_server_obsolete[0x25] = true
+multicraft_server_commands[0x25] = { "OPT_BLOCK_NOT_FOUND", 2 }
+multicraft_server_obsolete[0x25] = true
 
 -- TOCLIENT_SECTORMETA (obsolete)
 
-minetest_server_commands[0x26] = { "SECTORMETA", 2 }
-minetest_server_obsolete[0x26] = true
+multicraft_server_commands[0x26] = { "SECTORMETA", 2 }
+multicraft_server_obsolete[0x26] = true
 
 -- TOCLIENT_INVENTORY
 
 do
-	local f_inventory = ProtoField.string("minetest.server.inventory", "Inventory")
+	local f_inventory = ProtoField.string("multicraft.server.inventory", "Inventory")
 
-	minetest_server_commands[0x27] = {
+	multicraft_server_commands[0x27] = {
 		"INVENTORY", 2,
 		{ f_inventory },
 		function(buffer, pinfo, tree, t)
@@ -586,22 +586,22 @@ end
 -- TOCLIENT_OBJECTDATA
 
 do
-	local f_player_count = ProtoField.uint16("minetest.server.objectdata_player_count",
+	local f_player_count = ProtoField.uint16("multicraft.server.objectdata_player_count",
 		"Count of player positions", base.DEC)
-	local f_player = ProtoField.bytes("minetest.server.objectdata_player", "Player position")
-	local f_peer_id = ProtoField.uint16("minetest.server.objectdata_player_peer_id", "Peer ID")
-	local f_x = ProtoField.int32("minetest.server.objectdata_player_x", "Position X", base.DEC)
-	local f_y = ProtoField.int32("minetest.server.objectdata_player_y", "Position Y", base.DEC)
-	local f_z = ProtoField.int32("minetest.server.objectdata_player_z", "Position Z", base.DEC)
-	local f_speed_x = ProtoField.int32("minetest.server.objectdata_player_speed_x", "Speed X", base.DEC)
-	local f_speed_y = ProtoField.int32("minetest.server.objectdata_player_speed_y", "Speed Y", base.DEC)
-	local f_speed_z = ProtoField.int32("minetest.server.objectdata_player_speed_z", "Speed Z", base.DEC)
-	local f_pitch = ProtoField.int32("minetest.server.objectdata_player_pitch", "Pitch", base.DEC)
-	local f_yaw = ProtoField.int32("minetest.server.objectdata_player_yaw", "Yaw", base.DEC)
-	local f_block_count = ProtoField.uint16("minetest.server.objectdata_block_count",
+	local f_player = ProtoField.bytes("multicraft.server.objectdata_player", "Player position")
+	local f_peer_id = ProtoField.uint16("multicraft.server.objectdata_player_peer_id", "Peer ID")
+	local f_x = ProtoField.int32("multicraft.server.objectdata_player_x", "Position X", base.DEC)
+	local f_y = ProtoField.int32("multicraft.server.objectdata_player_y", "Position Y", base.DEC)
+	local f_z = ProtoField.int32("multicraft.server.objectdata_player_z", "Position Z", base.DEC)
+	local f_speed_x = ProtoField.int32("multicraft.server.objectdata_player_speed_x", "Speed X", base.DEC)
+	local f_speed_y = ProtoField.int32("multicraft.server.objectdata_player_speed_y", "Speed Y", base.DEC)
+	local f_speed_z = ProtoField.int32("multicraft.server.objectdata_player_speed_z", "Speed Z", base.DEC)
+	local f_pitch = ProtoField.int32("multicraft.server.objectdata_player_pitch", "Pitch", base.DEC)
+	local f_yaw = ProtoField.int32("multicraft.server.objectdata_player_yaw", "Yaw", base.DEC)
+	local f_block_count = ProtoField.uint16("multicraft.server.objectdata_block_count",
 		"Count of blocks", base.DEC)
 
-	minetest_server_commands[0x28] = {
+	multicraft_server_commands[0x28] = {
 		"OBJECTDATA", 6,
 		{ f_player_count, f_player, f_peer_id, f_x, f_y, f_z,
 		  f_speed_x, f_speed_y, f_speed_z,f_pitch, f_yaw,
@@ -614,7 +614,7 @@ do
 			t:add(f_player_count, buffer(player_count_pos, 2))
 
 			local block_count_pos = player_count_pos + 2 + 34 * player_count
-			if not minetest_check_length(buffer, block_count_pos + 2, t) then
+			if not multicraft_check_length(buffer, block_count_pos + 2, t) then
 				return
 			end
 
@@ -647,9 +647,9 @@ end
 -- TOCLIENT_TIME_OF_DAY
 
 do
-	local f_time = ProtoField.uint16("minetest.server.time_of_day", "Time", base.DEC)
+	local f_time = ProtoField.uint16("multicraft.server.time_of_day", "Time", base.DEC)
 
-	minetest_server_commands[0x29] = {
+	multicraft_server_commands[0x29] = {
 		"TIME_OF_DAY", 4,
 		{ f_time },
 		function(buffer, pinfo, tree, t)
@@ -661,17 +661,17 @@ end
 -- TOCLIENT_CHAT_MESSAGE
 
 do
-	local f_length = ProtoField.uint16("minetest.server.chat_message_length", "Length", base.DEC)
-	local f_message = ProtoField.string("minetest.server.chat_message", "Message")
+	local f_length = ProtoField.uint16("multicraft.server.chat_message_length", "Length", base.DEC)
+	local f_message = ProtoField.string("multicraft.server.chat_message", "Message")
 
-	minetest_server_commands[0x30] = {
+	multicraft_server_commands[0x30] = {
 		"CHAT_MESSAGE", 4,
 		{ f_length, f_message },
 		function(buffer, pinfo, tree, t)
 			t:add(f_length, buffer(2,2))
 			local textlen = buffer(2,2):uint()
-			if minetest_check_length(buffer, 4 + textlen*2, t) then
-				t:add(f_message, minetest_convert_utf16(buffer(4, textlen*2), "Converted chat message"))
+			if multicraft_check_length(buffer, 4 + textlen*2, t) then
+				t:add(f_message, multicraft_convert_utf16(buffer(4, textlen*2), "Converted chat message"))
 			end
 		end
 	}
@@ -681,35 +681,35 @@ end
 
 do
 	local f_removed_count = ProtoField.uint16(
-		"minetest.server.active_object_remove_add_removed_count",
+		"multicraft.server.active_object_remove_add_removed_count",
 		"Count of removed objects", base.DEC)
 	local f_removed = ProtoField.bytes(
-		"minetest.server.active_object_remove_add_removed",
+		"multicraft.server.active_object_remove_add_removed",
 		"Removed object")
 	local f_removed_id = ProtoField.uint16(
-		"minetest.server.active_object_remove_add_removed_id",
+		"multicraft.server.active_object_remove_add_removed_id",
 		"ID", base.DEC)
 
 	local f_added_count = ProtoField.uint16(
-		"minetest.server.active_object_remove_add_added_count",
+		"multicraft.server.active_object_remove_add_added_count",
 		"Count of added objects", base.DEC)
 	local f_added = ProtoField.bytes(
-		"minetest.server.active_object_remove_add_added",
+		"multicraft.server.active_object_remove_add_added",
 		"Added object")
 	local f_added_id = ProtoField.uint16(
-		"minetest.server.active_object_remove_add_added_id",
+		"multicraft.server.active_object_remove_add_added_id",
 		"ID", base.DEC)
 	local f_added_type = ProtoField.uint8(
-		"minetest.server.active_object_remove_add_added_type",
+		"multicraft.server.active_object_remove_add_added_type",
 		"Type", base.DEC)
 	local f_added_init_length = ProtoField.uint32(
-		"minetest.server.active_object_remove_add_added_init_length",
+		"multicraft.server.active_object_remove_add_added_init_length",
 		"Initialization data length", base.DEC)
 	local f_added_init_data = ProtoField.bytes(
-		"minetest.server.active_object_remove_add_added_init_data",
+		"multicraft.server.active_object_remove_add_added_init_data",
 		"Initialization data")
 
-	minetest_server_commands[0x31] = {
+	multicraft_server_commands[0x31] = {
 		"ACTIVE_OBJECT_REMOVE_ADD", 6,
 		{ f_removed_count, f_removed, f_removed_id,
 		  f_added_count, f_added, f_added_id,
@@ -722,7 +722,7 @@ do
 			t:add(f_removed_count, buffer(removed_count_pos, 2))
 
 			local added_count_pos = removed_count_pos + 2 + 2 * removed_count
-			if not minetest_check_length(buffer, added_count_pos + 2, t) then
+			if not multicraft_check_length(buffer, added_count_pos + 2, t) then
 				return
 			end
 
@@ -740,12 +740,12 @@ do
 			-- Loop through added active objects
 			pos = added_count_pos + 2
 			for index = 0, added_count - 1 do
-				if not minetest_check_length(buffer, pos + 7, t) then
+				if not multicraft_check_length(buffer, pos + 7, t) then
 					return
 				end
 
 				local init_length = buffer(pos + 3, 4):uint()
-				if not minetest_check_length(buffer, pos + 7 + init_length, t) then
+				if not multicraft_check_length(buffer, pos + 7 + init_length, t) then
 					return
 				end
 
@@ -768,22 +768,22 @@ end
 
 do
 	local f_object_count = ProtoField.uint16(
-		"minetest.server.active_object_messages_object_count",
+		"multicraft.server.active_object_messages_object_count",
 		"Count of objects", base.DEC)
 	local f_object = ProtoField.bytes(
-		"minetest.server.active_object_messages_object",
+		"multicraft.server.active_object_messages_object",
 		"Object")
 	local f_object_id = ProtoField.uint16(
-		"minetest.server.active_object_messages_id",
+		"multicraft.server.active_object_messages_id",
 		"ID", base.DEC)
 	local f_message_length = ProtoField.uint16(
-		"minetest.server.active_object_messages_message_length",
+		"multicraft.server.active_object_messages_message_length",
 		"Message length", base.DEC)
 	local f_message = ProtoField.bytes(
-		"minetest.server.active_object_messages_message",
+		"multicraft.server.active_object_messages_message",
 		"Message")
 
-	minetest_server_commands[0x32] = {
+	multicraft_server_commands[0x32] = {
 		"ACTIVE_OBJECT_MESSAGES", 2,
 		{ f_object_count, f_object, f_object_id, f_message_length, f_message },
 		function(buffer, pinfo, tree, t)
@@ -792,11 +792,11 @@ do
 			count = 0
 			pos = 2
 			while pos < buffer:len() do
-				if not minetest_check_length(buffer, pos + 4, t) then
+				if not multicraft_check_length(buffer, pos + 4, t) then
 					return
 				end
 				message_length = buffer(pos + 2, 2):uint()
-				if not minetest_check_length(buffer, pos + 4 + message_length, t) then
+				if not multicraft_check_length(buffer, pos + 4 + message_length, t) then
 					return
 				end
 				count = count + 1
@@ -825,9 +825,9 @@ end
 -- TOCLIENT_HP
 
 do
-	local f_hp = ProtoField.uint8("minetest.server.hp", "Hitpoints", base.DEC)
+	local f_hp = ProtoField.uint8("multicraft.server.hp", "Hitpoints", base.DEC)
 
-	minetest_server_commands[0x33] = {
+	multicraft_server_commands[0x33] = {
 		"HP", 3,
 		{ f_hp },
 		function(buffer, pinfo, tree, t)
@@ -839,14 +839,14 @@ end
 -- TOCLIENT_MOVE_PLAYER
 
 do
-	local f_x = ProtoField.int32("minetest.server.move_player_x", "Position X", base.DEC)
-	local f_y = ProtoField.int32("minetest.server.move_player_y", "Position Y", base.DEC)
-	local f_z = ProtoField.int32("minetest.server.move_player_z", "Position Z", base.DEC)
-	local f_pitch = ProtoField.int32("minetest.server.move_player_pitch", "Pitch", base.DEC)
-	local f_yaw = ProtoField.int32("minetest.server.move_player_yaw", "Yaw", base.DEC)
-	local f_garbage = ProtoField.bytes("minetest.server.move_player_garbage", "Garbage")
+	local f_x = ProtoField.int32("multicraft.server.move_player_x", "Position X", base.DEC)
+	local f_y = ProtoField.int32("multicraft.server.move_player_y", "Position Y", base.DEC)
+	local f_z = ProtoField.int32("multicraft.server.move_player_z", "Position Z", base.DEC)
+	local f_pitch = ProtoField.int32("multicraft.server.move_player_pitch", "Pitch", base.DEC)
+	local f_yaw = ProtoField.int32("multicraft.server.move_player_yaw", "Yaw", base.DEC)
+	local f_garbage = ProtoField.bytes("multicraft.server.move_player_garbage", "Garbage")
 
-	minetest_server_commands[0x34] = {
+	multicraft_server_commands[0x34] = {
 		"MOVE_PLAYER", 18,  -- actually 22, but see below
 		{ f_x, f_y, f_z, f_pitch, f_yaw, f_garbage },
 		function(buffer, pinfo, tree, t)
@@ -855,7 +855,7 @@ do
 			t:add(f_z, buffer(10, 4))
 
 			-- Compatibility note:
-			-- Up to 2011-08-23, there was a bug in Minetest that
+			-- Up to 2011-08-23, there was a bug in MultiCraft that
 			-- caused the server to serialize the pitch and yaw
 			-- with 2 bytes each instead of 4, creating a
 			-- malformed message.
@@ -864,7 +864,7 @@ do
 				t:add(f_yaw, buffer(18, 4))
 			else
 				t:add(f_garbage, buffer(14, 4))
-				t:add_expert_info(PI_MALFORMED, PI_WARN, "Malformed pitch and yaw, possibly caused by a serialization bug in Minetest")
+				t:add_expert_info(PI_MALFORMED, PI_WARN, "Malformed pitch and yaw, possibly caused by a serialization bug in MultiCraft")
 			end
 		end
 	}
@@ -873,17 +873,17 @@ end
 -- TOCLIENT_ACCESS_DENIED
 
 do
-	local f_reason_length = ProtoField.uint16("minetest.server.access_denied_reason_length", "Reason length", base.DEC)
-	local f_reason = ProtoField.string("minetest.server.access_denied_reason", "Reason")
+	local f_reason_length = ProtoField.uint16("multicraft.server.access_denied_reason_length", "Reason length", base.DEC)
+	local f_reason = ProtoField.string("multicraft.server.access_denied_reason", "Reason")
 
-	minetest_server_commands[0x35] = {
+	multicraft_server_commands[0x35] = {
 		"ACCESS_DENIED", 4,
 		{ f_reason_length, f_reason },
 		function(buffer, pinfo, tree, t)
 			t:add(f_reason_length, buffer(2,2))
 			local reason_length = buffer(2,2):uint()
-			if minetest_check_length(buffer, 4 + reason_length * 2, t) then
-				t:add(f_reason, minetest_convert_utf16(buffer(4, reason_length * 2), "Converted reason message"))
+			if multicraft_check_length(buffer, 4 + reason_length * 2, t) then
+				t:add(f_reason, multicraft_convert_utf16(buffer(4, reason_length * 2), "Converted reason message"))
 			end
 		end
 	}
@@ -893,22 +893,22 @@ end
 
 do
 	local f_count = ProtoField.uint16(
-		"minetest.server.playeritem_count",
+		"multicraft.server.playeritem_count",
 		"Count of players", base.DEC)
 	local f_player = ProtoField.bytes(
-		"minetest.server.playeritem_player",
+		"multicraft.server.playeritem_player",
 		"Player")
 	local f_peer_id = ProtoField.uint16(
-		"minetest.server.playeritem_peer_id",
+		"multicraft.server.playeritem_peer_id",
 		"Peer ID", base.DEC)
 	local f_item_length = ProtoField.uint16(
-		"minetest.server.playeritem_item_length",
+		"multicraft.server.playeritem_item_length",
 		"Item information length", base.DEC)
 	local f_item = ProtoField.string(
-		"minetest.server.playeritem_item",
+		"multicraft.server.playeritem_item",
 		"Item information")
 
-	minetest_server_commands[0x36] = {
+	multicraft_server_commands[0x36] = {
 		"PLAYERITEM", 4,
 		{ f_count, f_player, f_peer_id, f_item_length, f_item },
 		function(buffer, pinfo, tree, t)
@@ -920,11 +920,11 @@ do
 
 			pos = 4
 			for index = 0, count - 1 do
-				if not minetest_check_length(buffer, pos + 4, t) then
+				if not multicraft_check_length(buffer, pos + 4, t) then
 					return
 				end
 				item_length = buffer(pos + 2, 2):uint()
-				if not minetest_check_length(buffer, pos + 4 + item_length, t) then
+				if not multicraft_check_length(buffer, pos + 4 + item_length, t) then
 					return
 				end
 
@@ -949,19 +949,19 @@ do
 	}
 
 	local f_set_camera_point_target = ProtoField.uint8(
-		"minetest.server.deathscreen_set_camera_point_target",
+		"multicraft.server.deathscreen_set_camera_point_target",
 		"Set camera point target", base.DEC, vs_set_camera_point_target)
 	local f_camera_point_target_x = ProtoField.int32(
-		"minetest.server.deathscreen_camera_point_target_x",
+		"multicraft.server.deathscreen_camera_point_target_x",
 		"Camera point target X", base.DEC)
 	local f_camera_point_target_y = ProtoField.int32(
-		"minetest.server.deathscreen_camera_point_target_y",
+		"multicraft.server.deathscreen_camera_point_target_y",
 		"Camera point target Y", base.DEC)
 	local f_camera_point_target_z = ProtoField.int32(
-		"minetest.server.deathscreen_camera_point_target_z",
+		"multicraft.server.deathscreen_camera_point_target_z",
 		"Camera point target Z", base.DEC)
 
-	minetest_server_commands[0x37] = {
+	multicraft_server_commands[0x37] = {
 		"DEATHSCREEN", 15,
 		{ f_set_camera_point_target, f_camera_point_target_x,
 		  f_camera_point_target_y, f_camera_point_target_z},
@@ -982,10 +982,10 @@ end
 -- Wrapper protocol subdissectors --
 ------------------------------------
 
--- minetest.control dissector
+-- multicraft.control dissector
 
 do
-	local p_control = Proto("minetest.control", "Minetest Control")
+	local p_control = Proto("multicraft.control", "MultiCraft Control")
 
 	local vs_control_type = {
 		[0] = "Ack",
@@ -994,9 +994,9 @@ do
 		[3] = "Disco"
 	}
 
-	local f_control_type = ProtoField.uint8("minetest.control.type", "Control Type", base.DEC, vs_control_type)
-	local f_control_ack = ProtoField.uint16("minetest.control.ack", "ACK sequence number", base.DEC)
-	local f_control_peerid = ProtoField.uint8("minetest.control.peerid", "New peer ID", base.DEC)
+	local f_control_type = ProtoField.uint8("multicraft.control.type", "Control Type", base.DEC, vs_control_type)
+	local f_control_ack = ProtoField.uint16("multicraft.control.ack", "ACK sequence number", base.DEC)
+	local f_control_peerid = ProtoField.uint8("multicraft.control.peerid", "New peer ID", base.DEC)
 	p_control.fields = { f_control_type, f_control_ack, f_control_peerid }
 
 	local data_dissector = Dissector.get("data")
@@ -1028,38 +1028,38 @@ do
 	end
 end
 
--- minetest.client dissector
--- minetest.server dissector
+-- multicraft.client dissector
+-- multicraft.server dissector
 
--- Defines the minetest.client or minetest.server Proto. These two protocols
+-- Defines the multicraft.client or multicraft.server Proto. These two protocols
 -- are created by the same function because they are so similar.
 -- Parameter: proto: the Proto object
 -- Parameter: this_peer: "Client" or "Server"
 -- Parameter: other_peer: "Server" or "Client"
 -- Parameter: commands: table of command information, built above
 -- Parameter: obsolete: table of obsolete commands, built above
-function minetest_define_client_or_server_proto(is_client)
-	-- Differences between minetest.client and minetest.server
+function multicraft_define_client_or_server_proto(is_client)
+	-- Differences between multicraft.client and multicraft.server
 	local proto_name, this_peer, other_peer, empty_message_info
 	local commands, obsolete
 	if is_client then
-		proto_name = "minetest.client"
+		proto_name = "multicraft.client"
 		this_peer = "Client"
 		other_peer = "Server"
 		empty_message_info = "Empty message / Connect"
-		commands = minetest_client_commands  -- defined in Part 1
-		obsolete = minetest_client_obsolete  -- defined in Part 1
+		commands = multicraft_client_commands  -- defined in Part 1
+		obsolete = multicraft_client_obsolete  -- defined in Part 1
 	else
-		proto_name = "minetest.server"
+		proto_name = "multicraft.server"
 		this_peer = "Server"
 		other_peer = "Client"
 		empty_message_info = "Empty message"
-		commands = minetest_server_commands  -- defined in Part 2
-		obsolete = minetest_server_obsolete  -- defined in Part 2
+		commands = multicraft_server_commands  -- defined in Part 2
+		obsolete = multicraft_server_obsolete  -- defined in Part 2
 	end
 
 	-- Create the protocol object.
-	local proto = Proto(proto_name, "Minetest " .. this_peer .. " to " .. other_peer)
+	local proto = Proto(proto_name, "MultiCraft " .. this_peer .. " to " .. other_peer)
 
 	-- Create a table vs_command that maps command codes to command names.
 	local vs_command = {}
@@ -1085,7 +1085,7 @@ function minetest_define_client_or_server_proto(is_client)
 		end
 	end
 
-	-- minetest.client or minetest.server dissector function
+	-- multicraft.client or multicraft.server dissector function
 	function proto.dissector(buffer, pinfo, tree)
 		local t = tree:add(proto, buffer)
 
@@ -1096,7 +1096,7 @@ function minetest_define_client_or_server_proto(is_client)
 			t:add(f_empty, 1):set_generated()
 			pinfo.cols.info:append(": " .. empty_message_info)
 
-		elseif minetest_check_length(buffer, 2, t) then
+		elseif multicraft_check_length(buffer, 2, t) then
 			-- Get the command code.
 			t:add(f_command, buffer(0,2))
 			local code = buffer(0,2):uint()
@@ -1111,7 +1111,7 @@ function minetest_define_client_or_server_proto(is_client)
 				local command_min_length = command_info[2]
 				local command_fields = command_info[3]
 				local command_dissector = command_info[4]
-				if minetest_check_length(buffer, command_min_length, t) then
+				if multicraft_check_length(buffer, command_min_length, t) then
 					pinfo.cols.info:append(": " .. command_name)
 					if command_dissector ~= nil then
 						command_dissector(buffer, pinfo, tree, t)
@@ -1125,18 +1125,18 @@ function minetest_define_client_or_server_proto(is_client)
 	end
 end
 
-minetest_define_client_or_server_proto(true)  -- minetest.client
-minetest_define_client_or_server_proto(false) -- minetest.server
+multicraft_define_client_or_server_proto(true)  -- multicraft.client
+multicraft_define_client_or_server_proto(false) -- multicraft.server
 
--- minetest.split dissector
+-- multicraft.split dissector
 
 do
-	local p_split = Proto("minetest.split", "Minetest Split Message")
+	local p_split = Proto("multicraft.split", "MultiCraft Split Message")
 
-	local f_split_seq = ProtoField.uint16("minetest.split.seq", "Sequence number", base.DEC)
-	local f_split_chunkcount = ProtoField.uint16("minetest.split.chunkcount", "Chunk count", base.DEC)
-	local f_split_chunknum = ProtoField.uint16("minetest.split.chunknum", "Chunk number", base.DEC)
-	local f_split_data = ProtoField.bytes("minetest.split.data", "Split message data")
+	local f_split_seq = ProtoField.uint16("multicraft.split.seq", "Sequence number", base.DEC)
+	local f_split_chunkcount = ProtoField.uint16("multicraft.split.chunkcount", "Chunk count", base.DEC)
+	local f_split_chunknum = ProtoField.uint16("multicraft.split.chunknum", "Chunk number", base.DEC)
+	local f_split_data = ProtoField.bytes("multicraft.split.data", "Split message data")
 	p_split.fields = { f_split_seq, f_split_chunkcount, f_split_chunknum, f_split_data }
 
 	function p_split.dissector(buffer, pinfo, tree)
@@ -1157,14 +1157,14 @@ end
 -- Wrapper protocol main dissector --
 -------------------------------------
 
--- minetest dissector
+-- multicraft dissector
 
 do
-	local p_minetest = Proto("minetest", "Minetest")
+	local p_multicraft = Proto("multicraft", "MultiCraft")
 
-	local minetest_id = 0x4f457403
+	local multicraft_id = 0x4f457403
 	local vs_id = {
-		[minetest_id] = "Valid"
+		[multicraft_id] = "Valid"
 	}
 
 	local vs_peer = {
@@ -1179,40 +1179,40 @@ do
 		[3] = "Reliable"
 	}
 
-	local f_id = ProtoField.uint32("minetest.id", "ID", base.HEX, vs_id)
-	local f_peer = ProtoField.uint16("minetest.peer", "Peer", base.DEC, vs_peer)
-	local f_channel = ProtoField.uint8("minetest.channel", "Channel", base.DEC)
-	local f_type = ProtoField.uint8("minetest.type", "Type", base.DEC, vs_type)
-	local f_seq = ProtoField.uint16("minetest.seq", "Sequence number", base.DEC)
-	local f_subtype = ProtoField.uint8("minetest.subtype", "Subtype", base.DEC, vs_type)
+	local f_id = ProtoField.uint32("multicraft.id", "ID", base.HEX, vs_id)
+	local f_peer = ProtoField.uint16("multicraft.peer", "Peer", base.DEC, vs_peer)
+	local f_channel = ProtoField.uint8("multicraft.channel", "Channel", base.DEC)
+	local f_type = ProtoField.uint8("multicraft.type", "Type", base.DEC, vs_type)
+	local f_seq = ProtoField.uint16("multicraft.seq", "Sequence number", base.DEC)
+	local f_subtype = ProtoField.uint8("multicraft.subtype", "Subtype", base.DEC, vs_type)
 
-	p_minetest.fields = { f_id, f_peer, f_channel, f_type, f_seq, f_subtype }
+	p_multicraft.fields = { f_id, f_peer, f_channel, f_type, f_seq, f_subtype }
 
 	local data_dissector = Dissector.get("data")
-	local control_dissector = Dissector.get("minetest.control")
-	local client_dissector = Dissector.get("minetest.client")
-	local server_dissector = Dissector.get("minetest.server")
-	local split_dissector = Dissector.get("minetest.split")
+	local control_dissector = Dissector.get("multicraft.control")
+	local client_dissector = Dissector.get("multicraft.client")
+	local server_dissector = Dissector.get("multicraft.server")
+	local split_dissector = Dissector.get("multicraft.split")
 
-	function p_minetest.dissector(buffer, pinfo, tree)
+	function p_multicraft.dissector(buffer, pinfo, tree)
 
-		-- Add Minetest tree item and verify the ID
-		local t = tree:add(p_minetest, buffer(0,8))
+		-- Add MultiCraft tree item and verify the ID
+		local t = tree:add(p_multicraft, buffer(0,8))
 		t:add(f_id, buffer(0,4))
-		if buffer(0,4):uint() ~= minetest_id then
-			t:add_expert_info(PI_UNDECODED, PI_WARN, "Invalid ID, this is not a Minetest packet")
+		if buffer(0,4):uint() ~= multicraft_id then
+			t:add_expert_info(PI_UNDECODED, PI_WARN, "Invalid ID, this is not a MultiCraft packet")
 			return
 		end
 
 		-- ID is valid, so replace packet's shown protocol
-		pinfo.cols.protocol = "Minetest"
-		pinfo.cols.info = "Minetest"
+		pinfo.cols.protocol = "MultiCraft"
+		pinfo.cols.info = "MultiCraft"
 
 		-- Set the other header fields
 		t:add(f_peer, buffer(4,2))
 		t:add(f_channel, buffer(6,1))
 		t:add(f_type, buffer(7,1))
-		t:set_text("Minetest, Peer: " .. buffer(4,2):uint() .. ", Channel: " .. buffer(6,1):uint())
+		t:set_text("MultiCraft, Peer: " .. buffer(4,2):uint() .. ", Channel: " .. buffer(6,1):uint())
 
 		local reliability_info
 		if buffer(7,1):uint() == 3 then
@@ -1258,8 +1258,8 @@ do
 	end
 
 	-- FIXME Is there a way to let the dissector table check if the first payload bytes are 0x4f457403?
-	DissectorTable.get("udp.port"):add(30000, p_minetest)
-	DissectorTable.get("udp.port"):add(30001, p_minetest)
+	DissectorTable.get("udp.port"):add(30000, p_multicraft)
+	DissectorTable.get("udp.port"):add(30001, p_multicraft)
 end
 
 
@@ -1278,7 +1278,7 @@ end
 -- Parameter: min_len: required minimum length
 -- Parameter: t: dissector tree item
 -- Returns: true if tvb:len() >= min_len, false otherwise
-function minetest_check_length(tvb, min_len, t)
+function multicraft_check_length(tvb, min_len, t)
 	if tvb:len() >= min_len then
 		t:set_len(min_len)
 		return true
@@ -1307,7 +1307,7 @@ end
 -- Returns: New TvbRange containing the ASCII string.
 -- TODO: Handle surrogates (should only produce one question mark)
 -- TODO: Remove this when Wireshark supports UTF-16 strings natively.
-function minetest_convert_utf16(tvb, name)
+function multicraft_convert_utf16(tvb, name)
 	local hex, pos, char
 	hex = ""
 	for pos = 0, tvb:len() - 2, 2 do

@@ -1,5 +1,5 @@
 =============================
-Minetest World Format 22...25
+MultiCraft World Format 22...25
 =============================
 
 This applies to a world format carrying the block serialization version
@@ -160,21 +160,21 @@ Example content (added indentation):
 Map File Format
 ================
 
-Minetest maps consist of MapBlocks, chunks of 16x16x16 nodes.
+MultiCraft maps consist of MapBlocks, chunks of 16x16x16 nodes.
 
 In addition to the bulk node data, MapBlocks stored on disk also contain
 other things.
 
 History
 --------
-We need a bit of history in here. Initially Minetest stored maps in a
+We need a bit of history in here. Initially MultiCraft stored maps in a
 format called the "sectors" format. It was a directory/file structure like
 this:
   sectors2/XXX/ZZZ/YYYY
 For example, the MapBlock at (0,1,-2) was this file:
   sectors2/000/ffd/0001
 
-Eventually Minetest outgrow this directory structure, as filesystems were
+Eventually MultiCraft outgrow this directory structure, as filesystems were
 struggling under the amount of files and directories.
 
 Large servers seriously needed a new format, and thus the base of the
@@ -479,7 +479,7 @@ EndInventory
 ---
 
 ==============================================
-Minetest World Format used as of 2011-05 or so
+MultiCraft World Format used as of 2011-05 or so
 ==============================================
 
 Map data serialization format version 17.

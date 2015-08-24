@@ -13,18 +13,18 @@ if [[ $PLATFORM == "Linux" ]]; then
 	cmake $CMAKE_FLAGS ..
 	make -j2
 	echo "Running unit tests."
-	../bin/minetest --run-unittests && exit 0
+	../bin/multicraft --run-unittests && exit 0
 elif [[ $PLATFORM == Win* ]]; then
 	[[ $CC == "clang" ]] && exit 1 # Not supposed to happen
-	# We need to have our build directory outside of the minetest directory because
+	# We need to have our build directory outside of the multicraft directory because
 	#  CMake will otherwise get very very confused with symlinks and complain that
 	#  something is not a subdirectory of something even if it actually is.
 	# e.g.:
-	# /home/travis/minetest/minetest/travisbuild/minetest
+	# /home/travis/multicraft/multicraft/travisbuild/multicraft
 	# \/  \/  \/
-	# /home/travis/minetest/minetest/travisbuild/minetest/travisbuild/minetest
+	# /home/travis/multicraft/multicraft/travisbuild/multicraft/travisbuild/multicraft
 	# \/  \/  \/
-	# /home/travis/minetest/minetest/travisbuild/minetest/travisbuild/minetest/travisbuild/minetest
+	# /home/travis/multicraft/multicraft/travisbuild/multicraft/travisbuild/multicraft/travisbuild/multicraft
 	# You get the idea.
 	OLDDIR=$(pwd)
 	cd ..

@@ -1,37 +1,37 @@
-# German translations for minetest-c55 package.
-# Copyright (C) 2011 celeron
-# This file is distributed under the same license as the minetest-c55 package.
-# Frederik Helth <Guides@live.dk>, 2011.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.0.0\n"
+"Project-Id-Version: multicraft\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-12-13 15:24+0100\n"
-"PO-Revision-Date: 2013-02-17 00:41+0200\n"
-"Last-Translator: Rune Biskopstö Christensen <lakersforce@gmail.com>\n"
-"Language-Team: \n"
-"Language: da\n"
+"PO-Revision-Date: 2013-12-18 21:28+0200\n"
+"Last-Translator: Jabo Babo <bb7b@gmx.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 1.4-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 1.7-dev\n"
 
 #: builtin/fstk/ui.lua:67
 msgid "Ok"
-msgstr ""
+msgstr "kinnitama"
 
 #: builtin/mainmenu/dlg_config_world.lua:26
 #, fuzzy
 msgid "World:"
-msgstr "Vælg verden:"
+msgstr "Vali maailm:"
 
 #: builtin/mainmenu/dlg_config_world.lua:30
 #: builtin/mainmenu/dlg_config_world.lua:32
 #, fuzzy
 msgid "Hide Game"
-msgstr "Spil"
+msgstr "Mäng"
 
 #: builtin/mainmenu/dlg_config_world.lua:36
 #: builtin/mainmenu/dlg_config_world.lua:38
@@ -45,58 +45,59 @@ msgstr ""
 #: builtin/mainmenu/dlg_config_world.lua:48
 #, fuzzy
 msgid "Depends:"
-msgstr "afhænger af:"
+msgstr "Vajab:"
 
 #: builtin/mainmenu/dlg_config_world.lua:51 src/guiKeyChangeMenu.cpp:191
 msgid "Save"
-msgstr "Gem"
+msgstr "Salvesta"
 
 #: builtin/mainmenu/dlg_config_world.lua:52
 #: builtin/mainmenu/dlg_create_world.lua:64
 #: builtin/mainmenu/dlg_rename_modpack.lua:33 src/guiKeyChangeMenu.cpp:199
 #: src/keycode.cpp:224
 msgid "Cancel"
-msgstr "Anuller"
+msgstr "Tühista"
 
 #: builtin/mainmenu/dlg_config_world.lua:68
 #, fuzzy
 msgid "Enable MP"
-msgstr "Aktivér alle"
+msgstr "Lülita kõik sisse"
 
 #: builtin/mainmenu/dlg_config_world.lua:70
 #, fuzzy
 msgid "Disable MP"
-msgstr "Deaktivér alle"
+msgstr "Lülita kõik välja"
 
 #: builtin/mainmenu/dlg_config_world.lua:74
 #: builtin/mainmenu/dlg_config_world.lua:76
 msgid "enabled"
-msgstr "aktiveret"
+msgstr "Sisse lülitatud"
 
 #: builtin/mainmenu/dlg_config_world.lua:82
 #, fuzzy
 msgid "Enable all"
-msgstr "Aktivér alle"
+msgstr "Lülita kõik sisse"
 
 #: builtin/mainmenu/dlg_create_world.lua:50
 msgid "World name"
-msgstr "Verdens navn"
+msgstr "Maailma nimi"
 
 #: builtin/mainmenu/dlg_create_world.lua:53
 msgid "Seed"
 msgstr ""
 
 #: builtin/mainmenu/dlg_create_world.lua:56
+#, fuzzy
 msgid "Mapgen"
-msgstr ""
+msgstr "Põlvkonna kaardid"
 
 #: builtin/mainmenu/dlg_create_world.lua:59
 msgid "Game"
-msgstr "Spil"
+msgstr "Mäng"
 
 #: builtin/mainmenu/dlg_create_world.lua:63
 msgid "Create"
-msgstr "Skab"
+msgstr "Loo"
 
 #: builtin/mainmenu/dlg_create_world.lua:68
 msgid "You have no subgames installed."
@@ -111,17 +112,17 @@ msgid "Warning: The minimal development test is meant for developers."
 msgstr ""
 
 #: builtin/mainmenu/dlg_create_world.lua:73
-msgid "Download a subgame, such as minetest_game, from minetest.net"
+msgid "Download a subgame, such as multicraft_game, from minetest.net"
 msgstr ""
 
 #: builtin/mainmenu/dlg_create_world.lua:97
 #, fuzzy
 msgid "A world named \"$1\" already exists"
-msgstr "Kan ikke skabe verden: en verden med dette navn eksisterer allerede"
+msgstr "Maailma loomine ebaõnnestus: Samanimeline maailm on juba olemas"
 
 #: builtin/mainmenu/dlg_create_world.lua:116
 msgid "No worldname given or no game selected"
-msgstr ""
+msgstr "No nimi või no mäng valitud"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:26
 msgid "Are you sure you want to delete \"$1\"?"
@@ -131,7 +132,7 @@ msgstr ""
 #: builtin/mainmenu/dlg_delete_world.lua:25
 #: builtin/mainmenu/tab_settings.lua:25
 msgid "Yes"
-msgstr "Ja"
+msgstr "Jah"
 
 #: builtin/mainmenu/dlg_delete_mod.lua:28
 msgid "No of course not!"
@@ -148,11 +149,11 @@ msgstr ""
 #: builtin/mainmenu/dlg_delete_world.lua:24
 #, fuzzy
 msgid "Delete World \"$1\"?"
-msgstr "Slet verden"
+msgstr "Kustuta maailm: \"$1\"?"
 
 #: builtin/mainmenu/dlg_delete_world.lua:26
 msgid "No"
-msgstr "Nej"
+msgstr "Ei"
 
 #: builtin/mainmenu/dlg_rename_modpack.lua:26
 msgid "Rename Modpack:"
@@ -160,7 +161,7 @@ msgstr ""
 
 #: builtin/mainmenu/dlg_rename_modpack.lua:31 src/keycode.cpp:228
 msgid "Accept"
-msgstr "Accepter"
+msgstr "Nõustu"
 
 #: builtin/mainmenu/modmgr.lua:342
 msgid "Install Mod: file: \"$1\""
@@ -175,7 +176,7 @@ msgstr ""
 #: builtin/mainmenu/modmgr.lua:363
 #, fuzzy
 msgid "Failed to install $1 to $2"
-msgstr "Mislykkedes i at initialisere verden"
+msgstr "Maailma initsialiseerimine ebaõnnestus"
 
 #: builtin/mainmenu/modmgr.lua:366
 msgid "Install Mod: unable to find suitable foldername for modpack $1"
@@ -196,7 +197,7 @@ msgstr ""
 #: builtin/mainmenu/store.lua:125
 #, fuzzy
 msgid "Downloading"
-msgstr "Ned"
+msgstr "Alla"
 
 #: builtin/mainmenu/store.lua:127
 msgid "please wait..."
@@ -209,7 +210,7 @@ msgstr ""
 #: builtin/mainmenu/store.lua:163
 #, fuzzy
 msgid "Shortname:"
-msgstr "Verdens navn"
+msgstr "Maailma nimi"
 
 #: builtin/mainmenu/store.lua:167 src/guiFormSpecMenu.cpp:2866
 msgid "ok"
@@ -237,19 +238,19 @@ msgstr ""
 
 #: builtin/mainmenu/tab_credits.lua:22
 msgid "Credits"
-msgstr "Skabt af"
+msgstr "Tänuavaldused"
 
 #: builtin/mainmenu/tab_credits.lua:29
 msgid "Core Developers"
-msgstr ""
+msgstr "Põhiline arendaja"
 
 #: builtin/mainmenu/tab_credits.lua:43
 msgid "Active Contributors"
-msgstr ""
+msgstr "Co-arendaja"
 
 #: builtin/mainmenu/tab_credits.lua:48
 msgid "Previous Contributors"
-msgstr ""
+msgstr "Early arendajad"
 
 #: builtin/mainmenu/tab_mods.lua:30
 msgid "Installed Mods:"
@@ -282,7 +283,7 @@ msgstr ""
 #: builtin/mainmenu/tab_mods.lua:121
 #, fuzzy
 msgid "Select Mod File:"
-msgstr "Vælg verden:"
+msgstr "Vali maailm:"
 
 #: builtin/mainmenu/tab_mods.lua:165
 msgid "Mods"
@@ -290,27 +291,28 @@ msgstr ""
 
 #: builtin/mainmenu/tab_multiplayer.lua:23
 msgid "Address/Port"
-msgstr "Adresse/port"
+msgstr "IP/Port"
 
 #: builtin/mainmenu/tab_multiplayer.lua:24 builtin/mainmenu/tab_server.lua:37
 #: builtin/mainmenu/tab_simple_main.lua:25
 msgid "Name/Password"
-msgstr "Navn/kodeord"
+msgstr "Nimi/Parool"
 
 #: builtin/mainmenu/tab_multiplayer.lua:29
 #: builtin/mainmenu/tab_simple_main.lua:30
+#, fuzzy
 msgid "Public Serverlist"
-msgstr ""
+msgstr "Avatud serverite nimekiri:"
 
 #: builtin/mainmenu/tab_multiplayer.lua:34 builtin/mainmenu/tab_server.lua:26
 #: builtin/mainmenu/tab_singleplayer.lua:85 src/keycode.cpp:230
 msgid "Delete"
-msgstr "Slet"
+msgstr "Kustuta"
 
 #: builtin/mainmenu/tab_multiplayer.lua:38
 #: builtin/mainmenu/tab_simple_main.lua:34
 msgid "Connect"
-msgstr "Forbind"
+msgstr "Liitu"
 
 #: builtin/mainmenu/tab_multiplayer.lua:252
 msgid "Client"
@@ -318,35 +320,33 @@ msgstr ""
 
 #: builtin/mainmenu/tab_server.lua:27 builtin/mainmenu/tab_singleplayer.lua:86
 msgid "New"
-msgstr "Ny"
+msgstr "Uus"
 
 #: builtin/mainmenu/tab_server.lua:28 builtin/mainmenu/tab_singleplayer.lua:87
 msgid "Configure"
-msgstr "Konfigurér"
+msgstr "Konfigureeri"
 
 #: builtin/mainmenu/tab_server.lua:29
-#, fuzzy
 msgid "Start Game"
-msgstr "Start spil / Forbind"
+msgstr "Alusta mängu"
 
 #: builtin/mainmenu/tab_server.lua:30 builtin/mainmenu/tab_singleplayer.lua:89
 msgid "Select World:"
-msgstr "Vælg verden:"
+msgstr "Vali maailm:"
 
 #: builtin/mainmenu/tab_server.lua:31 builtin/mainmenu/tab_simple_main.lua:63
 #: builtin/mainmenu/tab_singleplayer.lua:90
 msgid "Creative Mode"
-msgstr "Kreativ tilstand"
+msgstr "Kujunduslik mängumood"
 
 #: builtin/mainmenu/tab_server.lua:33 builtin/mainmenu/tab_simple_main.lua:65
 #: builtin/mainmenu/tab_singleplayer.lua:92
 msgid "Enable Damage"
-msgstr "Aktivér skade"
+msgstr "Lülita valu sisse"
 
 #: builtin/mainmenu/tab_server.lua:35
-#, fuzzy
 msgid "Public"
-msgstr "Vis offentlig"
+msgstr "Avalik"
 
 #: builtin/mainmenu/tab_server.lua:45
 msgid "Bind Address"
@@ -374,63 +374,63 @@ msgstr ""
 
 #: builtin/mainmenu/tab_settings.lua:134
 msgid "Smooth Lighting"
-msgstr "Glat belysning"
+msgstr "Ilus valgustus"
 
 #: builtin/mainmenu/tab_settings.lua:136
 msgid "Enable Particles"
-msgstr "Aktivér partikler"
+msgstr "Lülita osakesed sisse"
 
 #: builtin/mainmenu/tab_settings.lua:138
 msgid "3D Clouds"
-msgstr "3D skyer"
+msgstr "3D pilved"
 
 #: builtin/mainmenu/tab_settings.lua:140
 #, fuzzy
 msgid "Fancy Trees"
-msgstr "\"Smarte\" træer"
+msgstr "Uhked puud"
 
 #: builtin/mainmenu/tab_settings.lua:142
 #, fuzzy
 msgid "Opaque Water"
-msgstr "Opakt (uigennemsigtigt) vand"
+msgstr "Läbipaistmatu vesi"
 
 #: builtin/mainmenu/tab_settings.lua:144
 #, fuzzy
 msgid "Connected Glass"
-msgstr "Forbind"
+msgstr "Liitu"
 
 #: builtin/mainmenu/tab_settings.lua:149
-msgid "Restart minetest for driver change to take effect"
+msgid "Restart multicraft for driver change to take effect"
 msgstr ""
 
 #: builtin/mainmenu/tab_settings.lua:151
 msgid "Mip-Mapping"
-msgstr "Mip-mapping"
+msgstr "Väga hea kvaliteet"
 
 #: builtin/mainmenu/tab_settings.lua:153
 msgid "Anisotropic Filtering"
-msgstr "Anisotropisk filtréring"
+msgstr "Anisotroopne Filtreerimine"
 
 #: builtin/mainmenu/tab_settings.lua:155
 msgid "Bi-Linear Filtering"
-msgstr "Bi-lineær filtréring"
+msgstr "Bi-lineaarsed Filtreerimine"
 
 #: builtin/mainmenu/tab_settings.lua:157
 msgid "Tri-Linear Filtering"
-msgstr "Tri-lineær filtréring"
+msgstr "Tri-Linear Filtreerimine"
 
 #: builtin/mainmenu/tab_settings.lua:160
 msgid "Shaders"
-msgstr "Shadere"
+msgstr "Varjutajad"
 
 #: builtin/mainmenu/tab_settings.lua:164
 msgid "Change keys"
-msgstr "Skift bindinger"
+msgstr "Vaheta nuppe"
 
 #: builtin/mainmenu/tab_settings.lua:167
 #, fuzzy
 msgid "Reset singleplayer world"
-msgstr "Enligspiller"
+msgstr "Üksikmäng"
 
 #: builtin/mainmenu/tab_settings.lua:171
 msgid "GUI scale factor"
@@ -451,7 +451,7 @@ msgstr ""
 #: builtin/mainmenu/tab_settings.lua:194 builtin/mainmenu/tab_settings.lua:208
 #, fuzzy
 msgid "Bumpmapping"
-msgstr "Mip-mapping"
+msgstr "Väga hea kvaliteet"
 
 #: builtin/mainmenu/tab_settings.lua:196 builtin/mainmenu/tab_settings.lua:209
 msgid "Generate Normalmaps"
@@ -475,11 +475,11 @@ msgstr ""
 
 #: builtin/mainmenu/tab_settings.lua:255
 msgid "To enable shaders the OpenGL driver needs to be used."
-msgstr ""
+msgstr "Aktiveerimiseks varjud, nad vajavad OpenGL draiver."
 
 #: builtin/mainmenu/tab_settings.lua:330
 msgid "Settings"
-msgstr "Indstillinger"
+msgstr "Sätted"
 
 #: builtin/mainmenu/tab_simple_main.lua:67
 msgid "Fly mode"
@@ -488,37 +488,38 @@ msgstr ""
 #: builtin/mainmenu/tab_simple_main.lua:71
 #, fuzzy
 msgid "Start Singleplayer"
-msgstr "Enligspiller"
+msgstr "Üksikmäng"
 
 #: builtin/mainmenu/tab_simple_main.lua:72
 #, fuzzy
 msgid "Config mods"
-msgstr "Konfigurér"
+msgstr "Konfigureeri"
 
 #: builtin/mainmenu/tab_simple_main.lua:191
 #, fuzzy
 msgid "Main"
-msgstr "Hovedmenu"
+msgstr "Menüü"
 
 #: builtin/mainmenu/tab_singleplayer.lua:88 src/keycode.cpp:249
 msgid "Play"
-msgstr "Afspil"
+msgstr "Mängi"
 
 #: builtin/mainmenu/tab_singleplayer.lua:224
 msgid "Singleplayer"
-msgstr "Enligspiller"
+msgstr "Üksikmäng"
 
 #: builtin/mainmenu/tab_texturepacks.lua:49
 msgid "Select texture pack:"
-msgstr ""
+msgstr "Vali graafika:"
 
 #: builtin/mainmenu/tab_texturepacks.lua:69
 msgid "No information available"
-msgstr ""
+msgstr "Informatsioon ei ole kättesaadav"
 
 #: builtin/mainmenu/tab_texturepacks.lua:114
+#, fuzzy
 msgid "Texturepacks"
-msgstr ""
+msgstr "Vali graafika:"
 
 #: src/client.cpp:2726
 msgid "Item textures..."
@@ -530,7 +531,7 @@ msgstr ""
 
 #: src/game.cpp:1063
 msgid "Respawn"
-msgstr "Genopstå"
+msgstr "Ärka ellu"
 
 #: src/game.cpp:2250
 msgid "Item definitions..."
@@ -558,159 +559,157 @@ msgid ""
 "Check debug.txt for details."
 msgstr ""
 "\n"
-"Tjek debug.txt for detaljer."
+"Vaata debug.txt info jaoks."
 
 #: src/guiFormSpecMenu.cpp:2055
 msgid "Proceed"
-msgstr "Fortsæt"
+msgstr "Jätka"
 
 #: src/guiFormSpecMenu.cpp:2846
 msgid "Enter "
 msgstr ""
 
 #: src/guiKeyChangeMenu.cpp:125
-msgid "Keybindings. (If this menu screws up, remove stuff from minetest.conf)"
+msgid "Keybindings. (If this menu screws up, remove stuff from multicraft.conf)"
 msgstr ""
-"Tastebindinger. (Hvis denne menu fucker op, fjern elementer fra minetest."
+"Nupusätted. (Kui see menüü sassi läheb, siis kustuta asju failist multicraft."
 "conf)"
 
 #: src/guiKeyChangeMenu.cpp:165
 msgid "\"Use\" = climb down"
-msgstr "\"Brug\" = klatre ned"
+msgstr "\"Tegevus\" = Roni alla"
 
 #: src/guiKeyChangeMenu.cpp:180
 msgid "Double tap \"jump\" to toggle fly"
-msgstr ""
-"Tryk på \"hop\" hurtigt to gange for at skifte frem og tilbage mellem flyve-"
-"tilstand"
+msgstr "Topeltklõpsa \"Hüppamist\" et sisse lülitada lendamine"
 
 #: src/guiKeyChangeMenu.cpp:296
 msgid "Key already in use"
-msgstr "Tast allerede i brug"
+msgstr "Nupp juba kasutuses"
 
 #: src/guiKeyChangeMenu.cpp:371
 msgid "press key"
-msgstr "Tryk på en tast"
+msgstr "Vajuta nuppu"
 
 #: src/guiKeyChangeMenu.cpp:397
 msgid "Forward"
-msgstr "Fremad"
+msgstr "Edasi"
 
 #: src/guiKeyChangeMenu.cpp:398
 msgid "Backward"
-msgstr "Baglæns"
+msgstr "Tagasi"
 
 #: src/guiKeyChangeMenu.cpp:399 src/keycode.cpp:229
 msgid "Left"
-msgstr "Venstre"
+msgstr "Vasakule"
 
 #: src/guiKeyChangeMenu.cpp:400 src/keycode.cpp:229
 msgid "Right"
-msgstr "Højre"
+msgstr "Paremale"
 
 #: src/guiKeyChangeMenu.cpp:401
 msgid "Use"
-msgstr "Brug"
+msgstr "Tegevus"
 
 #: src/guiKeyChangeMenu.cpp:402
 msgid "Jump"
-msgstr "Hop"
+msgstr "Hüppamine"
 
 #: src/guiKeyChangeMenu.cpp:403
 msgid "Sneak"
-msgstr "Snige"
+msgstr "Hiilimine"
 
 #: src/guiKeyChangeMenu.cpp:404
 msgid "Drop"
-msgstr "Slip"
+msgstr "Viska maha"
 
 #: src/guiKeyChangeMenu.cpp:405
 msgid "Inventory"
-msgstr "Beholdning"
+msgstr "Seljakott"
 
 #: src/guiKeyChangeMenu.cpp:406
 msgid "Chat"
-msgstr "Snak"
+msgstr "Jututuba"
 
 #: src/guiKeyChangeMenu.cpp:407
 msgid "Command"
-msgstr "Kommando"
+msgstr "Käsklus"
 
 #: src/guiKeyChangeMenu.cpp:408
 msgid "Console"
-msgstr "Konsol"
+msgstr "Konsool"
 
 #: src/guiKeyChangeMenu.cpp:409
 msgid "Toggle fly"
-msgstr "Omstil flyvning"
+msgstr "Lülita lendamine sisse"
 
 #: src/guiKeyChangeMenu.cpp:410
 msgid "Toggle fast"
-msgstr "Omstil hurtig"
+msgstr "Lülita kiirus sisse"
 
 #: src/guiKeyChangeMenu.cpp:411
 msgid "Toggle noclip"
-msgstr "Omstil fylde"
+msgstr "Lülita läbi seinte minek sisse"
 
 #: src/guiKeyChangeMenu.cpp:412
 msgid "Range select"
-msgstr "Afstands vælg"
+msgstr "Kauguse valik"
 
 #: src/guiKeyChangeMenu.cpp:413
 msgid "Print stacks"
-msgstr "Udskriv stakke"
+msgstr "Prindi kogused"
 
 #: src/guiPasswordChange.cpp:106
 msgid "Old Password"
-msgstr "Gammelt kodeord"
+msgstr "Vana parool"
 
 #: src/guiPasswordChange.cpp:122
 msgid "New Password"
-msgstr "Nyt kodeord"
+msgstr "Uus parool"
 
 #: src/guiPasswordChange.cpp:137
 msgid "Confirm Password"
-msgstr "Bekræft kodeord"
+msgstr "Kinnita parooli"
 
 #: src/guiPasswordChange.cpp:153
 msgid "Change"
-msgstr "Skift"
+msgstr "Muuda"
 
 #: src/guiPasswordChange.cpp:162
 msgid "Passwords do not match!"
-msgstr "Kodeordene er ikke ens!"
+msgstr "Paroolid ei ole samad!"
 
 #: src/guiVolumeChange.cpp:106
 msgid "Sound Volume: "
-msgstr ""
+msgstr "Hääle Volüüm: "
 
 #: src/guiVolumeChange.cpp:120
 msgid "Exit"
-msgstr ""
+msgstr "Välju"
 
 #: src/keycode.cpp:224
 msgid "Left Button"
-msgstr "Venstre knap"
+msgstr "Vasak nupp"
 
 #: src/keycode.cpp:224
 msgid "Middle Button"
-msgstr "Midterste knap"
+msgstr "Keskmine nupp"
 
 #: src/keycode.cpp:224
 msgid "Right Button"
-msgstr "Højre knap"
+msgstr "Parem nupp"
 
 #: src/keycode.cpp:224
 msgid "X Button 1"
-msgstr "X knap 1"
+msgstr "X Nuppp 1"
 
 #: src/keycode.cpp:225
 msgid "Back"
-msgstr "Tilbage"
+msgstr "Tagasi"
 
 #: src/keycode.cpp:225
 msgid "Clear"
-msgstr "Ryd"
+msgstr "Tühjenda"
 
 #: src/keycode.cpp:225
 msgid "Return"
@@ -718,20 +717,19 @@ msgstr "Enter"
 
 #: src/keycode.cpp:225
 msgid "Tab"
-msgstr "Tabulator"
+msgstr "Reavahetus"
 
 #: src/keycode.cpp:225
 msgid "X Button 2"
-msgstr "X knap 2"
+msgstr "X Nupp 2"
 
 #: src/keycode.cpp:226
-#, fuzzy
 msgid "Capital"
-msgstr "Store bogstaver"
+msgstr "Caps Lock"
 
 #: src/keycode.cpp:226
 msgid "Control"
-msgstr "Control"
+msgstr "CTRL"
 
 #: src/keycode.cpp:226
 msgid "Kana"
@@ -739,27 +737,27 @@ msgstr "Kana"
 
 #: src/keycode.cpp:226
 msgid "Menu"
-msgstr "Menu"
+msgstr "Menüü"
 
 #: src/keycode.cpp:226
 msgid "Pause"
-msgstr "Pause"
+msgstr "Paus"
 
 #: src/keycode.cpp:226
 msgid "Shift"
-msgstr "Shift"
+msgstr "Shift,"
 
 #: src/keycode.cpp:227
 msgid "Convert"
-msgstr "Konvertér"
+msgstr "Konverteeri"
 
 #: src/keycode.cpp:227
 msgid "Escape"
-msgstr "Escape"
+msgstr "Põgene"
 
 #: src/keycode.cpp:227
 msgid "Final"
-msgstr "Endelig"
+msgstr "Viimane"
 
 #: src/keycode.cpp:227
 msgid "Junja"
@@ -771,189 +769,187 @@ msgstr "Kanji"
 
 #: src/keycode.cpp:227
 msgid "Nonconvert"
-msgstr "Nonconvert"
+msgstr "Konverteerimatta"
 
 #: src/keycode.cpp:228
 msgid "End"
-msgstr "End"
+msgstr "Lõpeta"
 
 #: src/keycode.cpp:228
 msgid "Home"
-msgstr "Home"
+msgstr "Kodu"
 
 #: src/keycode.cpp:228
 msgid "Mode Change"
-msgstr "Tilstandsskift"
+msgstr "Moodi vahetamine"
 
 #: src/keycode.cpp:228
 msgid "Next"
-msgstr "Næste"
+msgstr "Järgmine"
 
 #: src/keycode.cpp:228
 msgid "Prior"
-msgstr "Foregående"
+msgstr "Eelnev"
 
 #: src/keycode.cpp:228
 msgid "Space"
-msgstr "Mellemrum"
+msgstr "Tühik"
 
 #: src/keycode.cpp:229
 msgid "Down"
-msgstr "Ned"
+msgstr "Alla"
 
 #: src/keycode.cpp:229
 msgid "Execute"
-msgstr "Eksekvér"
+msgstr "Soorita"
 
 #: src/keycode.cpp:229
 msgid "Print"
-msgstr "Udskriv"
+msgstr "Prindi"
 
 #: src/keycode.cpp:229
 msgid "Select"
-msgstr "Vælg"
+msgstr "Vali"
 
 #: src/keycode.cpp:229
 msgid "Up"
-msgstr "Op"
+msgstr "Üles"
 
 #: src/keycode.cpp:230
 msgid "Help"
-msgstr "Hjælp"
+msgstr "Abi"
 
 #: src/keycode.cpp:230
 msgid "Insert"
-msgstr "Insert"
+msgstr "Sisesta"
 
 #: src/keycode.cpp:230
-#, fuzzy
 msgid "Snapshot"
-msgstr "Tilstandsbillede"
+msgstr "Mängupilt"
 
 #: src/keycode.cpp:233
 msgid "Left Windows"
-msgstr "Venstre meta"
+msgstr "Vasak Windowsi nupp"
 
 #: src/keycode.cpp:234
-#, fuzzy
 msgid "Apps"
-msgstr "Applikationer"
+msgstr "Aplikatsioonid"
 
 #: src/keycode.cpp:234
 msgid "Numpad 0"
-msgstr "Numpad 0"
+msgstr "Numbrilaual 0"
 
 #: src/keycode.cpp:234
 msgid "Numpad 1"
-msgstr "Numpad 1"
+msgstr "Numbrilaual 1"
 
 #: src/keycode.cpp:234
 msgid "Right Windows"
-msgstr "Højre meta"
+msgstr "Parem Windowsi nupp"
 
 #: src/keycode.cpp:234
 msgid "Sleep"
-msgstr "Sov"
+msgstr "Maga"
 
 #: src/keycode.cpp:235
 msgid "Numpad 2"
-msgstr "Numpad 2"
+msgstr "Numbrilaual 2"
 
 #: src/keycode.cpp:235
 msgid "Numpad 3"
-msgstr "Numpad 3"
+msgstr "Numbrilaual 3"
 
 #: src/keycode.cpp:235
 msgid "Numpad 4"
-msgstr "Numpad 4"
+msgstr "Numbrilaual 4"
 
 #: src/keycode.cpp:235
 msgid "Numpad 5"
-msgstr "Numpad 5"
+msgstr "Numbrilaual 5"
 
 #: src/keycode.cpp:235
 msgid "Numpad 6"
-msgstr "Numpad 6"
+msgstr "Numbrilaual 6"
 
 #: src/keycode.cpp:235
 msgid "Numpad 7"
-msgstr "Numpad 7"
+msgstr "Numbrilaual 7"
 
 #: src/keycode.cpp:236
 msgid "Numpad *"
-msgstr "Numpad *"
+msgstr "Numbrilaual *"
 
 #: src/keycode.cpp:236
 msgid "Numpad +"
-msgstr "Numpad +"
+msgstr "Numbrilaual +"
 
 #: src/keycode.cpp:236
 msgid "Numpad -"
-msgstr "Numpad -"
+msgstr "Numbrilaual -"
 
 #: src/keycode.cpp:236
 msgid "Numpad /"
-msgstr "Numpad /"
+msgstr "Numbrilaual /"
 
 #: src/keycode.cpp:236
 msgid "Numpad 8"
-msgstr "Numpad 8"
+msgstr "Numbrilaual 8"
 
 #: src/keycode.cpp:236
 msgid "Numpad 9"
-msgstr "Numpad 9"
+msgstr "Numbrilaual 9"
 
 #: src/keycode.cpp:240
 msgid "Num Lock"
-msgstr "Num Lock"
+msgstr "Numbrilaual Num Lock"
 
 #: src/keycode.cpp:240
 msgid "Scroll Lock"
-msgstr "Scroll Lock"
+msgstr "Scroll lukk"
 
 #: src/keycode.cpp:241
 msgid "Left Shift"
-msgstr "Venstre Skift"
+msgstr "Vasak Shift"
 
 #: src/keycode.cpp:241
 msgid "Right Shift"
-msgstr "Højre Skift"
+msgstr "Parem Shift"
 
 #: src/keycode.cpp:242
 msgid "Left Control"
-msgstr "Venstre Control"
+msgstr "Vasak CTRL"
 
 #: src/keycode.cpp:242
 msgid "Left Menu"
-msgstr "Venstre Menu"
+msgstr "Vasak Menüü"
 
 #: src/keycode.cpp:242
 msgid "Right Control"
-msgstr "Højre Control"
+msgstr "Parem CTRL"
 
 #: src/keycode.cpp:242
 msgid "Right Menu"
-msgstr "Højre Menu"
+msgstr "Parem Menüü"
 
 #: src/keycode.cpp:244
 msgid "Comma"
-msgstr "Komma"
+msgstr "Koma"
 
 #: src/keycode.cpp:244
 msgid "Minus"
-msgstr "Minus"
+msgstr "Miinus"
 
 #: src/keycode.cpp:244
 msgid "Period"
-msgstr "Punktum"
+msgstr "Punkt"
 
 #: src/keycode.cpp:244
 msgid "Plus"
-msgstr "Plus"
+msgstr "Pluss"
 
 #: src/keycode.cpp:248
 msgid "Attn"
-msgstr "Giv agt"
+msgstr "Attn"
 
 #: src/keycode.cpp:248
 msgid "CrSel"
@@ -961,7 +957,7 @@ msgstr "CrSel"
 
 #: src/keycode.cpp:249
 msgid "Erase OEF"
-msgstr "Udvisk Slut-På-Fil"
+msgstr "Kustuta OEF"
 
 #: src/keycode.cpp:249
 msgid "ExSel"
@@ -969,7 +965,7 @@ msgstr "ExSel"
 
 #: src/keycode.cpp:249
 msgid "OEM Clear"
-msgstr "OEM Ryd"
+msgstr "OEM Tühi"
 
 #: src/keycode.cpp:249
 msgid "PA1"
@@ -977,11 +973,11 @@ msgstr "PA1"
 
 #: src/keycode.cpp:249
 msgid "Zoom"
-msgstr "Zoom"
+msgstr "Suumi"
 
 #: src/main.cpp:1681
 msgid "Main Menu"
-msgstr "Hovedmenu"
+msgstr "Menüü"
 
 #: src/main.cpp:1719
 msgid "Player name too long."
@@ -989,11 +985,11 @@ msgstr ""
 
 #: src/main.cpp:1757
 msgid "Connection error (timed out?)"
-msgstr "Forbindelses fejl (udløbelse af tidsfrist?)"
+msgstr "Ühenduse viga (Aeg otsas?)"
 
 #: src/main.cpp:1919
 msgid "No world selected and no address provided. Nothing to do."
-msgstr "Ingen verden valgt og ingen adresse angivet. Ingen opgave at lave."
+msgstr "Pole valitud ei maailma ega IP aadressi. Pole midagi teha."
 
 #: src/main.cpp:1926
 msgid "Provided world path doesn't exist: "
@@ -1001,62 +997,64 @@ msgstr ""
 
 #: src/main.cpp:1935
 msgid "Could not find or load game \""
-msgstr "Kunne ikke finde eller indlæse spil \""
+msgstr "Ei leia ega suuda jätkata mängu \""
 
 #: src/main.cpp:1953
 msgid "Invalid gamespec."
-msgstr "Ugyldig spilspecifikationer."
+msgstr "Vale mängu ID."
 
 #~ msgid "Left click: Move all items, Right click: Move single item"
-#~ msgstr "Venstre klik: flyt alle enheder. Højre klik: flyt en enkelt enhed"
+#~ msgstr ""
+#~ "Vasak hiireklõps: Liiguta kõiki asju, Parem hiireklõps: Liiguta üksikut "
+#~ "asja"
 
 #~ msgid "is required by:"
-#~ msgstr "er påkrævet af:"
+#~ msgstr "Seda vajavad:"
 
 #~ msgid "Configuration saved.  "
-#~ msgstr "Konfiguration gemt.  "
+#~ msgstr "Konfiguratsioon salvestatud. "
 
 #~ msgid "Warning: Configuration not consistent.  "
-#~ msgstr "Advarsel: konfigurationen er ikke sammenhængende.  "
+#~ msgstr "Hoiatus: Konfiguratsioon pole kindel."
 
 #~ msgid "Cannot create world: Name contains invalid characters"
-#~ msgstr "Kan ikke skabe verden: navnet indeholder ugyldige bogstaver"
+#~ msgstr "Maailma loomine ebaõnnestus: Nimes esineb keelatud tähti"
 
 #~ msgid "Multiplayer"
-#~ msgstr "Flerspiller"
+#~ msgstr "Mitmikmäng"
 
 #~ msgid "Advanced"
-#~ msgstr "Avanceret"
+#~ msgstr "Arenenud sätted"
 
 #~ msgid "Show Public"
-#~ msgstr "Vis offentlig"
+#~ msgstr "Näita avalikke"
 
 #~ msgid "Show Favorites"
-#~ msgstr "Vis favoritter"
+#~ msgstr "Näita lemmikuid"
 
 #~ msgid "Leave address blank to start a local server."
-#~ msgstr "Lad adresse-feltet være tomt for at starte en lokal server."
+#~ msgstr "Jäta IP lahter tühjaks et alustada LAN serverit."
 
 #~ msgid "Create world"
-#~ msgstr "Skab verden"
+#~ msgstr "Loo maailm"
 
 #~ msgid "Address required."
-#~ msgstr "Adresse påkrævet."
+#~ msgstr "IP on vajalkik."
 
 #~ msgid "Cannot delete world: Nothing selected"
-#~ msgstr "Kan ikke slette verden: ingenting valgt"
+#~ msgstr "Maailma kustutamine ebaõnnestus: Maailma pole valitud"
 
 #~ msgid "Files to be deleted"
-#~ msgstr "Filer som slettes"
+#~ msgstr "Failid mida kustutada"
 
 #~ msgid "Cannot create world: No games found"
-#~ msgstr "Kan ikke skabe verden: ingen spil fundet"
+#~ msgstr "Maailma loomine ebaõnnestus: Mängu ei leitud"
 
 #~ msgid "Cannot configure world: Nothing selected"
-#~ msgstr "Kan ikke konfigurere verden: ingenting valgt"
+#~ msgstr "Maailma konfigureerimine ebaõnnestus: Pole midagi valitud"
 
 #~ msgid "Failed to delete all world files"
-#~ msgstr "Mislykkedes i at slette alle verdenens filer"
+#~ msgstr "Kõigi maailma failide kustutamine ebaõnnestus"
 
 #~ msgid ""
 #~ "Default Controls:\n"
@@ -1071,65 +1069,93 @@ msgstr "Ugyldig spilspecifikationer."
 #~ "- ESC: This menu\n"
 #~ "- T: Chat\n"
 #~ msgstr ""
-#~ "Standard bindinger:\n"
-#~ "- WASD: bevægelse\n"
-#~ "- Venstre musetast: grav/slå\n"
-#~ "- Højre musetast: anbring/brug\n"
-#~ "- Musehjul: vælg genstand\n"
-#~ "- 0...9: vælg genstand\n"
-#~ "- Shift: snige\n"
-#~ "- R: omstil se alle indlæste klumper\n"
-#~ "- I: beholdning\n"
-#~ "- ESC: denne menu\n"
-#~ "- T: snak\n"
-
-#~ msgid "Delete map"
-#~ msgstr "Slet mappen"
+#~ "Algsed nupusätted:\n"
+#~ "- WASD: Kõnni\n"
+#~ "- Vasak hiireklõps: Kaeva/löö\n"
+#~ "- Parem hiireklõps: Aseta/kasuta\n"
+#~ "- Hiireratas: Vali asi\n"
+#~ "- 0...9: Vali asi\n"
+#~ "- Shift: Hiili\n"
+#~ "- R: Vaheta nägemiskaugust\n"
+#~ "- I: Seljakott\n"
+#~ "- ESC: Menüü\n"
+#~ "- T: Jututupa\n"
 
 #~ msgid ""
 #~ "Warning: Some configured mods are missing.\n"
 #~ "Their setting will be removed when you save the configuration.  "
 #~ msgstr ""
-#~ "Advarsel: nogle konfigurerede modifikationer mangler.\n"
-#~ "Deres indstillinger vil blive fjernet når du gemmer konfigurationen.  "
+#~ "Hoiatus: Mõned konfigureeritud modifikatsioonid on kaotsi läinud.\n"
+#~ "Nende sätted kustutatakse kui salvestada konfiguratsioon."
 
 #~ msgid ""
 #~ "Warning: Some mods are not configured yet.\n"
 #~ "They will be enabled by default when you save the configuration.  "
 #~ msgstr ""
-#~ "Advarsel: nogle modifikationer er endnu ikke konfigureret.\n"
-#~ "De vil blive aktiveret som standard når du gemmer konfigurationen.  "
+#~ "Hoiatus: Mõned modifikatsioonid pole sätitud veel.\n"
+#~ "Need lülitatakse sisse kohe pärast sätete salvestamist."
 
 #~ msgid "Exit to OS"
-#~ msgstr "Afslut til operativsystemet"
+#~ msgstr "Välju mängust"
 
 #~ msgid "Exit to Menu"
-#~ msgstr "Afslut til menu"
+#~ msgstr "Välju menüüsse"
+
+#~ msgid "Sound Volume"
+#~ msgstr "Hääle volüüm"
 
 #~ msgid "Change Password"
-#~ msgstr "Skift kodeord"
+#~ msgstr "Vaheta parooli"
 
 #~ msgid "Continue"
-#~ msgstr "Fortsæt"
+#~ msgstr "Jätka"
 
 #~ msgid "You died."
-#~ msgstr "Du døde."
+#~ msgstr "Sa surid."
+
+#, fuzzy
+#~ msgid "Finite Liquid"
+#~ msgstr "Löppev vedelik"
 
 #~ msgid "Preload item visuals"
-#~ msgstr "For-indlæs elementernes grafik"
+#~ msgstr "Lae asjade visuaale"
 
-#, fuzzy
+#~ msgid "SETTINGS"
+#~ msgstr "Seaded"
+
 #~ msgid "Password"
-#~ msgstr "Gammelt kodeord"
+#~ msgstr "Parool"
 
-#, fuzzy
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
 #~ msgid "Favorites:"
-#~ msgstr "Vis favoritter"
+#~ msgstr "Lemmikud:"
 
 #, fuzzy
+#~ msgid "<<-- Add mod"
+#~ msgstr "<<-- Lisama muutus"
+
+#, fuzzy
+#~ msgid "Remove selected mod"
+#~ msgstr "Eemalda valitud muutus"
+
+#~ msgid "EDIT GAME"
+#~ msgstr "MUUDA MÄNGU"
+
+#~ msgid "new game"
+#~ msgstr "uus mängu"
+
+#, fuzzy
+#~ msgid "edit game"
+#~ msgstr "Muuda mängu"
+
 #~ msgid "Games"
-#~ msgstr "Spil"
+#~ msgstr "Mängud"
+
+#~ msgid "GAMES"
+#~ msgstr "MÄNGUD"
 
 #, fuzzy
 #~ msgid "Game Name"
-#~ msgstr "Spil"
+#~ msgstr "Mäng"

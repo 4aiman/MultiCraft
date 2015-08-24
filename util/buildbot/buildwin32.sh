@@ -73,25 +73,25 @@ cd $libdir
 [ -d luajit ] || unzip -o $packagedir/luajit-$luajit_version-static-win32.zip -d luajit
 [ -d leveldb ] || unzip -o $packagedir/libleveldb-$leveldb_version-win32.zip -d leveldb
 
-# Get minetest
+# Get multicraft
 cd $builddir
 if [ ! "x$EXISTING_MINETEST_DIR" = "x" ]; then
-	ln -s $EXISTING_MINETEST_DIR minetest
+	ln -s $EXISTING_MINETEST_DIR multicraft
 else
-	[ -d minetest ] && (cd minetest && git pull) || (git clone https://github.com/minetest/minetest)
+	[ -d multicraft ] && (cd multicraft && git pull) || (git clone https://github.com/multicraft/multicraft)
 fi
-cd minetest
+cd multicraft
 git_hash=`git show | head -c14 | tail -c7`
 
-# Get minetest_game
+# Get multicraft_game
 cd games
 if [ "x$NO_MINETEST_GAME" = "x" ]; then
-	[ -d minetest_game ] && (cd minetest_game && git pull) || (git clone https://github.com/minetest/minetest_game)
+	[ -d multicraft_game ] && (cd multicraft_game && git pull) || (git clone https://github.com/multicraft/multicraft_game)
 fi
 cd ../..
 
 # Build the thing
-cd minetest
+cd multicraft
 [ -d _build ] && rm -Rf _build/
 mkdir _build
 cd _build

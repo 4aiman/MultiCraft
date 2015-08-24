@@ -1,5 +1,5 @@
 /*
-Minetest
+MultiCraft
 Copyright (C) 2013 sapier, sapier at gmx dot net
 
 This program is free software; you can redistribute it and/or modify
@@ -296,7 +296,7 @@ private:
 	/** 3d grid containing all map data already collected and analyzed */
 	std::vector<std::vector<std::vector<path_gridnode> > > m_data;
 
-	ServerEnvironment* m_env;   /**< minetest environment pointer             */
+	ServerEnvironment* m_env;   /**< multicraft environment pointer             */
 
 #ifdef PATHFINDER_DEBUG
 

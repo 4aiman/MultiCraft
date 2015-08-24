@@ -121,7 +121,7 @@ def readU32(f):
 def readS32(f):
     return unsignedToSigned(ord(f.read(1))*256*256*256 + ord(f.read(1))*256*256 + ord(f.read(1))*256 + ord(f.read(1)), 2**31)
 
-usagetext = """minetestmapper.py [options]
+usagetext = """multicraftmapper.py [options]
   -i/--input <world_path>
   -o/--output <output_image.png>
   --bgcolor <color>

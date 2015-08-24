@@ -12,7 +12,7 @@
 #endif
 
 LANGUAGE 0, SUBLANG_NEUTRAL
-130        ICON         "minetest-icon.ico"
+130        ICON         "multicraft-icon.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -42,8 +42,8 @@ BEGIN
         VALUE "FileVersion", VERSION_STRING
         VALUE "InternalName", PROJECT_NAME
         VALUE "LegalCopyright", "(c) 2011-2015 celeron55"
-        VALUE "LegalTrademarks", """Minetest"" is the property of the Minetest community, don't use it without permission!"
-        VALUE "OriginalFilename", "minetest.exe"
+        VALUE "LegalTrademarks", """MultiCraft"" is the property of the MultiCraft community, don't use it without permission!"
+        VALUE "OriginalFilename", "multicraft.exe"
         VALUE "PrivateBuild", VERSION_EXTRA
         VALUE "ProductName", PROJECT_NAME_C
         VALUE "ProductVersion", PRODUCT_VERSION_STRING

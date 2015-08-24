@@ -42,7 +42,7 @@
 
             <meta-data
                 android:name="android.app.lib_name"
-                android:value="minetest" />
+                android:value="multicraft" />
         </activity>
         <activity
             android:name="mobi.MultiCraft.MultiCraftTextEntry"

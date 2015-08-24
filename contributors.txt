@@ -26,7 +26,7 @@ Commits Name
     22	Diego Martínez <kaeza@users.sf.net>
     22	SmallJoker <mk939@ymail.com>
     21	darkrose <lisa@ltmnet.com>
-    19	Weblate <42@minetest.ru>
+    19	Weblate <42@multicraft.ru>
     18	JacobF <queatz@gmail.com>
     15	Jürgen Doser <jurgen.doser@gmail.com>
     15	Matthew I <matttpt@gmail.com>
@@ -99,7 +99,7 @@ Commits Name
      2	Jonas Kriaučiūnas <jonukas@gmail.com>
      2	L JJ <986869429@qq.com>
      2	LS-Steeef <ls@steeef.nl>
-     2	LeMagnesium <mg.minetest@gmail.com>
+     2	LeMagnesium <mg.multicraft@gmail.com>
      2	Mahmut Elmas <mahmutelmas06@hotmail.com>
      2	Megaf <mmegaf@gmail.com>
      2	Mitchell Ward <mitchie1234@hotmail.com>
@@ -108,7 +108,7 @@ Commits Name
      2	Petr Hála <halapetr@selfnet.cz>
      2	Ragnar Laud <ragnarlaud@gmail.com>
      2	Robert Arkenin <rarkenin@gmail.com>
-     2	Rutger NL <r.minetest@rutger.nl>
+     2	Rutger NL <r.multicraft@rutger.nl>
      2	Sasikaa Lacikaa <sasikaa@gmail.com>
      2	Sergey Gilfanov <inkelyad@gmail.com>
      2	Sokomine <wegwerf@anarres.dyndns.org>

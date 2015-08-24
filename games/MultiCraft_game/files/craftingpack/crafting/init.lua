@@ -154,7 +154,7 @@ multicraft.register_on_player_receive_fields(function(player, formname, fields)
 end)
 
 multicraft.register_on_joinplayer(function(player)
-    minetest.after(0,function(dt)
+    multicraft.after(0,function(dt)
        if player then set_inventory(player) end
     end)
     if multicraft.setting_getbool("creative_mode") then

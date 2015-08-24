@@ -4,7 +4,7 @@ To fully understand your rights consult the license (the link is given above).
 While the CC BY-NC-SA 4.0 license forbids any kind of commercial usage by default, 4aiman holds the right to give his permission to neglect that restriction.
 
 Thus being said, 4aiman had explicitly granted the right to commercially use "adbs" and "4hunger" mods to Maksim Gamarnik (a.k.a. MoNTE48, MoNTE48@mail.ua) on the following terms:
-- Maksim Gamarnik can use current version of "adbs" and "4hunger" mods for commercial purposes in any Minetest or Freeminer related projects - both existing and those which are yet to come;
+- Maksim Gamarnik can use current version of "adbs" and "4hunger" mods for commercial purposes in any MultiCraft or Freeminer related projects - both existing and those which are yet to come;
 - The exception mentioned above also applies to any organization with Maksim Gamarnik as it's leader/head.
 - The exception mentioned above cease to apply in case any changes to any part of "adbs" or "4hunger" are to be made by any other person than 4aiman;
 - The exception mentioned above does not apply to Maksim Gamarnik's or his organization's (organisations') customers.
