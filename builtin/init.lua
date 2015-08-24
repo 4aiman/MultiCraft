@@ -7,7 +7,6 @@
 
 -- Initialize some very basic things
 multicraft = core
-multicraft = core
 print = multicraft.debug
 math.randomseed(os.time())
 os.setlocale("C", "numeric")
